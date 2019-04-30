@@ -6,26 +6,10 @@ const theme = {
 	roundness: 2,
 	colors: {
 		...DefaultTheme.colors,
+		primary: "#006E90",
+		accent: "#99C24D",
 		background: "#fafafa"
 	}
 };
 
 export default theme;
-
-/**
- * react-native-elements colors
- * 		primary,
-		secondary,
-		grey0,
-		grey1,
-		grey2,
-		grey3,
-		grey4,
-		grey5,
-		greyOutline,
-		searchBg,
-		success,
-		error,
-		warning,
-		divider
- */
