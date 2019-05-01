@@ -9,6 +9,7 @@ import ThemContextObj, { ThemeProvider } from "./Themes/ThemeContext";
 import { AppContextProvider } from "./Services/AppContext";
 
 import { Screen } from "./Components";
+import colors from "./Themes/Colors";
 
 //create the easy store
 const store = createStore();
@@ -17,6 +18,10 @@ const store = createStore();
 export default () => {
 	return (
 		<Screen>
+			<StatusBar
+				barStyle="light-content"
+				backgroundColor={colors.black}
+			/>
 			<StoreProvider store={store}>
 				<ThemeProvider>
 					<ThemeConsumer />

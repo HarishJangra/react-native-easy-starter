@@ -1,6 +1,6 @@
 import React from "react";
-import { ViewX } from "../Lib/base";
 import viewStyles from "../Styles/ViewStyles";
+import ViewX from "./View";
 
 export default ({ style, ...other }) => {
 	return (
@@ -14,4 +14,8 @@ export default ({ style, ...other }) => {
 
 export const Container = ({ style, ...other }) => {
 	return <ViewX {...other} style={[viewStyles.container, style]} />;
+};
+
+export const Box = ({ style, ...other }) => {
+	return <ViewX {...other} style={[style]} />;
 };

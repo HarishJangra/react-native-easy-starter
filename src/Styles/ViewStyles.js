@@ -5,7 +5,8 @@ import colors from "../Themes/Colors";
 
 const viewStyles = StyleSheet.create({
 	container: {
-		...appStyles.screens.container
+		...appStyles.screens.container,
+		backgroundColor: colors.transparent
 	},
 
 	section: {

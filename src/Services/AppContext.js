@@ -57,7 +57,7 @@ export const AppContextProvider = props => {
 		} else if (state == APP_STATE.PUBLIC) {
 			NavigationService.navigate(Routes.LOGIN_STACK);
 		} else {
-			//do something
+			//do something if needed
 		}
 	}, [state]);
 
