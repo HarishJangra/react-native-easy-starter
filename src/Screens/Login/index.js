@@ -1,13 +1,13 @@
 import React, { useContext, useRef } from "react";
 import { View, Text, Keyboard } from "react-native";
 import { useStore, useActions } from "easy-peasy";
-import { InputX } from "../../Lib/base";
 import { Button } from "react-native-paper";
 import { ScrollView } from "react-native";
 import ThemeContext from "../../Themes/ThemeContext";
 import AppStateContext from "../../Services/AppContext";
 import { STATUS } from "../../Constants";
-import { PasswordInputX } from "../../Lib/base/Input";
+import LoadingActionContainer from "../../Components/LoadingActionContainer";
+import { Section, PasswordInputX, InputX } from "../../Components";
 
 export default () => {
 	const onChange = useActions(actions => actions.login.onLoginInputChange);
@@ -36,80 +36,66 @@ export default () => {
 	const loading = status == STATUS.FETCHING;
 
 	return (
-		<View
-			style={{
-				justifyContent: "center",
-				flex: 1,
-				padding: 20,
-				backgroundColor: "#fafafa"
-			}}
-		>
-			<ScrollView keyboardShouldPersistTaps="always">
-				<View
+		<LoadingActionContainer>
+			<Section>
+				<Text
 					style={{
-						flex: 1,
-						justifyContent: "center",
-						paddingVertical: 20
+						fontSize: 48,
+						fontWeight: "bold",
+						color: theme.colors.accent,
+						marginVertical: 60
 					}}
 				>
-					<Text
-						style={{
-							fontSize: 48,
-							fontWeight: "bold",
-							color: theme.colors.accent,
-							marginVertical: 60
-						}}
-					>
-						WELCOME
-					</Text>
+					WELCOME
+				</Text>
+			</Section>
+			<Section>
+				<InputX
+					label="USER NAME"
+					// mode="outlined"
+					ref={inputUserName}
+					autoCapitalize="none"
+					returnKeyType={"next"}
+					onSubmitEditing={onSubmit}
+					onChangeText={text =>
+						onChange({ key: "username", value: text })
+					}
+					value={username}
+				/>
 
-					<InputX
-						label="USER NAME"
-						// mode="outlined"
-						ref={inputUserName}
-						autoCapitalize="none"
-						returnKeyType={"next"}
-						onSubmitEditing={onSubmit}
-						onChangeText={text =>
-							onChange({ key: "username", value: text })
-						}
-						value={username}
-					/>
+				<PasswordInputX
+					ref={inputPassword}
+					value={password}
+					// mode="outlined"
+					label="PASSWORD"
+					returnKeyType={"go"}
+					onSubmitEditing={loginUser}
+					onChangeText={text =>
+						onChange({ key: "password", value: text })
+					}
+				/>
+			</Section>
 
-					<PasswordInputX
-						ref={inputPassword}
-						value={password}
-						// mode="outlined"
-						label="PASSWORD"
-						returnKeyType={"go"}
-						onSubmitEditing={loginUser}
-						onChangeText={text =>
-							onChange({ key: "password", value: text })
-						}
-					/>
+			<Section>
+				<Button
+					style={{ marginTop: 20 }}
+					mode="contained"
+					loading={loading}
+					contentStyle={{ padding: 8 }}
+					color={loading ? theme.colors.accent : theme.colors.primary}
+					onPress={!loading ? loginUser : null}
+				>
+					LOGIN
+				</Button>
 
-					<Button
-						style={{ marginTop: 20 }}
-						mode="contained"
-						loading={loading}
-						contentStyle={{ padding: 8 }}
-						color={
-							loading ? theme.colors.accent : theme.colors.primary
-						}
-						onPress={loginUser}
-					>
-						LOGIN
-					</Button>
-
-					<Button
-						style={{ marginTop: 20 }}
-						mode="text"
-						onPress={() => {}}
-					>
-						NEED HELP
-					</Button>
-				</View>
-			</ScrollView>
-		</View>
+				<Button
+					style={{ marginTop: 20 }}
+					mode="text"
+					onPress={() => {}}
+				>
+					NEED HELP
+				</Button>
+			</Section>
+		</LoadingActionContainer>
 	);
 };

@@ -1,7 +1,7 @@
 import React from "react";
-import { ViewX } from "../Lib/base";
 import viewStyles from "../Styles/ViewStyles";
+import View from "./View";
 
 export default ({ style, ...other }) => {
-	return <ViewX {...other} style={[viewStyles.section, style]} />;
+	return <View {...other} style={[viewStyles.section, style]} />;
 };

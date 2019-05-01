@@ -19,6 +19,9 @@ import com.facebook.soloader.SoLoader;
 import java.util.Arrays;
 import java.util.List;
 
+import android.support.multidex.MultiDex;
+import android.content.Context;
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -57,6 +60,13 @@ public class MainApplication extends Application implements ReactApplication {
   public ReactNativeHost getReactNativeHost() {
     return mReactNativeHost;
   }
+
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(base);
+       MultiDex.install(this);
+    }
+
 
   @Override
   public void onCreate() {

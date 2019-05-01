@@ -17,8 +17,7 @@ const row = {
 const appStyles = {
 	screens: {
 		container: {
-			...flex,
-			backgroundColor: colors.transparent
+			...flex
 		},
 		section: {
 			padding: metrics.s3,
