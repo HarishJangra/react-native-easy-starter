@@ -1,15 +1,15 @@
 import React from "react";
-import { View, Text, ActivityIndicator } from "react-native";
+import { Text, ActivityIndicator } from "react-native";
+import colors from "../../Themes/Colors";
+import { Container } from "../../Components";
 
 export default function() {
 	return (
-		<View
+		<Container
 			style={{
-				padding: 20,
-				backgroundColor: "black",
-				flex: 1,
 				justifyContent: "center",
-				alignItems: "center"
+				alignItems: "center",
+				backgroundColor: colors.black
 			}}
 		>
 			<ActivityIndicator size="large" color="cyan" />
@@ -23,6 +23,6 @@ export default function() {
 			>
 				LOADING...
 			</Text>
-		</View>
+		</Container>
 	);
 }

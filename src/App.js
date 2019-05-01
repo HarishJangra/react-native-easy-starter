@@ -7,19 +7,22 @@ import PrimaryNav from "./Navigation/AppNavigation";
 import { Provider as PaperProvider } from "react-native-paper";
 import ThemContextObj, { ThemeProvider } from "./Themes/ThemeContext";
 import { AppContextProvider } from "./Services/AppContext";
+
+import { Screen } from "./Components";
+
 //create the easy store
 const store = createStore();
 
 //return root component
 export default () => {
 	return (
-		<View style={styles.main}>
+		<Screen>
 			<StoreProvider store={store}>
 				<ThemeProvider>
 					<ThemeConsumer />
 				</ThemeProvider>
 			</StoreProvider>
-		</View>
+		</Screen>
 	);
 };
 
@@ -36,9 +39,3 @@ const ThemeConsumer = props => {
 		</PaperProvider>
 	);
 };
-
-const styles = StyleSheet.create({
-	main: {
-		flex: 1
-	}
-});

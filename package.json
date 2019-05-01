@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "android:dev": "react-native run-android --appIdSuffix debug",
+    "android:devsuffix": "react-native run-android --appIdSuffix debug",
     "clean:debug": "cd android/ && ./gradlew clean && cd .. && react-native run-android --appIdSuffix debug",
     "clean:build": "cd android/ && ./gradlew clean &&  ./gradlew assembleRelease",
     "start": "node node_modules/react-native/local-cli/cli.js start",
