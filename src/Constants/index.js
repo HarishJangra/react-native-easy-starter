@@ -6,7 +6,8 @@ export const isIos = !isAndroid;
 export const APP_STATE = {
 	PUBLIC: "PUBLIC_LOGIN",
 	PRIVATE: "MAIN_APP",
-	AUTH: "CHECKING_LOGIN"
+	AUTH: "CHECKING_LOGIN",
+	UNKNOWN:'UNKNOWN',
 };
 
 export const STATUS = {

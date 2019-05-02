@@ -6,6 +6,8 @@ import { name as appName } from "../../app.json";
 let devTools = composeWithDevTools({
 	name: appName,
 	realtime: true,
+	hostname:'192.168.0.150',
+	port:8081,
 	trace: true
 });
 

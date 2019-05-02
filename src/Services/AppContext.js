@@ -8,10 +8,17 @@ import { useActions, useStore } from "easy-peasy";
 const AppStateContext = React.createContext();
 
 export const AppContextProvider = props => {
-    const [state, setState] = useState(APP_STATE.AUTH);
+    // const [state, setState] = useState(APP_STATE.AUTH);
     
-	const loginUser = useActions(actions => actions.login.loginUser);
-	const loginStatus = useStore(state => state.login.status);
+	const {loginUser, setState} = useActions(actions => (
+		{
+			loginUser : actions.login.loginUser, 
+			setState : actions.login.changeAppState
+		}
+	));
+
+	const  state = useStore(state => state.login.appstate);
+
 
 	async function checkLogin() {
 		const credentials = await getLoginCredentials();
@@ -34,24 +41,17 @@ export const AppContextProvider = props => {
 		loginUser(reqData);
 	}
 
-	// watch login status
-	useEffect(() => {
-		console.log("LOG_checkloginstatus", loginStatus);
-		if (loginStatus == STATUS.SUCCESS) {
-			setState(APP_STATE.PRIVATE);
-		}
-	}, [loginStatus]);
-
 	// check loggedin on mount
 	useEffect(() => {
 		console.log("LOG_checklogin effect");
 		//cannot call async directly inside effect  react-warning
-		checkLogin();
+		state == APP_STATE.UNKNOWN &&  checkLogin();
 	}, []);
 
     // app state reactor
 	useEffect(() => {
 		console.log("LOG_effect state reactor", state);
+
 		if (state == APP_STATE.PRIVATE) {
 			NavigationService.navigate(Routes.MAIN_APP);
 		} else if (state == APP_STATE.PUBLIC) {

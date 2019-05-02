@@ -6,6 +6,8 @@ let store = null;
 let apiClient = null;
 
 const createStore = () => {
+	console.log('LOG_createstore');
+	
 	apiClient = Api.createApiClient();
 	// you can use apiclient as injections in store or like this only
 	store = ConfigureStore(model, apiClient);
