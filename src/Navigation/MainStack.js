@@ -1,22 +1,15 @@
 import { createStackNavigator } from "react-navigation";
-import styles from "./Styles/NavigationStyles";
 import Path from "./Routes";
 import Home from "../Screens/App";
+import Screen2 from '../Screens/Screen2'
 
 export default createStackNavigator(
 	{
 		[Path.HOME_SCREEN]: {
-			screen: Home,
-			navigationOptions: {
-				headerStyle: styles.header,
-				headerTitle: "HOME",
-				headerTitleStyle: {
-					color: "white",
-					width: 100,
-					fontWeight: "800"
-				}
-			}
-		}
+			screen: Home,		
+		},
+		Screen2,
+		
 	},
 	{
 		// Default config for all screens

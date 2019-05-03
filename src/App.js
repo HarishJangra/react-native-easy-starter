@@ -1,15 +1,18 @@
-import React, { useContext } from "react";
-import { View, Text, StatusBar, StyleSheet } from "react-native";
+import React from "react";
+import { StatusBar } from "react-native";
 import NavigationService from "./Navigation";
 import createStore from "./Store";
 import { StoreProvider } from "easy-peasy";
+
 import PrimaryNav from "./Navigation/AppNavigation";
 import { Provider as PaperProvider } from "react-native-paper";
-import ThemContextObj, { ThemeProvider } from "./Themes/ThemeContext";
-import { AppContextProvider } from "./Services/AppContext";
+
+import  { ThemeProvider } from "./Themes/Context/ThemeContext";
+import { AppContextProvider } from "./Services/Auth/AppContext";
 
 import { Screen } from "./Components";
 import colors from "./Themes/Colors";
+import useTheme from "./Themes/Context";
 
 //create the easy store
 const store = createStore();
@@ -17,11 +20,7 @@ const store = createStore();
 //return root component
 export default () => {
 	return (
-		<Screen>
-			<StatusBar
-				barStyle="light-content"
-				backgroundColor={colors.black}
-			/>
+		<Screen>			
 			<StoreProvider store={store}>
 				<ThemeProvider>
 					<ThemeConsumer />
@@ -32,7 +31,7 @@ export default () => {
 };
 
 const ThemeConsumer = props => {
-	const { theme, changeTheme } = useContext(ThemContextObj);
+	const { theme } = useTheme();
 
 	return (
 		<PaperProvider theme={theme}>

@@ -1,19 +1,20 @@
-import React, { useContext, useRef } from "react";
+import React, { useRef } from "react";
 import { View, Text, Keyboard } from "react-native";
 import { useStore, useActions } from "easy-peasy";
 import { Button } from "react-native-paper";
 import { ScrollView } from "react-native";
-import ThemeContext from "../../Themes/ThemeContext";
-import AppStateContext from "../../Services/AppContext";
 import { STATUS } from "../../Constants";
 import LoadingActionContainer from "../../Components/LoadingActionContainer";
 import { Section, PasswordInputX, InputX } from "../../Components";
 
+import useTheme from "../../Themes/Context";
+import useAuth from "../../Services/Auth";
+
 export default () => {
 	const onChange = useActions(actions => actions.login.onLoginInputChange);
 
-	const { state, login } = useContext(AppStateContext);
-	const { theme } = useContext(ThemeContext);
+	const { state, login } = useAuth();
+	const { theme } = useTheme();
 
 	const inputUserName = useRef();
 	const inputPassword = useRef();
@@ -32,7 +33,7 @@ export default () => {
 		Keyboard.dismiss();
 		login({ username, password });
 	};
-
+	
 	const loading = status == STATUS.FETCHING;
 
 	return (
