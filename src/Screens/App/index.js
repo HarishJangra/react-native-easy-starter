@@ -5,7 +5,11 @@ import AppStateContext from "../../Services/AppContext";
 import LoadingActionContainer from "../../Components/LoadingActionContainer";
 import { Container } from "../../Components";
 import colors from "../../Themes/Colors";
-export default () => {
+import NavigationStyles from "../../Styles/NavigationStyles";
+
+
+
+const MainScreen = () => {
 	const { state, logout } = useContext(AppStateContext);
 
 	return (
@@ -32,3 +36,16 @@ export default () => {
 		</LoadingActionContainer>
 	);
 };
+
+MainScreen.navigationOptions = {
+	headerStyle:NavigationStyles.header,
+	headerTitle: "HOME",
+	headerTitleStyle: {
+		color: "white",
+		width: 100,
+		fontWeight: "800"
+	}
+
+}
+
+export default MainScreen

@@ -1,6 +1,5 @@
 import { createSwitchNavigator, createAppContainer } from "react-navigation";
 
-import styles from "./Styles/NavigationStyles";
 import Path from "./Routes";
 import LaunchScreen from "../Screens/Launch";
 // Screens Objects
@@ -23,7 +22,7 @@ const PrimaryNav = createSwitchNavigator(
 		headerMode: "none",
 		initialRouteName: Path.LOADING,
 		navigationOptions: {
-			headerStyle: styles.header
+			// headerStyle: styles.header
 		}
 	}
 );
