@@ -27,6 +27,8 @@ const createApiClient = (baseURL = BASE_URL) => {
 	// const setAuthorizationHeader = access_token =>
 	// 	api.setHeader("Authorization", "Bearer " + access_token);
 
+	const checkAppVersion = (os = Platform.OS, app = "parent") =>
+		api.get(URIS.VERSION, { os, app });
 
 	const loginUser = payload => api.post(URIS.LOGIN, payload);
 	//kickoff our api functions
@@ -34,7 +36,7 @@ const createApiClient = (baseURL = BASE_URL) => {
 		// client modifiers
 		// setAuthorizationHeader,
 		// api call functions
-		// checkAppVersion,
+		checkAppVersion,
 		loginUser
 	};
 };
