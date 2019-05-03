@@ -8,7 +8,7 @@
 
   
 
-*  Always up-to-date React Native [0.59]([https://facebook.github.io/react-native/versions](https://facebook.github.io/react-native/versions)) scaffolding.  
+*  Always up-to-date React Native [0.59](https://facebook.github.io/react-native/versions) scaffolding.  
 
 *  [Easy-Peasy](https://github.com/ctrlplusb/easy-peasy) makes it easy to access the global state. 
 
