@@ -34,7 +34,7 @@ const createApiClient = (baseURL = BASE_URL) => {
 		// client modifiers
 		// setAuthorizationHeader,
 		// api call functions
-		checkAppVersion,
+		// checkAppVersion,
 		loginUser
 	};
 };
