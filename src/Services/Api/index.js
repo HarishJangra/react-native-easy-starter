@@ -1,25 +1,13 @@
 import { create } from "apisauce";
 import { BASE_URL } from "../../Config";
+import apiMonitor from "./Monitor";
+import { Platform } from "react-native";
 
 const URIS = {
+	VERSION: "app/version",
 	LOGIN: "clients/api/login",
 	REFRESH: "clients/api/refresh",
 	LOGOUT: "logout"
-};
-
-const apiMonitor = response => {
-	response.ok
-		? console.log(
-				"%c API_RESPONSE! %c" + response.config.url,
-				"background: #222; color: #bada55; font-size:16px",
-				"background:red;color:white;"
-		  )
-		: console.log(
-				"%c API_RESPONSE! %c" + response.config.url,
-				"background: #222; color: #ff7788; font-size:16px",
-				"background:red;color:white;"
-		  );
-	console.log(response);
 };
 
 const createApiClient = (baseURL = BASE_URL) => {
@@ -39,12 +27,14 @@ const createApiClient = (baseURL = BASE_URL) => {
 	// const setAuthorizationHeader = access_token =>
 	// 	api.setHeader("Authorization", "Bearer " + access_token);
 
+
 	const loginUser = payload => api.post(URIS.LOGIN, payload);
 	//kickoff our api functions
 	return {
 		// client modifiers
 		// setAuthorizationHeader,
 		// api call functions
+		checkAppVersion,
 		loginUser
 	};
 };

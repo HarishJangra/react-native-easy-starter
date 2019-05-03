@@ -1,25 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { APP_STATE, STATUS } from "../Constants/index";
-import { getLoginCredentials, resetLoginCredentials } from "./Keychain";
-import NavigationService from "../Navigation/index";
-import Routes from "../Navigation/Routes/index";
-import { useActions, useStore } from "easy-peasy";
+import { APP_STATE, STATUS } from "../../Constants";
+import { getLoginCredentials, resetLoginCredentials } from "../Keychain";
+import NavigationService from "../../Navigation";
+import Routes from "../../Navigation/Routes";
 
+import { useActions, useStore } from "easy-peasy";
+import useCheckVersion from '../CheckVersion'
 const AppStateContext = React.createContext();
 
-export const AppContextProvider = props => {
-    // const [state, setState] = useState(APP_STATE.AUTH);
-    
+export const AppContextProvider = props => {    
 	const {loginUser, setState} = useActions(actions => (
 		{
 			loginUser : actions.login.loginUser, 
-			setState : actions.login.changeAppState
+			setState : actions.login.changeAppState,			
 		}
 	));
+	const version = useCheckVersion()
 
 	const  state = useStore(state => state.login.appstate);
-
-
 	async function checkLogin() {
 		const credentials = await getLoginCredentials();
 		if (credentials) {

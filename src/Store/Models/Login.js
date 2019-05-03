@@ -8,7 +8,6 @@ import BaseModel from "./Base";
 const loginUser = thunk(async (actions, payload) => {
 	// let response = await ApiService.loginUser(payload);
 	actions.updateStatus(STATUS.FETCHING)
-
 	let response = await setLoginCredentials(
 		payload.username,
 		payload.password
@@ -17,7 +16,7 @@ const loginUser = thunk(async (actions, payload) => {
 	// mocking our api
 	setTimeout(() => {
 		if (!response.status) {
-			console.error(response.error);
+			console.warn(response.error);
 		}else {
 			actions.changeAppState(APP_STATE.PRIVATE)	
 		}
@@ -27,7 +26,7 @@ const loginUser = thunk(async (actions, payload) => {
 
 const LoginModel = {
 	//include BaseModel 
-	...BaseModel,
+	...BaseModel(),
 	//include all thunks or actions defined separately	
 	loginUser,
 	appstate: APP_STATE.UNKNOWN,
