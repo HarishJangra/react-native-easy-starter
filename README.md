@@ -18,8 +18,13 @@
 * react-navigation
 * react-native-vector-icons
 * Login Navigation Flow using Context API.
-* Internationalization
 * Themes support and much more
+
+## Road map
+* react-i18next setup
+* typescript implementation
+* ios libraries linking
+
 
 ## Getting Started
 **Step 1:** Clone and Install
@@ -31,3 +36,8 @@ $ yarn
 ```sh
 $ yarn run android:dev
 ```
+
+
+## How can I contribute?
+- :star: Star our GitHub repo 
+- :wrench: Create Fixes, libraries setup in ios, suggest new features or update docs
