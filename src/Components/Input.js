@@ -1,19 +1,18 @@
 import React, {
 	useImperativeHandle,
-	useContext,
 	forwardRef,
 	useState,
 	useRef
 } from "react";
 
 import { TextInput, Button } from "react-native-paper";
-import ThemeContext from "../Themes/ThemeContext";
 import { View } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { IconX } from "../Icons";
+import useTheme from "../Themes/Context";
 
 function Input({ style, ...other }, ref) {
-	const { theme } = useContext(ThemeContext);
+	const { theme } = useTheme;
 
 	const inputRef = useRef();
 

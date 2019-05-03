@@ -7,7 +7,6 @@ import com.microsoft.codepush.react.CodePush;
 import com.oblador.keychain.KeychainPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
-import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 //custom packages
@@ -44,7 +43,6 @@ public class MainApplication extends Application implements ReactApplication {
             new KeychainPackage(),
             new RNGestureHandlerPackage(),
             new VectorIconsPackage(),
-            new RNI18nPackage(),
             new RNDeviceInfo(),
             new ReactNativeConfigPackage()
       );

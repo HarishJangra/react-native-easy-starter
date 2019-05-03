@@ -1,13 +1,13 @@
-import { createSwitchNavigator, createAppContainer } from "react-navigation";
+import { createSwitchNavigator, createAppContainer, createStackNavigator } from "react-navigation";
 
-import styles from "./Styles/NavigationStyles";
 import Path from "./Routes";
 import LaunchScreen from "../Screens/Launch";
 // Screens Objects
 import LoginStack from "./LoginStack";
 import MainStack from "./MainStack";
-import AppStateContext from "../Services/AppContext";
+import AppStateContext from "../Services/Auth/AppContext";
 import { useContext } from "react";
+import AppUpdate from "../Screens/AppUpdate";
 
 const Root = { screen: LaunchScreen };
 
@@ -23,9 +23,24 @@ const PrimaryNav = createSwitchNavigator(
 		headerMode: "none",
 		initialRouteName: Path.LOADING,
 		navigationOptions: {
-			headerStyle: styles.header
+			// headerStyle: styles.header
 		}
 	}
 );
 
-export default createAppContainer(PrimaryNav);
+const ModalNav = createStackNavigator(
+	{
+		Main : PrimaryNav,
+		
+		AppUpdate :  {
+		  screen: AppUpdate,
+		},
+	},
+	  {
+		mode: 'modal',
+		initialRouteName: "Main",
+		headerMode: 'none',
+	  }
+)
+
+export default createAppContainer(ModalNav);
