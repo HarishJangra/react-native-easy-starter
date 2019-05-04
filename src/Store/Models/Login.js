@@ -15,8 +15,8 @@ const loginUser = thunk(async (actions, payload) => {
 
 	// mocking our api
 	setTimeout(() => {
+		actions.updateStatus(response.status ? STATUS.SUCCESS : STATUS.FAILED)
 		if (!response.status) {
-			actions.updateStatus(response.status ? STATUS.SUCCESS : STATUS.FAILED)
 			console.warn(response.error);
 		}else {
 			actions.changeAppState(APP_STATE.PRIVATE)	
