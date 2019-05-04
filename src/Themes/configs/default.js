@@ -8,7 +8,8 @@ const theme = {
 		...DefaultTheme.colors,
 		primary: "#006E90",
 		accent: "#99C24D",
-		background: "#fafafa"
+		background: "#fafafa",
+		header:'#ffffff'
 	}
 };
 

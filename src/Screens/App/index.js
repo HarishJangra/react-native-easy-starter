@@ -1,64 +1,38 @@
 import React, { useEffect } from "react";
 import { View, Text, StatusBar } from "react-native";
-import { Button } from "react-native-paper";
 import LoadingActionContainer from "../../Components/LoadingActionContainer";
-import { Container } from "../../Components";
+import { Container, ButtonX } from "../../Components";
 import colors from "../../Themes/Colors";
 import NavigationStyles from "../../Styles/NavigationStyles";
 import NavigationService from "../../Navigation";
 import useAuth from "../../Services/Auth";
-
-
+import useTheme from "../../Themes/Context";
 
 const MainScreen = ({navigation}) => {
 	const { state, logout } = useAuth();
+	const {theme} = useTheme()
 	
 	useEffect(() => {
-		navigation.setParams({headerColor: 'red'})
+		navigation.setParams({headerColor: theme.colors.header})
 	}, [])
 	return (
 		<LoadingActionContainer fixed>
 			<Container
 				style={{
 					justifyContent: "center",
-					alignItems: "center"
+					padding:20
 				}}
 			>
 				<Text style={{ fontSize: 24, color: colors.green300 }}>
-					HOME SCREEN
+					MAIN SCREEN
 				</Text>
 
-				<Button
+				<ButtonX
+					dark={true}
+					color={theme.colors.accent}
+					label="LOGOUT"
 					onPress={logout}
-					style={{ marginTop: 20 }}
-					mode="contained"
-				>
-					LOGOUT
-				</Button>
-
-				<Button
-				color={"#885223"}
-				onPress={
-					()=> NavigationService.navigate('AppUpdate')
-				}
-				style={{ marginTop: 20 }}
-				mode="contained"
-			>
-				MODAL
-			</Button>
-
-
-			<Button
-				color={"#543365"}
-				onPress={
-					()=> NavigationService.navigate('Screen2')
-				}
-				style={{ marginTop: 20 }}
-				mode="contained"
-			>
-				2nd screen
-			</Button>
-
+				/>
 
 			</Container>
 		</LoadingActionContainer>
@@ -66,17 +40,14 @@ const MainScreen = ({navigation}) => {
 };
 
 MainScreen.navigationOptions = ({navigation})=> {
-	console.log('LOG_navigagtion',navigation);
-	
+	// console.log('LOG_navigagtion',navigation);
 	return {
 		headerStyle:[NavigationStyles.header_statusBar, {backgroundColor:navigation.getParam('headerColor' , '#334466')}],
 		headerTitle: "HOME",
 		headerTitleStyle: {
-			color: "white",
 			width: 100,
-			fontWeight: "800"
-		}
-	
+			fontWeight: "700"
+		}	
 	}
 }
 

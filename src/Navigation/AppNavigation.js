@@ -16,8 +16,8 @@ const Root = { screen: LaunchScreen };
 const PrimaryNav = createSwitchNavigator(
 	{
 
-		// [Path.MAIN_APP]: MainStack,
-		[Path.MAIN_APP]: DemoStack,
+		[Path.MAIN_APP]: MainStack,
+		//[Path.MAIN_APP]: DemoStack,
 		[Path.LOGIN_STACK]: LoginStack,
 		[Path.LOADING]: Root
 	},
