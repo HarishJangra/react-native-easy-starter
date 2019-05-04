@@ -20,7 +20,9 @@ const store = createStore();
 //return root component
 export default () => {
 	return (
-		<Screen>			
+		<Screen>
+		<StatusBar translucent backgroundColor={"rgba(0,0,0,0.2)"}/>
+			
 			<StoreProvider store={store}>
 				<ThemeProvider>
 					<ThemeConsumer />
