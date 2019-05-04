@@ -5,7 +5,7 @@ import { Button } from "react-native-paper";
 import { ScrollView } from "react-native";
 import { STATUS } from "../../Constants";
 import LoadingActionContainer from "../../Components/LoadingActionContainer";
-import { Section, PasswordInputX, InputX } from "../../Components";
+import { Section, PasswordInputX, InputX, ButtonX } from "../../Components";
 
 import useTheme from "../../Themes/Context";
 import useAuth from "../../Services/Auth";
@@ -78,25 +78,20 @@ export default () => {
 			</Section>
 
 			<Section>
-				<Button
-					style={{ marginTop: 20 }}
-					mode="contained"
+				<ButtonX
 					loading={loading}
-					contentStyle={{ padding: 8 }}
 					color={loading ? theme.colors.accent : theme.colors.primary}
-					onPress={!loading ? loginUser : null}
-				>
-					LOGIN
-				</Button>
+					onPress={ loginUser }
+					label=" LOGIN "
+				/>
 
-				<Button
-					style={{ marginTop: 20 }}
+				<ButtonX
 					mode="text"
-					onPress={() => {}}
-				>
-					NEED HELP
-				</Button>
-			</Section>
+					onPress={() => {}} 
+					label=" NEED HELP "
+				/>
+
+			</Section>			
 		</LoadingActionContainer>
 	);
 };

@@ -201,6 +201,7 @@ configurations.all {
 
 
 dependencies {
+    implementation project(':react-native-reanimated')
     implementation project(':react-native-code-push')
     implementation project(':react-native-keychain')
     implementation project(':react-native-gesture-handler')

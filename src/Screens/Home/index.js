@@ -23,16 +23,11 @@ const MainScreen = ({navigation}) => {
 					padding:20
 				}}
 			>
-				<Text style={{ fontSize: 24, color: colors.green300 }}>
+				<Text style={{ fontSize: 24, textAlign:'center', color: colors.green300 }}>
 					MAIN SCREEN
 				</Text>
 
-				<ButtonX
-					dark={true}
-					color={theme.colors.accent}
-					label="LOGOUT"
-					onPress={logout}
-				/>
+			
 
 			</Container>
 		</LoadingActionContainer>
@@ -43,7 +38,8 @@ MainScreen.navigationOptions = ({navigation})=> {
 	// console.log('LOG_navigagtion',navigation);
 	return {
 		headerStyle:[NavigationStyles.header_statusBar, {backgroundColor:navigation.getParam('headerColor' , '#334466')}],
-		headerTitle: "HOME",
+        headerTitle: "HOME",
+        headerTintColor:['teal'],
 		headerTitleStyle: {
 			width: 100,
 			fontWeight: "700"
