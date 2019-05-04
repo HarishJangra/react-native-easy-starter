@@ -8,8 +8,7 @@ export default createStackNavigator(
 		[Path.HOME_SCREEN]: {
 			screen: Home,		
 		},
-		Screen2,
-		
+		Screen2,		
 	},
 	{
 		// Default config for all screens
