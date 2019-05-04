@@ -5,6 +5,7 @@ import LaunchScreen from "../Screens/Launch";
 // Screens Objects
 import LoginStack from "./LoginStack";
 import MainStack from "./MainStack";
+import DemoStack from './DemoStack'
 import AppStateContext from "../Services/Auth/AppContext";
 import { useContext } from "react";
 import AppUpdate from "../Screens/AppUpdate";
@@ -14,7 +15,9 @@ const Root = { screen: LaunchScreen };
 // Manifest of possible screens
 const PrimaryNav = createSwitchNavigator(
 	{
-		[Path.MAIN_APP]: MainStack,
+
+		// [Path.MAIN_APP]: MainStack,
+		[Path.MAIN_APP]: DemoStack,
 		[Path.LOGIN_STACK]: LoginStack,
 		[Path.LOADING]: Root
 	},

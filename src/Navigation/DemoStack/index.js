@@ -1,7 +1,7 @@
 import { createStackNavigator } from "react-navigation";
-import Path from "./Routes";
-import Home from "../DemoScreens/App";
-import Screen2 from '../DemoScreens/Screen2'
+import Path from "../Routes";
+import Home from "../../DemoScreens/App";
+import Screen2 from '../../DemoScreens/Screen2'
 
 export default createStackNavigator(
 	{
