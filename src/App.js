@@ -22,6 +22,7 @@ export default () => {
 	return (
 		<Screen>			
 			<StoreProvider store={store}>
+			<StatusBar translucent backgroundColor={"rgba(0,0,0,0.2)"}/>
 				<ThemeProvider>
 					<ThemeConsumer />
 				</ThemeProvider>

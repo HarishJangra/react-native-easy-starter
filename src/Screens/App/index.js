@@ -24,7 +24,6 @@ const MainScreen = ({navigation}) => {
 					alignItems: "center"
 				}}
 			>
-				<StatusBar translucent backgroundColor={"rgba(0,0,0,0.2)"}/>
 				<Text style={{ fontSize: 24, color: colors.green300 }}>
 					HOME SCREEN
 				</Text>
