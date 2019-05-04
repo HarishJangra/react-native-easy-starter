@@ -35,7 +35,8 @@ export default () => {
 	};
 	
 	const loading = status == STATUS.FETCHING;
-
+	console.log('LOG_login',loading);
+	
 	return (
 		<LoadingActionContainer>
 			<Section>
@@ -80,6 +81,7 @@ export default () => {
 			<Section>
 				<ButtonX
 					loading={loading}
+					dark={true}
 					color={loading ? theme.colors.accent : theme.colors.primary}
 					onPress={ loginUser }
 					label=" LOGIN "

@@ -23,7 +23,7 @@ const MainScreen = ({navigation}) => {
 					padding:20
 				}}
 			>
-				<Text style={{ fontSize: 24, textAlign:'center', color: colors.green300 }}>
+				<Text style={{ fontSize: 24, textAlign:'center', color: theme.colors.primary }}>
 					MAIN SCREEN
 				</Text>
 

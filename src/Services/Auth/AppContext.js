@@ -18,6 +18,7 @@ export const AppContextProvider = props => {
 	const version = useCheckVersion()
 
 	const  state = useStore(state => state.login.appstate);
+
 	async function checkLogin() {
 		const credentials = await getLoginCredentials();
 		if (credentials) {
@@ -50,8 +51,8 @@ export const AppContextProvider = props => {
 	useEffect(() => {
 		console.log("LOG_effect state reactor", state);
 
-		if (state == APP_STATE.PRIVATE) {
-			NavigationService.navigate(Routes.MAIN_APP);
+		if (state == APP_STATE.PRIVATE) {		
+		NavigationService.navigate(Routes.MAIN_APP);
 		} else if (state == APP_STATE.PUBLIC) {
 			NavigationService.navigate(Routes.LOGIN_STACK);
 		} else {

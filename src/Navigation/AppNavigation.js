@@ -28,10 +28,10 @@ const PrimaryNav = createAnimatedSwitchNavigator(
 			<Transition.Together>
 			  <Transition.Out
 				type="slide-left"
-				durationMs={400}
+				durationMs={200}
 				interpolation="easeIn"
 			  />
-			  <Transition.In type="slide-right" durationMs={500} />
+			  <Transition.In type="slide-right" durationMs={200} />
 			</Transition.Together>
 		  ),
 		// Default config for all screens
