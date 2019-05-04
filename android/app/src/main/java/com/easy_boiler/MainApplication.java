@@ -3,6 +3,7 @@ package com.easy_boiler;
 import android.app.Application;
 //custom packages
 import com.facebook.react.ReactApplication;
+import com.swmansion.reanimated.ReanimatedPackage;
 import com.microsoft.codepush.react.CodePush;
 import com.oblador.keychain.KeychainPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -39,6 +40,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReanimatedPackage(),
             new CodePush(BuildConfig.CODEPUSH_KEY, getApplicationContext(), BuildConfig.DEBUG),
             new KeychainPackage(),
             new RNGestureHandlerPackage(),
