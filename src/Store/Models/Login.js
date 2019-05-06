@@ -54,7 +54,6 @@ const loginUser = thunk(async (actions, payload , {dispatch}) => {
 		await setLoginCredentials(
 			 JSON.stringify(response.data)
 		);
-
 	}else {
 		 showErrorToast("Error in login , Please check your login credentials !")
 		actions.updateStatus(STATUS.FAILED)
