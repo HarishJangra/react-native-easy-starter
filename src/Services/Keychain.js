@@ -1,10 +1,11 @@
 import React from "react";
 import * as Keychain from "react-native-keychain";
+import { timeStampX } from '../Utils/DateHelper';
 //@flow
 
-export const setLoginCredentials = async (field1, field2) => {
+export const setLoginCredentials = async (data) => {
 	try {
-		const response = await Keychain.setGenericPassword(field1, field2);
+		const response = await Keychain.setGenericPassword(timeStampX(), data);
 		console.log("keychain data securely set  ", response);
 		return { status: true, response };
 	} catch (e) {
@@ -17,8 +18,11 @@ export const getLoginCredentials = async () => {
 	try {
 		const credentials = await Keychain.getGenericPassword();
 		console.log("keychain get data ", credentials);
-		if (credentials) {
-			return credentials;
+		if (credentials) {			
+			let loginData = credentials.username && credentials.password && JSON.parse(credentials.password)
+			return Object.assign({}, loginData,{
+				timestamp: credentials.username
+			});
 		}
 		return false;
 	} catch (e) {

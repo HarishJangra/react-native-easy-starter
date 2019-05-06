@@ -1,14 +1,17 @@
 import React from 'react'
 import Toast from 'react-native-tiny-toast'
+import colors from '../../Themes/Colors';
 
 export default function showToast(message, type, duration){
     Toast.show(message , {
         position: -1,
         duration:200,
+        textColor: type == 'success' ? 'green' : type == 'error'? 'red' : type == 'info'? 'orange' : "white",
         containerStyle:{
-            backgroundColor: type == 'success' ? 'green' : type == 'error'? 'rgba(200,0,0,0.4)' : type == 'info'? 'orange' : "black",
-            padding:8,
-            margin:1,
+            backgroundColor:colors.blueGrey900,
+            borderRadius:0,
+            padding:16,
+            margin:10,
         },
     })
 }

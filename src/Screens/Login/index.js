@@ -40,9 +40,7 @@ export default () => {
 		login({ username, password });
 	};
 	
-	const loading = status == STATUS.FETCHING;
-	console.log('LOG_login',loading);
-	
+	const loading = status == STATUS.FETCHING;	
 	
 	return (
 		<LoadingActionContainer>

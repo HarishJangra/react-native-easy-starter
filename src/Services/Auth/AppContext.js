@@ -6,27 +6,33 @@ import Routes from "../../Navigation/Routes";
 
 import { useActions, useStore } from "easy-peasy";
 import useCheckVersion from '../CheckVersion'
+import { ApiService } from '../../Store';
+
 const AppStateContext = React.createContext();
 
 export const AppContextProvider = props => {    
-	const {loginUser, setState} = useActions(actions => (
+	
+	const {loginUser, setState, profileRequest, checkLogin} = useActions(actions => (
 		{
 			loginUser : actions.login.loginUser, 
-			setState : actions.login.changeAppState,			
+			setState : actions.login.changeAppState,
+			profileRequest: actions.user.requestUserProfile,	
+			checkLogin: actions.login.checkRefreshToken		
 		}
 	));
-	const version = useCheckVersion()
-
+	const version = useCheckVersion() 
 	const  state = useStore(state => state.login.appstate);
 
-	async function checkLogin() {
-		const credentials = await getLoginCredentials();
-		if (credentials) {
-			setState(APP_STATE.PRIVATE);
-		} else {
-			setState(APP_STATE.PUBLIC);
-		}
-	}
+	// async function checkLogin() {
+	// 	const credentials = await getLoginCredentials();
+	// 	if (credentials) {
+	
+	// 		ApiService.setAuthorizationHeader(credentials.access_token)
+	// 		setState(APP_STATE.PRIVATE);
+	// 	} else {
+	// 		setState(APP_STATE.PUBLIC);
+	// 	}
+	// }
 
 	async function logout() {
 		const reset = resetLoginCredentials();
@@ -51,8 +57,9 @@ export const AppContextProvider = props => {
 	useEffect(() => {
 		console.log("LOG_effect state reactor", state);
 
-		if (state == APP_STATE.PRIVATE) {		
-		NavigationService.navigate(Routes.MAIN_APP);
+		if (state == APP_STATE.PRIVATE) {	
+			profileRequest()	
+			NavigationService.navigate(Routes.MAIN_APP);
 		} else if (state == APP_STATE.PUBLIC) {
 			NavigationService.navigate(Routes.LOGIN_STACK);
 		} else {

@@ -9,7 +9,7 @@ export default function() {
 			style={{
 				justifyContent: "center",
 				alignItems: "center",
-				backgroundColor: colors.black
+				backgroundColor: colors.background
 			}}
 		>
 			<ActivityIndicator size="large" color="cyan" />
