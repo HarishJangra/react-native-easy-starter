@@ -1,6 +1,6 @@
 import { createStackNavigator } from "react-navigation";
 import Path from "./Routes";
-import Home from "../Screens/App";
+import Home from "../Screens/Home";
 
 export default createStackNavigator(
 	{

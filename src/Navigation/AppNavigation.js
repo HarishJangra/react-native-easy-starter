@@ -36,10 +36,7 @@ const PrimaryNav = createAnimatedSwitchNavigator(
 		  ),
 		// Default config for all screens
 		headerMode: "none",
-		initialRouteName: Path.LOADING,
-		navigationOptions: {
-			// headerStyle: styles.header
-		}
+		initialRouteName: Path.LOADING,	
 	}
 );
 
