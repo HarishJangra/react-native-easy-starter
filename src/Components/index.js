@@ -1,5 +1,6 @@
 import Screen, { Container } from "./Screen";
 import Section from "./Section";
 import InputX, { PasswordInputX } from "./Input";
+import ButtonX from './Button'
 
-export { Screen, Container, Section, InputX, PasswordInputX };
+export { ButtonX, Screen, Container, Section, InputX, PasswordInputX };
