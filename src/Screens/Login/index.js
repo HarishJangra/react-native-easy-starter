@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { View, Text, Keyboard } from "react-native";
 import { useStore, useActions } from "easy-peasy";
 import { Button } from "react-native-paper";
@@ -9,6 +9,7 @@ import { Section, PasswordInputX, InputX, ButtonX } from "../../Components";
 
 import useTheme from "../../Themes/Context";
 import useAuth from "../../Services/Auth";
+import { showInfoToast } from "../../Lib/Toast";
 
 export default () => {
 	const onChange = useActions(actions => actions.login.onLoginInputChange);
@@ -31,11 +32,17 @@ export default () => {
 
 	const loginUser = () => {
 		Keyboard.dismiss();
+		
+		if(!username || !password){
+			showInfoToast("Username and password are mandatory, try again !")
+		}
+
 		login({ username, password });
 	};
 	
 	const loading = status == STATUS.FETCHING;
 	console.log('LOG_login',loading);
+	
 	
 	return (
 		<LoadingActionContainer>

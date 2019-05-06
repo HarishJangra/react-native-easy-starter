@@ -29,6 +29,7 @@
     "react-native-keychain": "^3.1.1",
     "react-native-paper": "^2.15.2",
     "react-native-reanimated": "^1.0.1",
+    "react-native-tiny-toast": "^1.0.3",
     "react-native-vector-icons": "^6.4.2",
     "react-navigation": "^3.9.0",
     "react-navigation-animated-switch": "^0.2.0"

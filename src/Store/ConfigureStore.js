@@ -7,7 +7,8 @@ let devTools = composeWithDevTools({
 	name: appName,
 	realtime: true,
 	hostname:'192.168.0.150',
-	port:8081,
+	port:8000,
+	injectserver:"react-native",
 	trace: true
 });
 
