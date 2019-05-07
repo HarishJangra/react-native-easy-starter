@@ -11,6 +11,7 @@ import MainStack from "./MainStack";
 import DemoStack from './DemoStack'
 import AppStateContext from "../Services/Auth/AppContext";
 import AppUpdate from "../Screens/AppUpdate";
+import BottomTabStack from './BottomTabStack';
 
 const Root = { screen: LaunchScreen };
 
@@ -36,10 +37,7 @@ const PrimaryNav = createAnimatedSwitchNavigator(
 		  ),
 		// Default config for all screens
 		headerMode: "none",
-		initialRouteName: Path.LOADING,
-		navigationOptions: {
-			// headerStyle: styles.header
-		}
+		initialRouteName: Path.LOADING,	
 	}
 );
 

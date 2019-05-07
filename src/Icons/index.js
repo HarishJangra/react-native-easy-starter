@@ -24,7 +24,7 @@ export const ICON_TYPE = {
 	MATERIAL_COMMUNITY: "MATERIALCOMMUNITY"
 };
 
-export const IconX = ({ origin, name, color, size, paddingLeft }) => {
+export const IconX = ({ origin, name, color, size, paddingLeft, style }) => {
 	let colorx = color || "#aaaaaa";
 	let sizex = size || 24;
 	let namex = name || "right";
@@ -78,7 +78,7 @@ export const IconX = ({ origin, name, color, size, paddingLeft }) => {
 			name={namex}
 			size={sizex}
 			color={colorx}
-			style={{ paddingLeft: paddingx }}
+			style={[{ paddingLeft: paddingx }, style]}
 		/>
 	);
 };

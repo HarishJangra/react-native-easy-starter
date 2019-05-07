@@ -42,6 +42,7 @@ const ThemeConsumer = props => {
 		<PaperProvider theme={theme}>
 			<AppContextProvider>
 				<PrimaryNav
+					screenProps={{theme}}
 					ref={nav => NavigationService.setTopLevelNavigator(nav)}
 				/>
 			</AppContextProvider>
