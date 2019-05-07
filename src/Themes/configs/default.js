@@ -6,7 +6,7 @@ const theme = {
 	roundness: 5,
 	colors: {
 		...DefaultTheme.colors,
-		primary: "#006E90",
+		primary: "#99C24D",
 		accent: "#99C24D",
 		background: "#fafafa",
 		header:'#ffffff'

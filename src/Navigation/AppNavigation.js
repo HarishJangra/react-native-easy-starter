@@ -19,7 +19,7 @@ const Root = { screen: LaunchScreen };
 const PrimaryNav = createAnimatedSwitchNavigator(
 	{
 
-		[Path.MAIN_APP]: BottomTabStack,
+		[Path.MAIN_APP]: MainStack,
 		//[Path.MAIN_APP]: DemoStack,
 		[Path.LOGIN_STACK]: LoginStack,
 		[Path.LOADING]: Root

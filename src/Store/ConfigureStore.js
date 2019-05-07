@@ -16,8 +16,8 @@ export default (model, api) => {
 	return createStore(model, {
 		/**
 		 * for api injecting using injections
-		 * injections: { api },
 		 */
+		injections: { api },
 		compose: devTools
 	});
 };

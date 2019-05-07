@@ -12,6 +12,8 @@ let navigator;
  * This function is called when the RootScreen is created to set the navigator instance to use.
  */
 function setTopLevelNavigator(navigatorRef) {
+	console.log('LOG_navigator',navigatorRef);
+	
 	navigator = navigatorRef;
 }
 
@@ -59,7 +61,7 @@ function navigateAndReset(routeName, params) {
 const NavigationService = {
 	navigate,
 	navigateAndReset,
-	setTopLevelNavigator
+	setTopLevelNavigator,
 };
 
 export default NavigationService;

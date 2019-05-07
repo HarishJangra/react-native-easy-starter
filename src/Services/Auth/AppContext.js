@@ -7,6 +7,7 @@ import Routes from "../../Navigation/Routes";
 import { useActions, useStore } from "easy-peasy";
 import useCheckVersion from '../CheckVersion'
 import { ApiService } from '../../Store';
+import { showLoading, hideLoading } from "../../Lib/Toast";
 
 const AppStateContext = React.createContext();
 
@@ -35,9 +36,11 @@ export const AppContextProvider = props => {
 	// }
 
 	async function logout() {
+		showLoading();
 		const reset = resetLoginCredentials();
 		if (reset) {
 			// do logout
+			hideLoading()
 			setState(APP_STATE.PUBLIC);
 		}
 	}

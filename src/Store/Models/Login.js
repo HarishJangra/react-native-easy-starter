@@ -8,7 +8,9 @@ import {minutesSinceTime} from '../../Utils/DateHelper'
 import { showErrorToast, showLoading } from "../../Lib/Toast";
 
 
-const checkRefreshToken = thunk(async(actions) => {
+const checkRefreshToken = thunk(async(actions , payload , {injections}) => {
+	const {api} = injections
+
 	const credentials = await getLoginCredentials();
 	if (credentials) {
 		const prev = credentials.timestamp
@@ -16,9 +18,9 @@ const checkRefreshToken = thunk(async(actions) => {
 
 			if(minutes >= 1350){
 				console.log('LOG_need to refresh', minutes);
-				const response = await ApiService.refreshUser(credentials.refresh_token)		
+				const response = await api.refreshUser(credentials.refresh_token)		
 				if(response.ok){
-					ApiService.setAuthorizationHeader(response.data.access_token)		
+					api.setAuthorizationHeader(response.data.access_token)		
 					actions.changeAppState(APP_STATE.PRIVATE);		
 
 					await setLoginCredentials(
@@ -32,7 +34,7 @@ const checkRefreshToken = thunk(async(actions) => {
 					actions.changeAppState(APP_STATE.PUBLIC);
 				}
 			}else {
-				ApiService.setAuthorizationHeader(credentials.access_token)
+				api.setAuthorizationHeader(credentials.access_token)
 				actions.changeAppState(APP_STATE.PRIVATE);		
 			}
 	} else {
@@ -56,7 +58,7 @@ const loginUser = thunk(async (actions, payload , {dispatch}) => {
 		);
 	}else {
 		 showErrorToast("Error in login , Please check your login credentials !")
-		actions.updateStatus(STATUS.FAILED)
+		 actions.updateStatus(STATUS.FAILED)
 	}
 });
 

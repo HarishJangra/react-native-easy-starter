@@ -2,6 +2,8 @@ import React from 'react'
 import Toast from 'react-native-tiny-toast'
 import colors from '../../Themes/Colors';
 
+let toast;
+
 export default function showToast(message, type, duration){
     Toast.show(message , {
         position: -1,
@@ -16,15 +18,21 @@ export default function showToast(message, type, duration){
     })
 }
 
+export function hideLoading ( ){
+    Toast.hide(toast)
+}
 
 export function showLoading (message =""){
-    Toast.showLoading(message, {
+   
+    toast = Toast.showLoading(message, {
         position:0,
         containerStyle:{
-          backgroundColor:'transparent'  
+          padding:30,
+          backgroundColor:'rgba(0,0,0, 0.7)'
         },
-        textColor:'cyan',
-        maskColor:'rgba(200, 200, 200, 0.5)'
+        textColor:'white',
+        textstyle:{fontSize:16}
+        // maskColor:'rgba(10, 10, 10, 0.5)'
     })
 
 }

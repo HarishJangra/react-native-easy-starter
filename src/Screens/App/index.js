@@ -7,10 +7,12 @@ import NavigationStyles from "../../Styles/NavigationStyles";
 import NavigationService from "../../Navigation";
 import useAuth from "../../Services/Auth";
 import useTheme from "../../Themes/Context";
+import { redTheme } from "../../Themes";
+import metrics from '../../Themes/Metrics';
 
 const MainScreen = ({navigation}) => {
 	const { state, logout } = useAuth();
-	const {theme} = useTheme()
+	const {theme, changeTheme} = useTheme()
 	
 	useEffect(() => {
 		navigation.setParams({headerColor: theme.colors.header})
@@ -42,10 +44,11 @@ const MainScreen = ({navigation}) => {
 MainScreen.navigationOptions = ({navigation})=> {
 	// console.log('LOG_navigagtion',navigation);
 	return {
-		headerStyle:[NavigationStyles.header_statusBar, {backgroundColor:navigation.getParam('headerColor' , '#334466')}],
-		headerTitle: "HOME",
+		headerStyle:[NavigationStyles.header_statusBar, {elevation:1,backgroundColor:navigation.getParam('headerColor' , '#334466')}],
+        headerTitle: "NOTIFICATIONS ",
+        headerTintColor:['black'],
 		headerTitleStyle: {
-			width: 100,
+			width: metrics.screenWidth,
 			fontWeight: "700"
 		}	
 	}

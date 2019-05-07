@@ -99,8 +99,8 @@ export default () => {
 
 			<ButtonX
 				mode="text"
-				// onPress={() => panelRef.current.show()} 
-				onPress={()=> {}}
+				onPress={() => panelRef.current.show()} 
+				// onPress={()=> {}}
 				label=" NEED HELP "
 			/>
 
