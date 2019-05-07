@@ -9,6 +9,8 @@ import { Provider as PaperProvider } from "react-native-paper";
 
 import  { ThemeProvider } from "./Themes/Context/ThemeContext";
 import { AppContextProvider } from "./Services/Auth/AppContext";
+import { LocaleContextProvider } from './i18n/LocaleContext';
+
 
 import { Screen } from "./Components";
 import colors from "./Themes/Colors";
@@ -21,12 +23,14 @@ const store = createStore();
 export default () => {
 	return (
 		<Screen>			
-			<StoreProvider store={store}>
-			<StatusBar translucent backgroundColor={"rgba(0,0,0,0.2)"}/>
-				<ThemeProvider>
-					<ThemeConsumer />
-				</ThemeProvider>
-			</StoreProvider>
+			<LocaleContextProvider>
+				<StoreProvider store={store}>
+				<StatusBar translucent backgroundColor={"rgba(0,0,0,0.2)"}/>
+					<ThemeProvider>
+						<ThemeConsumer />
+					</ThemeProvider>
+				</StoreProvider>
+			</LocaleContextProvider>
 		</Screen>
 	);
 };

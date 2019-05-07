@@ -7,11 +7,19 @@ import NavigationStyles from "../../Styles/NavigationStyles";
 import NavigationService from "../../Navigation";
 import useAuth from "../../Services/Auth";
 import useTheme from "../../Themes/Context";
+import useTranslation from "../../i18n";
+import { LOCALES } from '../../Constants/index';
 
 const MainScreen = ({navigation}) => {
 	const { state, logout } = useAuth();
 	const {theme} = useTheme()
+
+	const {t, locale, changeLocale} = useTranslation()
 	
+	const _changeLocale = () => {
+		changeLocale(locale == LOCALES.HINDI ? LOCALES.ENGLISH : LOCALES.HINDI)
+	}
+
 	useEffect(() => {
 		navigation.setParams({headerColor: theme.colors.header})
 	}, [])
@@ -24,7 +32,7 @@ const MainScreen = ({navigation}) => {
 				}}
 			>
 				<Text style={{ fontSize: 24, color: colors.green300 }}>
-					MAIN SCREEN
+					{t('welcome')}
 				</Text>
 
 				<ButtonX
@@ -32,6 +40,14 @@ const MainScreen = ({navigation}) => {
 					color={theme.colors.accent}
 					label="LOGOUT"
 					onPress={logout}
+				/>
+
+				<ButtonX
+					dark={true}
+					mode="outline"
+					color={theme.colors.accent}
+					label="CHANGE LOCALE"
+					onPress={_changeLocale}
 				/>
 
 			</Container>
