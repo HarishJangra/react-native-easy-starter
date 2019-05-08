@@ -47,15 +47,7 @@ export default createMaterialBottomTabNavigator({
   activeColor: '#f0edf6',
   shifting:true,
   labeled:false,
-  inactiveColor: 'rgba(255,255,255,0.6)',
-//   tabBarComponent:(props)=> {
-//     console.log('LOG_tabbar',props);    
-//     return(
-//         <View>
-//         </View>
-//     )
-//   },
-  
+  inactiveColor: 'rgba(255,255,255,0.4)',
 }
 )
 

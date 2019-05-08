@@ -1,4 +1,5 @@
 import { NavigationActions, StackActions } from "react-navigation";
+import { DrawerActions } from 'react-navigation-drawer';
 
 /**
  * The navigation is implemented as a service so that it can be used outside of components, for example in sagas.
@@ -58,8 +59,18 @@ function navigateAndReset(routeName, params) {
 	);
 }
 
+
+function toggleDrawer(){
+	console.log('LOG_toggleDrawer', DrawerActions);
+	
+	navigator.dispatch(
+		DrawerActions.toggleDrawer()
+	)
+}
+
 const NavigationService = {
 	navigate,
+	toggleDrawer,
 	navigateAndReset,
 	setTopLevelNavigator,
 };

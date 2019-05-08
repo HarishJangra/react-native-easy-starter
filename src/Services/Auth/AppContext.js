@@ -17,7 +17,6 @@ export const AppContextProvider = props => {
 		{
 			loginUser : actions.login.loginUser, 
 			setState : actions.login.changeAppState,
-			profileRequest: actions.user.requestUserProfile,	
 			checkLogin: actions.login.checkRefreshToken		
 		}
 	));
@@ -48,7 +47,6 @@ export const AppContextProvider = props => {
 		console.log("LOG_effect state reactor", state);
 
 		if (state == APP_STATE.PRIVATE) {	
-			profileRequest()	
 			NavigationService.navigate(Routes.MAIN_APP);
 		} else if (state == APP_STATE.PUBLIC) {
 			NavigationService.navigate(Routes.LOGIN_STACK);

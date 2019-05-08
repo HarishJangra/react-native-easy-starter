@@ -6,6 +6,10 @@ import android.view.ViewGroup;
 import android.annotation.TargetApi;
 import android.view.WindowInsets;
 import android.os.Build;
+import com.facebook.react.ReactActivityDelegate;
+import com.facebook.react.ReactRootView;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+
 
 
 import com.facebook.react.ReactActivity;
@@ -31,6 +35,15 @@ public class MainActivity extends ReactActivity {
         return "easy_boiler";
     }
 
+  @Override
+  protected ReactActivityDelegate createReactActivityDelegate() {
+    return new ReactActivityDelegate(this, getMainComponentName()) {
+      @Override
+      protected ReactRootView createRootView() {
+       return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      }
+    };
+  }
 
     @TargetApi(20)
     private void setTranslucent() {

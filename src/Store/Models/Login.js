@@ -8,7 +8,7 @@ import {minutesSinceTime} from '../../Utils/DateHelper'
 import { showErrorToast, showLoading } from "../../Lib/Toast";
 
 
-const checkRefreshToken = thunk(async(actions , payload , {injections}) => {
+const checkRefreshToken = thunk(async(actions , payload , {dispatch,injections}) => {
 	const {api} = injections
 
 	const credentials = await getLoginCredentials();
@@ -35,6 +35,7 @@ const checkRefreshToken = thunk(async(actions , payload , {injections}) => {
 				}
 			}else {
 				api.setAuthorizationHeader(credentials.access_token)
+				dispatch.user.requestUserProfile()
 				actions.changeAppState(APP_STATE.PRIVATE);		
 			}
 	} else {

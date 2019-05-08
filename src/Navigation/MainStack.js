@@ -8,7 +8,7 @@ import Routes from "./Routes";
 
 export default createStackNavigator(
 	{
-		[Path.HOME_SCREEN]: {
+		[Path.HOME_TABS]: {
 			screen: BottomTabStack,
 			path:"tabs"
 		}
@@ -16,7 +16,7 @@ export default createStackNavigator(
 	{
 		// Default config for all screens
 		headerMode: "none",
-		initialRouteName: Path.HOME_SCREEN,
+		initialRouteName: Path.HOME_TABS,
 		headerLayoutPreset: "center",
 	}
 );

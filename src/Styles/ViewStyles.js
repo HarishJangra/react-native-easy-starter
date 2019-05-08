@@ -11,6 +11,10 @@ const viewStyles = StyleSheet.create({
 
 	section: {
 		...appStyles.screens.section
+	},
+	center:{
+		alignItems:'center',
+		justifyContent:'center'
 	}
 });
 

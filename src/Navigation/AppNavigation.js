@@ -12,7 +12,7 @@ import DemoStack from './DemoStack'
 import AppStateContext from "../Services/Auth/AppContext";
 import AppUpdate from "../Screens/AppUpdate";
 import BottomTabStack from './BottomTabStack';
-
+import DrawerStack from './DrawerStack'
 const Root = { screen: LaunchScreen };
 
 // Manifest of possible screens
@@ -20,7 +20,7 @@ const PrimaryNav = createAnimatedSwitchNavigator(
 	{
 
 		[Path.MAIN_APP]: {
-			screen:MainStack,
+			screen:DrawerStack,
 		  path:"home"
 		},
 		//[Path.MAIN_APP]: DemoStack,
