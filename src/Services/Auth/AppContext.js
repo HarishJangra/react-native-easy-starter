@@ -24,23 +24,10 @@ export const AppContextProvider = props => {
 	const version = useCheckVersion() 
 	const  state = useStore(state => state.login.appstate);
 
-	// async function checkLogin() {
-	// 	const credentials = await getLoginCredentials();
-	// 	if (credentials) {
-	
-	// 		ApiService.setAuthorizationHeader(credentials.access_token)
-	// 		setState(APP_STATE.PRIVATE);
-	// 	} else {
-	// 		setState(APP_STATE.PUBLIC);
-	// 	}
-	// }
-
 	async function logout() {
-		showLoading();
 		const reset = resetLoginCredentials();
 		if (reset) {
 			// do logout
-			hideLoading()
 			setState(APP_STATE.PUBLIC);
 		}
 	}

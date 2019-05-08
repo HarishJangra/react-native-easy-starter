@@ -15,6 +15,7 @@ import { LocaleContextProvider } from './i18n/LocaleContext';
 import { Screen } from "./Components";
 import colors from "./Themes/Colors";
 import useTheme from "./Themes/Context";
+import { APP_PREFIX } from './Config/index';
 
 //create the easy store
 const store = createStore();
@@ -42,6 +43,7 @@ const ThemeConsumer = props => {
 		<PaperProvider theme={theme}>
 			<AppContextProvider>
 				<PrimaryNav
+				    uriPrefix={APP_PREFIX}
 					screenProps={{theme}}
 					ref={nav => NavigationService.setTopLevelNavigator(nav)}
 				/>

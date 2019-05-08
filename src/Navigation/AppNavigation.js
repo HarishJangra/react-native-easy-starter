@@ -19,10 +19,13 @@ const Root = { screen: LaunchScreen };
 const PrimaryNav = createAnimatedSwitchNavigator(
 	{
 
-		[Path.MAIN_APP]: MainStack,
+		[Path.MAIN_APP]: {
+			screen:MainStack,
+		  path:"home"
+		},
 		//[Path.MAIN_APP]: DemoStack,
-		[Path.LOGIN_STACK]: LoginStack,
-		[Path.LOADING]: Root
+		[Path.LOGIN_STACK]: {screen:LoginStack, path:'login'},
+		[Path.LOADING]:  Root
 	},
 	{
 		transition: (
@@ -43,10 +46,14 @@ const PrimaryNav = createAnimatedSwitchNavigator(
 
 const ModalNav = createStackNavigator(
 	{
-		Main : PrimaryNav,
+		Main : {
+			screen:PrimaryNav, 
+			path:'app'
+		},
 		
 		AppUpdate :  {
-		  screen: AppUpdate,
+			screen: AppUpdate,
+			path:'update'
 		},
 	},
 	  {

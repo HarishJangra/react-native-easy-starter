@@ -9,6 +9,7 @@ import useAuth from "../../Services/Auth";
 import useTheme from "../../Themes/Context";
 import useTranslation from "../../i18n";
 import { LOCALES } from '../../Constants/index';
+import metrics from "../../Themes/Metrics";
 
 const MainScreen = ({navigation}) => {
 	const { state, logout } = useAuth();

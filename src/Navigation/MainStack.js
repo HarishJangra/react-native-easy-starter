@@ -10,6 +10,7 @@ export default createStackNavigator(
 	{
 		[Path.HOME_SCREEN]: {
 			screen: BottomTabStack,
+			path:"tabs"
 		}
 	},
 	{

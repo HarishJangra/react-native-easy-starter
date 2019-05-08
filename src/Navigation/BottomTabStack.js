@@ -19,13 +19,15 @@ const NotificationStack =  createStackNavigator({App})
 export default createMaterialBottomTabNavigator({
     [Routes.HOME_SCREEN]: {
         screen: HomeStack,
+        path:'home',
         navigationOptions:{
-            title:'HOME',
+            title:'HOME',            
             tabBarIcon: getHomeIcon,
         }
     },
     [Routes.PROFILE_SCREEN] : {
         screen: StudentsStack,
+        path:'students',
         navigationOptions:{
             headerTitle:'STUDENTS',
             title:'STUDENTS',
@@ -33,7 +35,8 @@ export default createMaterialBottomTabNavigator({
         }
     },
     [Routes.NOTIFICATION_SCREEN] : {
-        screen: NotificationStack,        
+        screen: NotificationStack,
+        path:'notifications',        
         navigationOptions:{
             tabBarIcon: getNotificationIcon,            
             title:'NOTIFICATIONS',
@@ -43,6 +46,7 @@ export default createMaterialBottomTabNavigator({
   initialRouteName: Routes.HOME_SCREEN,
   activeColor: '#f0edf6',
   shifting:true,
+  labeled:false,
   inactiveColor: 'rgba(255,255,255,0.6)',
 //   tabBarComponent:(props)=> {
 //     console.log('LOG_tabbar',props);    
