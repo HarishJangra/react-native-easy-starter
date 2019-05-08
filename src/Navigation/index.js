@@ -1,5 +1,5 @@
 import { NavigationActions, StackActions } from "react-navigation";
-import { DrawerActions } from 'react-navigation-drawer';
+import { DrawerActions } from "react-navigation-drawer";
 
 /**
  * The navigation is implemented as a service so that it can be used outside of components, for example in sagas.
@@ -13,8 +13,6 @@ let navigator;
  * This function is called when the RootScreen is created to set the navigator instance to use.
  */
 function setTopLevelNavigator(navigatorRef) {
-	console.log('LOG_navigator',navigatorRef);
-	
 	navigator = navigatorRef;
 }
 
@@ -25,8 +23,7 @@ function setTopLevelNavigator(navigatorRef) {
  * @param params Route parameters.
  */
 function navigate(routeName, params) {
-	console.log("LOG_navigation", routeName, params);
-
+	console.log("LOG_navigate", routeName, params);
 	navigator.dispatch(
 		NavigationActions.navigate({
 			routeName,
@@ -59,20 +56,15 @@ function navigateAndReset(routeName, params) {
 	);
 }
 
-
-function toggleDrawer(){
-	console.log('LOG_toggleDrawer', DrawerActions);
-	
-	navigator.dispatch(
-		DrawerActions.toggleDrawer()
-	)
+function toggleDrawer() {
+	navigator.dispatch(DrawerActions.toggleDrawer());
 }
 
 const NavigationService = {
 	navigate,
 	toggleDrawer,
 	navigateAndReset,
-	setTopLevelNavigator,
+	setTopLevelNavigator
 };
 
 export default NavigationService;

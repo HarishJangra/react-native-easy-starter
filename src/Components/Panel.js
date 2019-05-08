@@ -45,7 +45,7 @@ function BottomPanel(props, ref) {
 				margin: 0
 			}}
 		>
-			<Container style={[{ flex: 0.5 }]}>
+			<Container style={[{ flex: 0.5, backgroundColor: "black" }]}>
 				<View
 					style={{ flexDirection: "row", justifyContent: "flex-end" }}
 				>

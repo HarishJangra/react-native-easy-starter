@@ -2,7 +2,7 @@ import { create } from "apisauce";
 import { BASE_URL } from "../../Config";
 import apiMonitor from "./Monitor";
 import { Platform } from "react-native";
-import setInterceptor from './Interceptor'
+import setInterceptor from "./Interceptor";
 
 export const URIS = {
 	VERSION: "app/version",
@@ -10,10 +10,7 @@ export const URIS = {
 	REFRESH: "clients/api/refresh",
 	LOGOUT: "logout",
 	USER_PROFILE: "user/profile",
-	UPDATE_FCM_TOKEN: "user/update",
-
-
-
+	UPDATE_FCM_TOKEN: "user/update"
 };
 
 const createApiClient = (baseURL = BASE_URL) => {
@@ -31,19 +28,26 @@ const createApiClient = (baseURL = BASE_URL) => {
 	api.addMonitor(apiMonitor);
 	setInterceptor(api);
 
-	const setAuthorizationHeader = access_token =>{		
+	const setAuthorizationHeader = access_token => {
 		api.setHeader("Authorization", "Bearer " + access_token);
-		console.log('LOG_setAccessToken');		
-	}
+		console.log("LOG_setAccessToken");
+	};
 
-	const checkAppVersion = (os = Platform.OS, app = "parent") =>
+	const checkAppVersion = (os = Platform.OS, app = "parent") => {
+		console.log("LOG_request", URIS.VERSION, { os, app });
 		api.get(URIS.VERSION, { os, app });
-
+	};
 	const loginUser = payload => api.post(URIS.LOGIN, payload);
-	
-	const refreshUser = refresh_token => api.post(URIS.REFRESH,{refresh_token}, {headers:{'_retry':true}})
 
-	const profileRequest = () => api.get(URIS.USER_PROFILE, { include: "studentsWithSchool,fcm,roles"})
+	const refreshUser = refresh_token =>
+		api.post(
+			URIS.REFRESH,
+			{ refresh_token },
+			{ headers: { _retry: true } }
+		);
+
+	const profileRequest = () =>
+		api.get(URIS.USER_PROFILE, { include: "studentsWithSchool,fcm,roles" });
 
 	//kickoff our api functions
 	return {

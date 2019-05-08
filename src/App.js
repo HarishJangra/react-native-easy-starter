@@ -16,15 +16,24 @@ import colors from "./Themes/Colors";
 import useTheme from "./Themes/Context";
 import { APP_PREFIX } from "./Config/index";
 import BottomPanel from "./Components/Panel";
+import useNetInfo from "./Lib/NetInfo";
 
 export let BottomAlert = null;
 //create the easy store
 const store = createStore();
 
+const NetworkInfo = props => {
+	const netinfo = useNetInfo();
+	console.log("LOG_NETINFO", netinfo);
+
+	return null;
+};
+
 //return root component
 export default () => {
 	return (
 		<Screen>
+			<NetworkInfo />
 			<LocaleContextProvider>
 				<StoreProvider store={store}>
 					<StatusBar

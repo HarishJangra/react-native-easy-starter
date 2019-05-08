@@ -1,30 +1,33 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import NetInfo from "@react-native-community/netinfo";
 
 const inititalState = {
-  type: null, effectiveType: null
-}
+	type: null,
+	effectiveType: null
+};
 
-export default () => {
-  const [netInfo, setNetInfo] = useState(inititalState)
+const useNetInfo = () => {
+	const [netInfo, setNetInfo] = useState(inititalState);
 
-  onChange = (newState) => {
-    setNetInfo(newState)
-  }
+	onChange = newState => {
+		setNetInfo(newState);
+	};
 
-  useEffect(() => {
-    NetInfo.getConnectionInfo().then((connectionInfo) => {
-      setNetInfo(connectionInfo)
-    })
-  }, [])
+	useEffect(() => {
+		NetInfo.getConnectionInfo().then(connectionInfo => {
+			setNetInfo(connectionInfo);
+		});
+	}, []);
 
-  useEffect(() => {
-    NetInfo.addEventListener('connectionChange', onChange)
+	useEffect(() => {
+		NetInfo.addEventListener("connectionChange", onChange);
 
-    return () => {
-      NetInfo.removeEventListener('connectionChange', onChange)
-    }
-  }, [])
+		return () => {
+			NetInfo.removeEventListener("connectionChange", onChange);
+		};
+	}, []);
 
-  return netInfo
-}
+	return netInfo;
+};
+
+export default useNetInfo;
