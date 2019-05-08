@@ -6,10 +6,10 @@ import BaseModel from "./Base";
 const checkAppVersion = thunk(async (actions, payload) => {
 	actions.updateStatus(STATUS.FETCHING);
 	let response = await ApiService.checkAppVersion();
-	if (response.ok) {
-		// actions.setVersion(9)
-		actions.updateStatus(STATUS.SUCCESS);
-	}
+	// if (response.ok) {
+	// 	// actions.setVersion(9)
+	// 	actions.updateStatus(STATUS.SUCCESS);
+	// }
 });
 
 const AppModel = {

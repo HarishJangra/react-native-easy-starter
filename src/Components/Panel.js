@@ -45,7 +45,7 @@ function BottomPanel(props, ref) {
 				margin: 0
 			}}
 		>
-			<Container style={[{ flex: 0.5, backgroundColor: "black" }]}>
+			<Container style={[{ flex: 0.5 }]}>
 				<View
 					style={{ flexDirection: "row", justifyContent: "flex-end" }}
 				>
@@ -58,15 +58,15 @@ function BottomPanel(props, ref) {
 					</Button>
 				</View>
 
-				<Container style={{ padding: 20, backgroundColor: "#fafafa" }}>
+				<Container style={{ padding: 20, backgroundColor: "black" }}>
 					<Text
 						style={{
 							fontSize: 20,
 							fontWeight: "bold",
-							color: "black"
+							color: "white"
 						}}
 					>
-						An error occured while login. Please try again
+						Do you want to reset your password?
 					</Text>
 				</Container>
 			</Container>

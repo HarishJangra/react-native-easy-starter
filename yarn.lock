@@ -5944,6 +5944,11 @@ react-native-animatable@^1.3.1, react-native-animatable@^1.3.2:
   dependencies:
     prop-types "^15.5.10"
 
+react-native-app-intro-slider@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-app-intro-slider/-/react-native-app-intro-slider-2.0.1.tgz#947fece38d2332d9cdc5381344b0c47ab822984b"
+  integrity sha512-Bg/hQ+fU7IJDaZYXApH7xWW7dxdb0buDZ46GGhOerOmJh6GMq5WIxtimYKP8u1Pumq+hGrbSRFzT1vhYlPkDAw==
+
 react-native-code-push@^5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/react-native-code-push/-/react-native-code-push-5.6.0.tgz#e905d32d188c5f7bcff446d813271d03a69543fd"
@@ -6038,13 +6043,6 @@ react-native-safe-area-view@^0.13.0:
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.22.tgz#7a120377b52aa9bbb94d0b8541a014026be9289b"
   integrity sha512-kSyAt0AeVU6N7ZonfV6dP6iZF8B7Bce+tk3eujXhzBGsLg0VSLnU7uE9VqJF0xdQrHR91ZjGgVMieo/8df9KTA==
 
-react-native-tab-view@^1.0.0:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-1.3.5.tgz#f9d8fa5750422f0bec42efd9f34b3666f4bb37c1"
-  integrity sha512-D+pJ/OX+NQ+Jsbqbs2SF60mZWHnC+RuQwRD362hlzN2NhAbcVA7XHCqRgP6Q2iPG2bznbyThZkyi1UI8XaCsDw==
-  dependencies:
-    prop-types "^15.6.1"
-
 react-native-tab-view@^1.2.0, react-native-tab-view@^1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-1.3.4.tgz#63fc3eb09652651d0ea0e016cff0f3a5e535f4de"
@@ -6138,29 +6136,10 @@ react-navigation-drawer@1.2.1:
   dependencies:
     react-native-tab-view "^1.2.0"
 
-react-navigation-material-bottom-tabs@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-navigation-material-bottom-tabs/-/react-navigation-material-bottom-tabs-1.0.0.tgz#4fc3f21c57891e3a5bff88679afd84801d69adb7"
-  integrity sha512-fmPOt82xYpNYWh7gDdk38ce2TDmKuGnVaC7Pd67Ss62bjZ2CwmX9kOXExThtdY039zDGIcABDq9h65c8TQeTUA==
-  dependencies:
-    hoist-non-react-statics "^2.5.0"
-    prop-types "^15.6.0"
-    react-navigation-tabs "1.0.0"
-
 react-navigation-stack@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-1.3.0.tgz#34bbddb068c094c9ab843e36059b9fd92b728250"
   integrity sha512-ouyD1GkRksJSGuvAuqrJnlJnZ5g2g/+/WB/MTa8BzjSBvyOgruD5TrmEkpViCOMr1R17C8D4Htln90H4D+NV3Q==
-
-react-navigation-tabs@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-1.0.0.tgz#f9fe3eb8b77787551d017d1279ec049c3bed4950"
-  integrity sha512-2oWPk+XfwHihgdOBhuAuzzU94NPhwdvuzseL30R3VsggunfVB4cUtNiQjRP4rVVpdGgJygQtws1eRbUsQ9cECA==
-  dependencies:
-    hoist-non-react-statics "^2.5.0"
-    prop-types "^15.6.1"
-    react-lifecycles-compat "^3.0.4"
-    react-native-tab-view "^1.0.0"
 
 react-navigation-tabs@1.1.2:
   version "1.1.2"

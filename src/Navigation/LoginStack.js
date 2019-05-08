@@ -1,14 +1,17 @@
 import Login from "../Screens/Login";
 import { createStackNavigator } from "react-navigation";
-import Path from "./Routes";
+import Routes from "./Routes";
+import AppIntro from "../Screens/AppIntro";
 
 export default createStackNavigator(
 	{
-		[Path.LOGIN_SCREEN]: { screen: Login }
+		[Routes.APP_INTRO]: AppIntro,
+		[Routes.LOGIN_SCREEN]: Login
 	},
 	{
 		// Default config for all screens
+		// mode:'modal'
 		headerMode: "none",
-		initialRouteName: Path.LOGIN_SCREEN
+		initialRouteName: Routes.APP_INTRO
 	}
 );
