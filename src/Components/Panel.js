@@ -1,54 +1,79 @@
-import React from 'react'
-import {View,ActivityIndicator, Text, TouchableNativeFeedback } from 'react-native'
-import SlidingUpPanel from 'rn-sliding-up-panel'
-import { useRef, useImperativeHandle, forwardRef } from 'react';
-import {Container} from '../Components'
-import { Button } from 'react-native-paper';
+import React, { useState } from "react";
+import {
+	View,
+	ActivityIndicator,
+	Text,
+	TouchableNativeFeedback
+} from "react-native";
+import { useRef, useImperativeHandle, forwardRef } from "react";
+import { Container } from "../Components";
+import { Button } from "react-native-paper";
+import Modal from "react-native-modal";
+import metrics from "../Themes/Metrics";
+import viewStyles from "../Styles/ViewStyles";
 
-function SlidingPanel (props, ref) {
+function BottomPanel(props, ref) {
+	const [visible, setVisibility] = useState(false);
 
-    const panelRef = useRef()
+	const _hide = () => {
+		setVisibility(false);
+	};
 
-    useImperativeHandle(ref, () => ({
-        show :(toValue, velocity) => {
-            console.log('LOG_show');
-            
-            panelRef.current.show(toValue, velocity)
-        },
-        hide: () => {
-            panelRef.current.hide()
-        }
-    }));
+	const panelRef = useRef();
 
-    return (
-            <SlidingUpPanel
-                 ref={panelRef}  
-                //  showBackdrop={false}
-                 draggableRange={{top:300, bottom:0}}             
-                 height={300}
-                 allowDragging={false}
-                 
-                 >
-                    <Container>
-                    <View style={{flexDirection:'row', justifyContent:'flex-end'}}>
-                    <Button
-                        style={{marginBottom:10}}
-                        color={'white'}
-                        onPress={()=>panelRef.current.hide()}
-                    >
-                        OK
-                    </Button>
-                 </View>
-                 <Container style={{padding:20, backgroundColor:'#fafafa'}}>
-                    <Text style={{fontSize:18, fontWeight:'bold', color:'black'}}> Do you want to reset your password?  </Text>
-                 </Container>
+	useImperativeHandle(ref, () => ({
+		show: () => {
+			setVisibility(true);
+		},
+		hide: () => {
+			_hide();
+		}
+	}));
 
-                    </Container>
-                 </SlidingUpPanel>
-       
-    )
+	return (
+		<Modal
+			swipeDirection={["down", "right"]}
+			hideModalContentWhileAnimating
+			isVisible={visible}
+			avoidKeyboard={true}
+			swipeThreshold={100}
+			onSwipeComplete={() => _hide()}
+			onBackButtonPress={() => _hide()}
+			useNativeDriver={true}
+			style={{
+				justifyContent: "flex-end",
+				margin: 0
+			}}
+		>
+			<Container style={[{ flex: 0.5 }]}>
+				<View
+					style={{ flexDirection: "row", justifyContent: "flex-end" }}
+				>
+					<Button
+						style={{ marginBottom: 10 }}
+						color={"white"}
+						onPress={() => setVisibility(false)}
+					>
+						OK
+					</Button>
+				</View>
+
+				<Container style={{ padding: 20, backgroundColor: "#fafafa" }}>
+					<Text
+						style={{
+							fontSize: 20,
+							fontWeight: "bold",
+							color: "black"
+						}}
+					>
+						An error occured while login. Please try again
+					</Text>
+				</Container>
+			</Container>
+		</Modal>
+	);
 }
 
-SlidingPanel = forwardRef(SlidingPanel)
+BottomPanel = forwardRef(BottomPanel);
 
-export default SlidingPanel
+export default BottomPanel;

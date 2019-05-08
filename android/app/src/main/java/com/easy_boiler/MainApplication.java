@@ -3,6 +3,8 @@ package com.easy_boiler;
 import android.app.Application;
 //custom packages
 import com.facebook.react.ReactApplication;
+import com.reactnativecommunity.netinfo.NetInfoPackage;
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.swmansion.reanimated.ReanimatedPackage;
 import com.microsoft.codepush.react.CodePush;
 import com.oblador.keychain.KeychainPackage;
@@ -40,6 +42,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new NetInfoPackage(),
+            new AsyncStoragePackage(),
             new ReanimatedPackage(),
             new CodePush(BuildConfig.CODEPUSH_KEY, getApplicationContext(), BuildConfig.DEBUG),
             new KeychainPackage(),

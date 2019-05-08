@@ -5,12 +5,19 @@ import { Button } from "react-native-paper";
 import { ScrollView } from "react-native";
 import { STATUS } from "../../Constants";
 import LoadingActionContainer from "../../Components/LoadingActionContainer";
-import { Section,Container, PasswordInputX, InputX, ButtonX } from "../../Components";
+import {
+	Section,
+	Container,
+	PasswordInputX,
+	InputX,
+	ButtonX
+} from "../../Components";
 
 import useTheme from "../../Themes/Context";
 import useAuth from "../../Services/Auth";
 import { showInfoToast } from "../../Lib/Toast";
-import SlidingPanel from '../../Components/Panel';
+import BottomPanel from "../../Components/Panel";
+import { BottomAlert } from "../../App";
 
 export default () => {
 	const onChange = useActions(actions => actions.login.onLoginInputChange);
@@ -35,84 +42,88 @@ export default () => {
 
 	const loginUser = () => {
 		Keyboard.dismiss();
-		
-		if(!username || !password){
-			showInfoToast("Username and password are mandatory, try again !")
+
+		if (!username || !password) {
+			// BottomAlert && BottomAlert.show();
+			showInfoToast("Username and password are mandatory, try again !");
 		}
 
-		login({ username, password });
+		login({
+			username,
+			password
+		});
 	};
-	
-	const loading = status == STATUS.FETCHING;	
-	
+
+	const loading = status == STATUS.FETCHING;
+
 	return (
 		<Container>
+			<LoadingActionContainer>
+				<Section>
+					<Text
+						style={{
+							fontSize: 48,
+							fontWeight: "bold",
+							color: theme.colors.accent,
+							marginVertical: 60
+						}}
+					>
+						WELCOME
+					</Text>
+				</Section>
+				<Section>
+					<InputX
+						label="USER NAME"
+						// mode="outlined"
+						ref={inputUserName}
+						autoCapitalize="none"
+						returnKeyType={"next"}
+						onSubmitEditing={onSubmit}
+						onChangeText={text =>
+							onChange({
+								key: "username",
+								value: text
+							})
+						}
+						value={username}
+					/>
+					<PasswordInputX
+						ref={inputPassword}
+						value={password}
+						// mode="outlined"
+						label="PASSWORD"
+						returnKeyType={"go"}
+						onSubmitEditing={loginUser}
+						onChangeText={text =>
+							onChange({
+								key: "password",
+								value: text
+							})
+						}
+					/>
+				</Section>
+				<Section>
+					<ButtonX
+						loading={loading}
+						dark={true}
+						color={
+							loading ? theme.colors.accent : theme.colors.primary
+						}
+						onPress={loginUser}
+						label=" LOGIN "
+					/>
 
-		<LoadingActionContainer>
-		<Section>
-			<Text
-				style={{
-					fontSize: 48,
-					fontWeight: "bold",
-					color: theme.colors.accent,
-					marginVertical: 60
-				}}
-			>
-				WELCOME
-			</Text>
-		</Section>
-		<Section>
-			<InputX
-				label="USER NAME"
-				// mode="outlined"
-				ref={inputUserName}
-				autoCapitalize="none"
-				returnKeyType={"next"}
-				onSubmitEditing={onSubmit}
-				onChangeText={text =>
-					onChange({ key: "username", value: text })
-				}
-				value={username}
-			/>
+					<ButtonX
+						mode="text"
+						onPress={() => {
+							panelRef.current.show();
+						}}
+						label=" NEED HELP "
+					/>
+				</Section>
+			</LoadingActionContainer>
 
-			<PasswordInputX
-				ref={inputPassword}
-				value={password}
-				// mode="outlined"
-				label="PASSWORD"
-				returnKeyType={"go"}
-				onSubmitEditing={loginUser}
-				onChangeText={text =>
-					onChange({ key: "password", value: text })
-				}
-			/>
-		</Section>
-
-		<Section>
-			<ButtonX
-				loading={loading}
-				dark={true}
-				color={loading ? theme.colors.accent : theme.colors.primary}
-				onPress={ loginUser }
-				label=" LOGIN "
-			/>
-
-			<ButtonX
-				mode="text"
-				onPress={() => panelRef.current.show()} 
-				// onPress={()=> {}}
-				label=" NEED HELP "
-			/>
-
-		</Section>			
-
-		
-	</LoadingActionContainer>
-
-		<SlidingPanel 
-				ref={panelRef}
-			/>
+			<BottomPanel ref={panelRef} />
 		</Container>
-	
 	);
 };
