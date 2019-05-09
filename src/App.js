@@ -19,7 +19,6 @@ import BottomPanel from "./Components/Panel";
 import useNetInfo from "./Lib/NetInfo";
 import useTranslation from "./i18n";
 
-export let BottomAlert = null;
 //create the easy store
 const store = createStore();
 
@@ -46,12 +45,6 @@ export default () => {
 					</ThemeProvider>
 				</StoreProvider>
 			</LocaleContextProvider>
-
-			<BottomPanel
-				ref={ref => {
-					BottomAlert = ref;
-				}}
-			/>
 		</Screen>
 	);
 };

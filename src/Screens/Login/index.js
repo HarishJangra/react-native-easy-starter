@@ -17,7 +17,6 @@ import useTheme from "../../Themes/Context";
 import useAuth from "../../Services/Auth";
 import { showInfoToast } from "../../Lib/Toast";
 import BottomPanel from "../../Components/Panel";
-import { BottomAlert } from "../../App";
 import useTranslation from "../../i18n";
 
 export default () => {
@@ -45,7 +44,6 @@ export default () => {
 		Keyboard.dismiss();
 
 		if (!username || !password) {
-			// BottomAlert && BottomAlert.show();
 			showInfoToast("Username and password are mandatory, try again !");
 		}
 
@@ -114,10 +112,9 @@ export default () => {
 						label={t("login")}
 					/>
 
-			<Section>
-				<ButtonX
-					loading={loading}
-						}}
+					<ButtonX
+						mode={"text"}
+						onPress={() => panelRef.current.show()}
 						label=" NEED HELP "
 					/>
 				</Section>

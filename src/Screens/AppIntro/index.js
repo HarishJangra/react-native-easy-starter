@@ -44,25 +44,21 @@ const LanguageSlideItem = props => {
 const slides = [
 	{
 		key: "somethun",
-		title: "SCHOOLLOG",
-		renderExtra: LanguageSlideItem,
+		title: "slide 1",
+		text: "something cool text.",
+		// renderExtra: LanguageSlideItem,
 		backgroundColor: colors.blueJeans
 	},
 	{
 		key: "somethun-dos",
-		title: "SCHOOLLOG",
+		title: "slide2",
 		text: "Other cool stuff",
 		backgroundColor: colors.munshellGreen
 	},
+
 	{
 		key: "somethun-dos",
-		title: "SCHOOLLOG",
-		text: "Other cool stuff",
-		backgroundColor: colors.goldenRod
-	},
-	{
-		key: "somethun-dos",
-		title: "SCHOOLLOG",
+		title: "slide 3",
 		text: "Other cool stuff",
 		backgroundColor: colors.mystic
 	},

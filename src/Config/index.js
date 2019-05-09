@@ -1,2 +1,2 @@
-export const APP_PREFIX = "schoollog://";
-export const BASE_URL = "http://api.test.schoollog.in/v1/";
+export const APP_PREFIX = "easyboiler://";
+export const BASE_URL = "http://api.test.in/v1/";

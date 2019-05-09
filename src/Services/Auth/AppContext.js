@@ -5,23 +5,22 @@ import NavigationService from "../../Navigation";
 import Routes from "../../Navigation/Routes";
 
 import { useActions, useStore } from "easy-peasy";
-import useCheckVersion from '../CheckVersion'
-import { ApiService } from '../../Store';
+import useCheckVersion from "../CheckVersion";
+import { ApiService } from "../../Store";
 import { showLoading, hideLoading } from "../../Lib/Toast";
 
 const AppStateContext = React.createContext();
 
-export const AppContextProvider = props => {    
-	
-	const {loginUser, setState, profileRequest, checkLogin} = useActions(actions => (
-		{
-			loginUser : actions.login.loginUser, 
-			setState : actions.login.changeAppState,
-			checkLogin: actions.login.checkRefreshToken		
-		}
-	));
-	const version = useCheckVersion() 
-	const  state = useStore(state => state.login.appstate);
+export const AppContextProvider = props => {
+	const { loginUser, setState, profileRequest, checkLogin } = useActions(
+		actions => ({
+			loginUser: actions.login.loginUser,
+			setState: actions.login.changeAppState,
+			checkLogin: actions.login.checkLogin
+		})
+	);
+	const version = useCheckVersion();
+	const state = useStore(state => state.login.appstate);
 
 	async function logout() {
 		const reset = resetLoginCredentials();
@@ -38,15 +37,14 @@ export const AppContextProvider = props => {
 	// check loggedin on mount
 	useEffect(() => {
 		console.log("LOG_checklogin effect");
-		//cannot call async directly inside effect  react-warning
-		state == APP_STATE.UNKNOWN &&  checkLogin();
+		state == APP_STATE.UNKNOWN && checkLogin();
 	}, []);
 
-    // app state reactor
+	// app state reactor
 	useEffect(() => {
 		console.log("LOG_effect state reactor", state);
 
-		if (state == APP_STATE.PRIVATE) {	
+		if (state == APP_STATE.PRIVATE) {
 			NavigationService.navigate(Routes.MAIN_APP);
 		} else if (state == APP_STATE.PUBLIC) {
 			NavigationService.navigate(Routes.LOGIN_STACK);
