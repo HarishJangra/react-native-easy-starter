@@ -25,7 +25,6 @@ const useStorage = (key, defaultValue) => {
 		} catch (e) {
 		} finally {
 			updateStorageValue(newValue);
-			// getStorageValue();
 		}
 	}
 
