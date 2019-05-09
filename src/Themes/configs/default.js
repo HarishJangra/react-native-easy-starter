@@ -7,7 +7,7 @@ const theme = {
 	roundness: 5,
 	colors: {
 		...DefaultTheme.colors,
-		primary: colors.mystic,
+		primary: colors.tiffanyBlue,
 		accent: "#99C24D",
 		background: "#fafafa",
 		header: "#ffffff"

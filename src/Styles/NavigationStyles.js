@@ -5,26 +5,26 @@ import { isAndroid } from "../Constants";
 export default StyleSheet.create({
 	header: {
 		backgroundColor: "#313151",
-		height: 60,
+		height: 60
 	},
 	header_statusBar: {
 		backgroundColor: "white",
 		...getHeaderInfo()
-	
 	},
 
 	header_statusBar2: {
 		backgroundColor: "#513131",
-		...getHeaderInfo()	
+		...getHeaderInfo()
 	}
 });
 
-
-function getHeaderInfo(){
-	return isAndroid && Platform.Version > 20 ? {
-		height: 86,
-		paddingTop:26,
-	} : {
-		height:60
-	}
+function getHeaderInfo() {
+	return isAndroid && Platform.Version > 20
+		? {
+				height: 86,
+				paddingTop: 26
+		  }
+		: {
+				height: 60
+		  };
 }
