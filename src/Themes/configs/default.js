@@ -3,12 +3,13 @@ import { DefaultTheme } from "react-native-paper";
 const theme = {
 	...DefaultTheme,
 	dark: false,
-	roundness: 2,
+	roundness: 5,
 	colors: {
 		...DefaultTheme.colors,
-		primary: "#006E90",
+		primary: "#99C24D",
 		accent: "#99C24D",
-		background: "#fafafa"
+		background: "#fafafa",
+		header:'#ffffff'
 	}
 };
 

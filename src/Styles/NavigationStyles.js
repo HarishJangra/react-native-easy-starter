@@ -8,7 +8,7 @@ export default StyleSheet.create({
 		height: 60,
 	},
 	header_statusBar: {
-		backgroundColor: "#313151",
+		backgroundColor: "white",
 		...getHeaderInfo()
 	
 	},

@@ -13,7 +13,7 @@ const metrics = {
 
 	screenWidth: width < height ? width : height,
 	screenHeight: width < height ? height : width,
-
+	drawerWidth: (2/3)*width,
 	navBarHeight: Platform.OS === "ios" ? 64 : 54,
 
 	buttonRadius: 4,

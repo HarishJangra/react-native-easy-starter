@@ -16,3 +16,10 @@ export const STATUS = {
 	FETCHING: "FETCHING",
 	FAILED: "FAILED"
 };
+
+
+
+export const LOCALES = {
+	ENGLISH: "en",
+	HINDI : "hi",
+} 

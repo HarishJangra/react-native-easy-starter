@@ -10,7 +10,7 @@ const apiMonitor = response => {
 				"background: #222; color: #ff7788; font-size:16px",
 				"background:red;color:white;"
 		  );
-	console.log(response);
+	console.log(response.data);
 };
 
-export default apiMonitor
+export default apiMonitor;

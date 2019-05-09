@@ -7,7 +7,8 @@ let devTools = composeWithDevTools({
 	name: appName,
 	realtime: true,
 	hostname:'192.168.0.150',
-	port:8081,
+	port:8000,
+	injectserver:"react-native",
 	trace: true
 });
 
@@ -15,8 +16,8 @@ export default (model, api) => {
 	return createStore(model, {
 		/**
 		 * for api injecting using injections
-		 * injections: { api },
 		 */
+		injections: { api },
 		compose: devTools
 	});
 };

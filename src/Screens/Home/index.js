@@ -7,44 +7,58 @@ import NavigationStyles from "../../Styles/NavigationStyles";
 import NavigationService from "../../Navigation";
 import useAuth from "../../Services/Auth";
 import useTheme from "../../Themes/Context";
+import metrics from "../../Themes/Metrics";
+import { DrawerActions } from "react-navigation-drawer";
 
-const MainScreen = ({navigation}) => {
+const MainScreen = ({ navigation }) => {
 	const { state, logout } = useAuth();
-	const {theme} = useTheme()
-	
+	const { theme } = useTheme();
+
+	const _toggleDrawer = props => {
+		NavigationService.toggleDrawer();
+	};
+
 	useEffect(() => {
-		navigation.setParams({headerColor: theme.colors.header})
-	}, [])
+		navigation.setParams({ headerColor: theme.colors.header });
+	}, []);
+
 	return (
 		<LoadingActionContainer fixed>
 			<Container
 				style={{
 					justifyContent: "center",
-					padding:20
+					padding: 20
 				}}
 			>
-				<Text style={{ fontSize: 24, textAlign:'center', color: colors.green300 }}>
-					MAIN SCREEN
-				</Text>
-
-			
-
+				<ButtonX
+					dark={true}
+					mode="outline"
+					color={theme.colors.accent}
+					label="DRAWER"
+					onPress={_toggleDrawer}
+				/>
 			</Container>
 		</LoadingActionContainer>
 	);
 };
 
-MainScreen.navigationOptions = ({navigation})=> {
-	// console.log('LOG_navigagtion',navigation);
+MainScreen.navigationOptions = ({ navigation, screenProps }) => {
+	const { t, theme } = screenProps;
 	return {
-		headerStyle:[NavigationStyles.header_statusBar, {backgroundColor:navigation.getParam('headerColor' , '#334466')}],
-        headerTitle: "HOME",
-        headerTintColor:['teal'],
+		headerStyle: [
+			NavigationStyles.header_statusBar,
+			{
+				elevation: 1,
+				backgroundColor: navigation.getParam("headerColor", "#334466")
+			}
+		],
+		headerTitle: t("home"),
+		headerTintColor: ["black"],
 		headerTitleStyle: {
-			width: 100,
+			width: metrics.screenWidth,
 			fontWeight: "700"
-		}	
-	}
-}
+		}
+	};
+};
 
-export default MainScreen
+export default MainScreen;
