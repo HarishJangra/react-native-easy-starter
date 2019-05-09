@@ -75,7 +75,6 @@ export default class AppIntroSlider extends React.Component {
 
 	_renderItem = item => {
 		const { width, height } = this.state;
-		console.log("LOG_height", this.state.height);
 
 		const props = { ...item.item, width, height };
 		return (

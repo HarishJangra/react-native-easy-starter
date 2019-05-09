@@ -1,19 +1,19 @@
 import I18n from "i18n-js";
-import { LOCALES } from '../Constants/index';
+import { LOCALES } from "../Constants/index";
 
 //default locale
-I18n.defaultLocale = LOCALES.ENGLISH
+I18n.defaultLocale = LOCALES.ENGLISH.name;
 
 // Enable fallbacks  to `en`
-I18n.fallbacks = true
+I18n.fallbacks = true;
 
 //current locale
-I18n.locale = LOCALES.ENGLISH
+I18n.locale = LOCALES.ENGLISH.name;
 
 I18n.translations = {
-    en: require('./languages/english.json'),
-    hi: require('./languages/hindi.json')
-}
+	en: require("./languages/english.json"),
+	hi: require("./languages/hindi.json")
+};
 
 // let languageCode = I18n.locale.substr(0, 2)
 

@@ -1,12 +1,17 @@
 import React from "react";
 import viewStyles from "../Styles/ViewStyles";
 import ViewX from "./View";
+import colors from "../Themes/Colors";
 
 export default ({ style, ...other }) => {
 	return (
 		<ViewX
 			{...other}
-			style={[viewStyles.container, style]}
+			style={[
+				viewStyles.container,
+				style,
+				{ backgroundColor: "#dddddd" }
+			]}
 			useSafeAreaView
 		/>
 	);

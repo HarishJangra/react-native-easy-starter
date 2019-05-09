@@ -15,10 +15,14 @@ const MainScreen = ({ navigation }) => {
 	const { state, logout } = useAuth();
 	const { theme } = useTheme();
 
-	const { t, locale, changeLocale } = useTranslation();
+	const { t, localeProvider, changeLocale } = useTranslation();
 
 	const _changeLocale = () => {
-		changeLocale(locale == LOCALES.HINDI ? LOCALES.ENGLISH : LOCALES.HINDI);
+		changeLocale(
+			localeProvider.id == LOCALES.HINDI.id
+				? LOCALES.ENGLISH
+				: LOCALES.HINDI
+		);
 	};
 
 	useEffect(() => {
@@ -32,21 +36,15 @@ const MainScreen = ({ navigation }) => {
 					padding: 20
 				}}
 			>
-				<Text style={{ fontSize: 24, color: colors.green300 }}>
+				<Text style={{ fontSize: 24, color: theme.colors.primary }}>
 					{t("welcome")}
 				</Text>
 
-				<ButtonX
-					dark={true}
-					color={theme.colors.accent}
-					label={t("logout")}
-					onPress={logout}
-				/>
+				<ButtonX dark={true} label={t("logout")} onPress={logout} />
 
 				<ButtonX
 					dark={true}
 					mode="outline"
-					color={theme.colors.accent}
 					label={t("change_locale")}
 					onPress={_changeLocale}
 				/>

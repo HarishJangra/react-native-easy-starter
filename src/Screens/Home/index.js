@@ -34,7 +34,6 @@ const MainScreen = ({ navigation }) => {
 				<ButtonX
 					dark={true}
 					mode="outline"
-					color={theme.colors.accent}
 					label="DRAWER"
 					onPress={_toggleDrawer}
 				/>

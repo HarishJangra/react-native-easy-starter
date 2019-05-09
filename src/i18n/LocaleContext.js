@@ -1,4 +1,6 @@
 import "./i18n";
+import { find } from "lodash";
+
 import React, { useState, useEffect } from "react";
 import I18n from "i18n-js";
 import useStorage from "../Services/AsyncStorage";
@@ -8,11 +10,11 @@ import translateOrFallback from "./TranslateFallback";
 const LocaleContext = React.createContext();
 
 export const LocaleContextProvider = props => {
-	const [locale, changeLocale] = useStorage("@locale", LOCALES.ENGLISH);
-	I18n.locale = locale;
+	const [locale, changeLocale] = useStorage("@language", LOCALES.ENGLISH);
+	I18n.locale = locale.name;
 
 	const _changeLocale = locale => {
-		I18n.locale = locale;
+		I18n.locale = locale.name;
 		changeLocale(locale);
 	};
 
@@ -20,6 +22,7 @@ export const LocaleContextProvider = props => {
 		<LocaleContext.Provider
 			value={{
 				...I18n,
+				localeProvider: locale,
 				t: translateOrFallback,
 				changeLocale: _changeLocale
 			}}

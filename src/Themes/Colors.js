@@ -3,6 +3,47 @@
 const colors = {
 	transparent: "rgba(0,0,0,0)",
 	background: "#fafafa",
+
+	//bg
+	gainsboro: "#E2DCDE",
+
+	darkSkyBlue: "#76BED0",
+	jonquil: "#F7CB15",
+	goldenRod: "#D5A021",
+	eggShell: "#EDE7D9",
+	spanishGrey: "#A49694",
+	brass: "#B68F40",
+	japaneseIndigo: "#233D4D",
+	steelTeal: "#619B8A",
+	greenSheen: "#729EA1",
+	mystic: "#DB5375",
+	rustyRed: "#D7263D",
+	steelTeal: "#5F758E",
+	davyGrey: "#5E565A",
+	caribbeanGreen: "#00CC99",
+	antiflashWhite: "#FAF7F9",
+	munshellGreen: "#00A676",
+
+	//screen
+	eucalyptus: "#40C9A2",
+	blueJeans: "#5BC0EB",
+	tiffanyBlue: "#17BEBB",
+	moonStoneBlue: "#62BBC1",
+	androidGreen: "#9BC53D",
+	englishVermillion: "#C3423F",
+	coral: "#FF8A5B",
+	charleston: "#2E282A",
+	redOrange: "#F15152",
+	zomp: "#2F9C95",
+
+	//pr
+	darkSlateGrey: "#1E555C",
+	onyx: "#3A2E39",
+	pineapple: "#48435C",
+	cyanAzure: "#507DBC",
+	richBlack: "#04080F",
+	roseGold: "#B97375",
+
 	red50: "#ffebee",
 	red100: "#ffcdd2",
 	red200: "#ef9a9a",

@@ -10,30 +10,25 @@ import {
 
 const { width, height } = Dimensions.get("window");
 
-export default class DefaultSlide extends React.PureComponent {
-	render() {
-		const style = {
-			backgroundColor: this.props.backgroundColor,
-			width: this.props.width,
-			flex: 1,
-			paddingBottom: this.props.bottomButton ? 132 : 64
-		};
-		return (
-			<View style={[styles.mainContent, style]}>
-				<Text style={[styles.title, this.props.titleStyle]}>
-					{this.props.title}
-				</Text>
-				<Image
-					source={this.props.image}
-					style={this.props.imageStyle}
-				/>
-				<Text style={[styles.text, this.props.textStyle]}>
-					{this.props.text}
-				</Text>
+const DefaultSlide = props => {
+	const style = {
+		backgroundColor: props.backgroundColor,
+		width: props.width,
+		flex: 1,
+		paddingBottom: props.bottomButton ? 132 : 64
+	};
+	return (
+		<View style={[styles.mainContent, style]}>
+			<Text style={[styles.title, props.titleStyle]}>{props.title}</Text>
+			<Image source={props.image} style={props.imageStyle} />
+
+			<View>
+				{props.renderExtra ? props.renderExtra() : null}
+				<Text style={[styles.text, props.textStyle]}>{props.text}</Text>
 			</View>
-		);
-	}
-}
+		</View>
+	);
+};
 
 const styles = StyleSheet.create({
 	mainContent: {
@@ -53,6 +48,9 @@ const styles = StyleSheet.create({
 		color: "rgba(255, 255, 255, .7)",
 		fontWeight: "300",
 		width,
+		textAlign: "center",
 		paddingHorizontal: 16
 	}
 });
+
+export default DefaultSlide;

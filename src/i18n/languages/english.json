@@ -3,5 +3,7 @@
     "home": "HOME",
     "notifications": "NOTIFICATIONS",
     "change_locale": "CHANGE LOCALE",
-    "logout": "LOGOUT"
+    "logout": "LOGOUT",
+    "login": "LOGIN",
+    "selectLanguage": "Select Your Language"
 }

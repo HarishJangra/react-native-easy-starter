@@ -18,10 +18,11 @@ import useAuth from "../../Services/Auth";
 import { showInfoToast } from "../../Lib/Toast";
 import BottomPanel from "../../Components/Panel";
 import { BottomAlert } from "../../App";
+import useTranslation from "../../i18n";
 
 export default () => {
 	const onChange = useActions(actions => actions.login.onLoginInputChange);
-
+	const { t } = useTranslation();
 	const { state, login } = useAuth();
 	const { theme } = useTheme();
 
@@ -64,11 +65,11 @@ export default () => {
 						style={{
 							fontSize: 48,
 							fontWeight: "bold",
-							color: theme.colors.accent,
+							color: theme.colors.primary,
 							marginVertical: 60
 						}}
 					>
-						WELCOME
+						{t("welcome")}
 					</Text>
 				</Section>
 				<Section>
@@ -110,7 +111,7 @@ export default () => {
 							loading ? theme.colors.accent : theme.colors.primary
 						}
 						onPress={loginUser}
-						label=" LOGIN "
+						label={t("login")}
 					/>
 
 					<ButtonX
