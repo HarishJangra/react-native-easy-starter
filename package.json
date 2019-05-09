@@ -1,6 +1,6 @@
 {
   "name": "easy_boiler",
-  "version": "0.1.2",
+  "version": "1.0.4",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
