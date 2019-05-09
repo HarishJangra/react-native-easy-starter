@@ -113,8 +113,8 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         multiDexEnabled true
 
-        versionCode 2
-        versionName "1.0.2"
+        versionCode 4
+        versionName "1.0.4"
         vectorDrawables.useSupportLibrary = true
         resValue "string", "build_config_package", "com.easy_boiler"
     }
