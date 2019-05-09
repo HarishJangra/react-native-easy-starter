@@ -1,30 +1,77 @@
 import React from "react";
 import { StyleSheet, StatusBar } from "react-native";
 import { View, Image, Text } from "react-native";
-import { Container } from "../../Components";
+import { Container, ButtonX } from "../../Components";
 import NavigationService from "../../Navigation/index";
 import Routes from "../../Navigation/Routes/index";
 import AppIntroSlider from "../../Lib/AppIntroSlider";
+import useTranslation from "../../i18n/index";
+import { LOCALES } from "../../Constants/index";
+import colors from "../../Themes/Colors";
+
+const LanguageSlideItem = props => {
+	const { t, localeProvider, changeLocale } = useTranslation();
+
+	const _changeLocale = () => {
+		changeLocale(
+			localeProvider.id == LOCALES.HINDI.id
+				? LOCALES.ENGLISH
+				: LOCALES.HINDI
+		);
+	};
+
+	return (
+		<View style={{ padding: 20 }}>
+			<Text
+				style={{
+					fontSize: 16,
+					color: "rgba(255,255,255,0.6)"
+				}}
+			>
+				{t("selectLanguage")}
+			</Text>
+			<ButtonX
+				dark={true}
+				mode="outlined"
+				color="white"
+				label={localeProvider.label}
+				onPress={_changeLocale}
+			/>
+		</View>
+	);
+};
 
 const slides = [
 	{
 		key: "somethun",
 		title: "SCHOOLLOG",
-		text: "Description.\nSay something cool",
-		backgroundColor: "#59b2ab"
+		renderExtra: LanguageSlideItem,
+		backgroundColor: colors.blueJeans
 	},
 	{
 		key: "somethun-dos",
-		title: "ZNMD 2",
+		title: "SCHOOLLOG",
 		text: "Other cool stuff",
-		backgroundColor: "#febe29"
+		backgroundColor: colors.munshellGreen
+	},
+	{
+		key: "somethun-dos",
+		title: "SCHOOLLOG",
+		text: "Other cool stuff",
+		backgroundColor: colors.goldenRod
+	},
+	{
+		key: "somethun-dos",
+		title: "SCHOOLLOG",
+		text: "Other cool stuff",
+		backgroundColor: colors.mystic
 	},
 	{
 		key: "somethun1",
-		title: "Rocket guy",
+		title: "FINAL SLIDE",
 		text: "I'm already out of descriptions\n\nLorem ipsum bla bla bla",
 		//   image: require('./assets/3.jpg'),
-		backgroundColor: "#52bcb5"
+		backgroundColor: colors.androidGreen
 	}
 ];
 
@@ -38,6 +85,7 @@ const AppIntro = props => {
 			<AppIntroSlider
 				slides={slides}
 				onDone={_onDone}
+				onSkip={_onDone}
 				showPrevButton={true}
 				showSkipButton={true}
 			/>

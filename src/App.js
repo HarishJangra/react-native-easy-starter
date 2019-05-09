@@ -58,8 +58,7 @@ export default () => {
 
 const ThemeConsumer = props => {
 	const { theme } = useTheme();
-	const { t, locale } = useTranslation();
-	console.log("LOG_app locale", locale);
+	const { t } = useTranslation();
 
 	return (
 		<PaperProvider theme={theme}>

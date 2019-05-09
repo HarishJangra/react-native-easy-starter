@@ -7,7 +7,7 @@ export const APP_STATE = {
 	PUBLIC: "PUBLIC_LOGIN",
 	PRIVATE: "MAIN_APP",
 	AUTH: "CHECKING_LOGIN",
-	UNKNOWN:'UNKNOWN',
+	UNKNOWN: "UNKNOWN"
 };
 
 export const STATUS = {
@@ -17,9 +17,7 @@ export const STATUS = {
 	FAILED: "FAILED"
 };
 
-
-
 export const LOCALES = {
-	ENGLISH: "en",
-	HINDI : "hi",
-} 
+	ENGLISH: { id: 1, name: "en", label: "ENGLISH" },
+	HINDI: { id: 2, name: "hi", label: "हिंदी" }
+};

@@ -1,4 +1,5 @@
 import { DefaultTheme } from "react-native-paper";
+import colors from "../Colors";
 
 const theme = {
 	...DefaultTheme,
@@ -6,10 +7,10 @@ const theme = {
 	roundness: 5,
 	colors: {
 		...DefaultTheme.colors,
-		primary: "#99C24D",
+		primary: colors.mystic,
 		accent: "#99C24D",
 		background: "#fafafa",
-		header:'#ffffff'
+		header: "#ffffff"
 	}
 };
 

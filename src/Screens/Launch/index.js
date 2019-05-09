@@ -8,8 +8,7 @@ export default function() {
 		<Container
 			style={{
 				justifyContent: "center",
-				alignItems: "center",
-				backgroundColor: colors.background
+				alignItems: "center"
 			}}
 		>
 			<ActivityIndicator size="large" color="cyan" />
