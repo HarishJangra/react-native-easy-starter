@@ -4,6 +4,7 @@ module.exports = {
 		"@babel/preset-flow",
 		"@babel/preset-react"
 	],
+	plugins: ["transform-remove-console"],
 	env: {
 		production: {
 			plugins: ["react-native-paper/babel"]

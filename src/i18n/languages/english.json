@@ -1,3 +1,7 @@
 {
-    "welcome":"WELCOME"
+    "welcome": "WELCOME",
+    "home": "HOME",
+    "notifications": "NOTIFICATIONS",
+    "change_locale": "CHANGE LOCALE",
+    "logout": "LOGOUT"
 }

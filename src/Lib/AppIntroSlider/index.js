@@ -82,8 +82,7 @@ export default class AppIntroSlider extends React.Component {
 			<View
 				style={{
 					width: this.state.width,
-					flex: 1,
-					backgroundColor: "red"
+					flex: 1
 				}}
 			>
 				{this.props.renderItem ? (

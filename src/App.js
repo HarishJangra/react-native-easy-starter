@@ -17,6 +17,7 @@ import useTheme from "./Themes/Context";
 import { APP_PREFIX } from "./Config/index";
 import BottomPanel from "./Components/Panel";
 import useNetInfo from "./Lib/NetInfo";
+import useTranslation from "./i18n";
 
 export let BottomAlert = null;
 //create the easy store
@@ -25,15 +26,15 @@ const store = createStore();
 const NetworkInfo = props => {
 	const netinfo = useNetInfo();
 	console.log("LOG_NETINFO", netinfo);
-
 	return null;
 };
 
 //return root component
 export default () => {
+	console.log("LOG_apprender");
+
 	return (
 		<Screen>
-			<NetworkInfo />
 			<LocaleContextProvider>
 				<StoreProvider store={store}>
 					<StatusBar
@@ -57,13 +58,17 @@ export default () => {
 
 const ThemeConsumer = props => {
 	const { theme } = useTheme();
+	const { t, locale } = useTranslation();
+	console.log("LOG_app locale", locale);
 
 	return (
 		<PaperProvider theme={theme}>
 			<AppContextProvider>
+				<NetworkInfo />
+
 				<PrimaryNav
 					uriPrefix={APP_PREFIX}
-					screenProps={{ theme }}
+					screenProps={{ theme, t }}
 					ref={nav => NavigationService.setTopLevelNavigator(nav)}
 				/>
 			</AppContextProvider>
