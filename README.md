@@ -56,6 +56,8 @@
 
 $ git clone https://github.com/HarishJangra/react-native-easy-starter.git
 
+$ cd react-native-easy-starter
+
 $ yarn
 
 ```
