@@ -1,5 +1,8 @@
 import { NavigationActions, StackActions } from "react-navigation";
 import { DrawerActions } from "react-navigation-drawer";
+import Routes from "./Routes";
+
+export { Routes };
 
 /**
  * The navigation is implemented as a service so that it can be used outside of components, for example in sagas.
@@ -13,7 +16,7 @@ let navigator;
  * This function is called when the RootScreen is created to set the navigator instance to use.
  */
 function setTopLevelNavigator(navigatorRef) {
-	navigator = navigatorRef;
+  navigator = navigatorRef;
 }
 
 /**
@@ -23,13 +26,13 @@ function setTopLevelNavigator(navigatorRef) {
  * @param params Route parameters.
  */
 function navigate(routeName, params) {
-	console.log("LOG_navigate", routeName, params);
-	navigator.dispatch(
-		NavigationActions.navigate({
-			routeName,
-			params
-		})
-	);
+  // console.log("LOG_navigate", routeName, params);
+  navigator.dispatch(
+    NavigationActions.navigate({
+      routeName,
+      params
+    })
+  );
 }
 
 /**
@@ -42,29 +45,39 @@ function navigate(routeName, params) {
  * @param params Route parameters.
  */
 function navigateAndReset(routeName, params) {
-	navigator.dispatch(
-		StackActions.reset({
-			index: 0,
-			key: null,
-			actions: [
-				NavigationActions.navigate({
-					routeName,
-					params
-				})
-			]
-		})
-	);
+  navigator.dispatch(
+    StackActions.reset({
+      index: 0,
+      key: null,
+      actions: [
+        NavigationActions.navigate({
+          routeName,
+          params
+        })
+      ]
+    })
+  );
 }
 
 function toggleDrawer() {
-	navigator.dispatch(DrawerActions.toggleDrawer());
+  navigator.dispatch(DrawerActions.toggleDrawer());
+}
+
+function openDrawer() {
+  navigator.dispatch(DrawerActions.openDrawer());
+}
+
+function closeDrawer() {
+  navigator.dispatch(DrawerActions.closeDrawer());
 }
 
 const NavigationService = {
-	navigate,
-	toggleDrawer,
-	navigateAndReset,
-	setTopLevelNavigator
+  navigate,
+  toggleDrawer,
+  openDrawer,
+  closeDrawer,
+  navigateAndReset,
+  setTopLevelNavigator
 };
 
 export default NavigationService;

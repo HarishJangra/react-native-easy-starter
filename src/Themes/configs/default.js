@@ -2,16 +2,23 @@ import { DefaultTheme } from "react-native-paper";
 import colors from "../Colors";
 
 const theme = {
-	...DefaultTheme,
-	dark: false,
-	roundness: 5,
-	colors: {
-		...DefaultTheme.colors,
-		primary: colors.tiffanyBlue,
-		accent: "#99C24D",
-		background: "#fafafa",
-		header: "#ffffff"
-	}
+  ...DefaultTheme,
+  dark: false,
+  roundness: 7,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: colors.tiffanyBlue,
+    accent: colors.flame,
+    background: colors.issabeline,
+    text: colors.panegrey,
+    placeholder: colors.ashgrey,
+    header: colors.deepkamaru,
+    headerTitle: colors.white,
+
+    //react-native-paper theme colors
+    surface: colors.white,
+    primaryText: colors.darkgunmetal
+  }
 };
 
 export default theme;

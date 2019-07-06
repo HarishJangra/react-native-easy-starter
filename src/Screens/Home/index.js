@@ -11,53 +11,50 @@ import metrics from "../../Themes/Metrics";
 import { DrawerActions } from "react-navigation-drawer";
 
 const MainScreen = ({ navigation }) => {
-	const { state, logout } = useAuth();
-	const { theme } = useTheme();
+  const { state, logout } = useAuth();
+  const { theme } = useTheme();
 
-	const _toggleDrawer = props => {
-		NavigationService.toggleDrawer();
-	};
+  const _toggleDrawer = props => {
+    NavigationService.openDrawer();
+  };
 
-	useEffect(() => {
-		navigation.setParams({ headerColor: theme.colors.header });
-	}, []);
+  useEffect(() => {
+    navigation.setParams({ headerColor: theme.colors.header });
+  }, []);
 
-	return (
-		<LoadingActionContainer fixed>
-			<Container
-				style={{
-					justifyContent: "center",
-					padding: 20
-				}}
-			>
-				<ButtonX
-					dark={true}
-					mode="outline"
-					label="DRAWER"
-					onPress={_toggleDrawer}
-				/>
-			</Container>
-		</LoadingActionContainer>
-	);
+  return (
+    <LoadingActionContainer fixed>
+      <Container
+        style={{
+          justifyContent: "center",
+          padding: 20
+        }}
+      >
+        <ButtonX
+          dark={true}
+          mode="outline"
+          label="DRAWER"
+          onPress={_toggleDrawer}
+        />
+      </Container>
+    </LoadingActionContainer>
+  );
 };
 
 MainScreen.navigationOptions = ({ navigation, screenProps }) => {
-	const { t, theme } = screenProps;
-	return {
-		headerStyle: [
-			NavigationStyles.header_statusBar,
-			{
-				elevation: 1,
-				backgroundColor: navigation.getParam("headerColor", "#334466")
-			}
-		],
-		headerTitle: t("home"),
-		headerTintColor: ["black"],
-		headerTitleStyle: {
-			width: metrics.screenWidth,
-			fontWeight: "700"
-		}
-	};
+  const { t, theme } = screenProps;
+  return {
+    headerStyle: [
+      NavigationStyles.header_statusBar,
+      { backgroundColor: theme.colors.header }
+    ],
+    headerTitle: t("home"),
+    headerTintColor: theme.colors.headerTitle,
+    headerTitleStyle: [
+      NavigationStyles.headerTitle,
+      { color: theme.colors.headerTitle }
+    ]
+  };
 };
 
 export default MainScreen;

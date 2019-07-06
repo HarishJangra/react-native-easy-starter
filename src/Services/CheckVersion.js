@@ -1,29 +1,28 @@
-import {useEffect} from 'react'
-import { useActions, useStore } from 'easy-peasy';
-import CodePush from 'react-native-code-push';
-import { STATUS } from '../Constants';
-import NavigationService from '../Navigation/index';
+import { useEffect } from "react";
+import { useActions, useStore } from "easy-peasy";
+// import CodePush from "react-native-code-push";
+import { STATUS } from "../Constants";
+import NavigationService from "../Navigation/index";
 
 export default () => {
-    const checkAppVersion = useActions(actions =>  actions.app.checkAppVersion)
-    
-    const { status, version } = useStore( state => ({
-        status : state.app.status,
-        version : state.app.version
-    }))
-    
-    // codepush app version
-    // CodePush.sync()
+  const checkAppVersion = useActions(actions => actions.app.checkAppVersion);
 
-    useEffect(()=> {
-          status !== STATUS.SUCCESS && checkAppVersion()
-    },[])
+  const { status, version } = useStore(state => ({
+    status: state.app.status,
+    version: state.app.version
+  }));
 
-    useEffect(()=> {
-        console.log('LOG_version reactor',version);        
-        version && NavigationService.navigate("AppUpdate")        
-    }, [version])
+  // codepush app version
+  // CodePush.sync()
 
+  useEffect(() => {
+    status !== STATUS.SUCCESS && checkAppVersion();
+  }, []);
 
-    return version
-}
+  useEffect(() => {
+    console.log("LOG_version reactor", version);
+    //do whaterver on version check
+  }, [version]);
+
+  return version;
+};

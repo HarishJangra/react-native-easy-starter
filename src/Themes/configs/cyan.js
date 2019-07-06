@@ -1,34 +1,24 @@
 import { DefaultTheme } from "react-native-paper";
+import colors from "../Colors";
 
 const theme = {
-	...DefaultTheme,
-	dark: false,
-	roundness: 5,
-	colors: {
-		...DefaultTheme.colors,
-		primary: "teal",
-		accent: "yellow",
-		background: "#fafafa",
-		text: "#2a2a2a"
-	}
+  ...DefaultTheme,
+  dark: false,
+  roundness: 7,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: colors.pineapple,
+    accent: colors.musturd,
+    background: colors.issabeline,
+    text: colors.panegrey,
+    placeholder: colors.ashgrey,
+    header: colors.deepkamaru,
+    headerTitle: colors.white,
+
+    //react-native-paper theme colors
+    surface: colors.white,
+    primaryText: colors.darkgunmetal
+  }
 };
 
 export default theme;
-
-/**
- * react-native-elements colors
- * 		primary,
-		secondary,
-		grey0,
-		grey1,
-		grey2,
-		grey3,
-		grey4,
-		grey5,
-		greyOutline,
-		searchBg,
-		success,
-		error,
-		warning,
-		divider
- */
