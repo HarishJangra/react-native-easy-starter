@@ -13,7 +13,8 @@
     "android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease",
     "android:menu": "adb shell input keyevent 82",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "npx jetify"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.5.0",

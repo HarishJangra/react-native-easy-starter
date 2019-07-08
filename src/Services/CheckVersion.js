@@ -1,13 +1,15 @@
 import { useEffect } from "react";
-import { useActions, useStore } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 // import CodePush from "react-native-code-push";
 import { STATUS } from "../Constants";
 import NavigationService from "../Navigation/index";
 
 export default () => {
-  const checkAppVersion = useActions(actions => actions.app.checkAppVersion);
+  const checkAppVersion = useStoreActions(
+    actions => actions.app.checkAppVersion
+  );
 
-  const { status, version } = useStore(state => ({
+  const { status, version } = useStoreState(state => ({
     status: state.app.status,
     version: state.app.version
   }));

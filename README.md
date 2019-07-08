@@ -6,47 +6,47 @@
 
 ## WHY USE EASY STARTER ?
 
--   Always up-to-date React Native [0.60](https://facebook.github.io/react-native/versions) scaffolding.
+- Always up-to-date React Native [0.60](https://facebook.github.io/react-native/versions) scaffolding.
 
-*   [Easy-Peasy](https://github.com/ctrlplusb/easy-peasy) makes it easy to access the global state.
+* [Easy-Peasy](https://github.com/ctrlplusb/easy-peasy) makes it easy to access the global state.
 
--   Use of [React Hooks](https://reactjs.org/docs/hooks-intro.html) optimizes the performance and increases reusability.
+- Use of [React Hooks](https://reactjs.org/docs/hooks-intro.html) optimizes the performance and increases reusability.
 
-*   Provides a basic infrastructure, which can easily be used throughout the whole project.
+* Provides a basic infrastructure, which can easily be used throughout the whole project.
 
--   [ApiSauce](https://github.com/infinitered/apisauce) Axios + standardized errors + request/response transforms.
+- [ApiSauce](https://github.com/infinitered/apisauce) Axios + standardized errors + request/response transforms.
 
 ## Currently Includes
 
--   React-native 0.59.8
--   code-push
--   react-native-keychain
--   react-native-config
--   easy-peasy for state management
--   Hooks
--   react-navigation
--   react-native-vector-icons
--   Login Navigation Flow using React Context.
--   Themes support and much more
--   Multi - languages and locale support using i18n-js
--   Deeply integrated, production ready workflow
+- React-native 0.60
+  <!-- -   code-push -->
+- react-native-keychain
+  <!-- -   react-native-config -->
+- easy-peasy for state management
+- Hooks
+- react-navigation
+- react-native-vector-icons
+- Login Navigation Flow using React Context.
+- Themes support and much more
+- Multi - languages and locale support using i18n-js
+- Deeply integrated, production ready workflow
 
 ## Ready to use templates
 
--   Loading /Login / Main app screens
--   extended Material Bottom Tabs Navigator (customizable) and Drawer Navigator using react-navigation
--   App Intro screens
--   Locale context , theme context
--   Api ready service
--   oAuth ready interceptor
--   material design components using [react-native-paper](https://github.com/callstack/react-native-paper)
--   react-native-modal
--   easy-peasy models
--   `useStorage()` for async storage
--   `useNetInfo()` for network info
--   `useTranslation()` for i18n
--   `useTheme()` for using themes
--   ... much more
+- Loading /Login / Main app screens
+- extended Material Bottom Tabs Navigator (customizable) and Drawer Navigator using react-navigation
+- App Intro screens
+- Locale context , theme context
+- Api ready service
+- oAuth ready interceptor
+- material design components using [react-native-paper](https://github.com/callstack/react-native-paper)
+- react-native-modal
+- easy-peasy models
+- `useStorage()` for async storage
+- `useNetInfo()` for network info
+- `useTranslation()` for i18n
+- `useTheme()` for using themes
+- ... much more
 
 ## Getting Started
 
@@ -98,8 +98,8 @@ $ yarn run android:build
 
 #### Bugs? Comments? Features? PRs and Issues happily welcomed!
 
--   :star: Star our GitHub repo
+- :star: Star our GitHub repo
 
-*   :wrench: Create Fixes, suggest new features or update docs
+* :wrench: Create Fixes, suggest new features or update docs
 
 ##

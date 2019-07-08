@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { View, Text, Keyboard } from "react-native";
-import { useStore, useActions } from "easy-peasy";
+import { useStoreState, useStoreActions } from "easy-peasy";
 import { Button } from "react-native-paper";
 import { ScrollView } from "react-native";
 import { STATUS } from "../../Constants";
@@ -20,7 +20,7 @@ import BottomPanel from "../../Components/Panel";
 import useTranslation from "../../i18n";
 
 export default () => {
-  const onChange = useActions(actions => actions.login.onLoginInputChange);
+  const onChange = useStoreActions(actions => actions.login.onLoginInputChange);
   const { t } = useTranslation();
   const { state, login } = useAuth();
   const { theme } = useTheme();
@@ -34,7 +34,7 @@ export default () => {
     inputPassword.current.focus();
   };
 
-  const { username, password, status } = useStore(state => ({
+  const { username, password, status } = useStoreState(state => ({
     username: state.login.username,
     password: state.login.password,
     status: state.login.status

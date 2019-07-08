@@ -30,6 +30,7 @@ const MainScreen = ({ navigation }) => {
           padding: 20
         }}
       >
+        <Text style={{ padding: 20 }}>Open Drawer</Text>
         <ButtonX
           dark={true}
           mode="outline"
