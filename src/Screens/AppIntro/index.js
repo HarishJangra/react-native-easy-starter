@@ -1,32 +1,31 @@
-import React from "react";
-import { StyleSheet, StatusBar } from "react-native";
-import { View, Image, Text } from "react-native";
-import { Container, ButtonX } from "../../Components";
-import NavigationService from "../../Navigation/index";
-import Routes from "../../Navigation/Routes/index";
-import AppIntroSlider from "../../Lib/AppIntroSlider";
-import useTranslation from "../../i18n/index";
-import { LOCALES } from "../../Constants/index";
-import colors from "../../Themes/Colors";
+import React from 'react';
+import {StyleSheet, StatusBar} from 'react-native';
+import {View, Image, Text} from 'react-native';
+import {Container, ButtonX} from '../../Components';
+import NavigationService from '../../Navigation/index';
+import Routes from '../../Navigation/Routes/index';
+import AppIntroSlider from '../../Lib/AppIntroSlider';
+import useTranslation from '../../i18n/index';
+import {LOCALES} from '../../Constants/index';
+import colors from '../../Themes/Colors';
 
 const LanguageSlideItem = props => {
-  const { t, localeProvider, changeLocale } = useTranslation();
+  const {t, localeProvider, changeLocale} = useTranslation();
 
   const _changeLocale = () => {
     changeLocale(
-      localeProvider.id == LOCALES.HINDI.id ? LOCALES.ENGLISH : LOCALES.HINDI
+      localeProvider.id == LOCALES.HINDI.id ? LOCALES.ENGLISH : LOCALES.HINDI,
     );
   };
 
   return (
-    <View style={{ padding: 20 }}>
+    <View style={{padding: 20}}>
       <Text
         style={{
           fontSize: 16,
-          color: "rgba(255,255,255,0.6)"
-        }}
-      >
-        {t("selectLanguage")}
+          color: 'rgba(255,255,255,0.6)',
+        }}>
+        {t('selectLanguage')}
       </Text>
       <ButtonX
         dark={true}
@@ -41,32 +40,32 @@ const LanguageSlideItem = props => {
 
 const slides = [
   {
-    key: "Loren Ipsum...",
-    title: "slide 1",
-    text: "something cool text.",
+    key: 'Loren Ipsum...',
+    title: 'slide 1',
+    text: 'something cool text.',
     // renderExtra: LanguageSlideItem,
-    backgroundColor: colors.blueJeans
+    backgroundColor: colors.blueJeans,
   },
   {
-    key: "bla bla -dos",
-    title: "slide2",
-    text: "Other cool stuff",
-    backgroundColor: colors.pineapple
+    key: 'bla bla -dos',
+    title: 'slide2',
+    text: 'Other cool stuff',
+    backgroundColor: colors.pineapple,
   },
 
   {
-    key: "There is more-dos",
-    title: "slide 3",
-    text: "Other cool stuff",
-    backgroundColor: colors.mystic
+    key: 'There is more-dos',
+    title: 'slide 3',
+    text: 'Other cool stuff',
+    backgroundColor: colors.mystic,
   },
   {
-    key: "And some final notes",
-    title: "FINAL SLIDE",
+    key: 'And some final notes',
+    title: 'FINAL SLIDE',
     text: "I'm already out of descriptions\n\nLorem ipsum bla bla bla",
     //   image: require('./assets/3.jpg'),
-    backgroundColor: colors.androidGreen
-  }
+    backgroundColor: colors.androidGreen,
+  },
 ];
 
 const AppIntro = props => {
@@ -91,11 +90,10 @@ const _renderItem = item => {
   return (
     <Container
       style={{
-        alignItems: "center",
-        justifyContent: "space-around",
-        backgroundColor: item.backgroundColor
-      }}
-    >
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        backgroundColor: item.backgroundColor,
+      }}>
       <Text style={styles.title}>{item.title}</Text>
       <Image source={item.image} />
       <Text style={styles.text}>{item.text}</Text>
@@ -107,12 +105,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     marginVertical: 10,
-    color: "white"
+    color: 'white',
   },
   text: {
     fontSize: 16,
-    color: "white"
-  }
+    color: 'white',
+  },
 });
 
 export default AppIntro;
