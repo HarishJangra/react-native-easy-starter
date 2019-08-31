@@ -1,11 +1,12 @@
 package com.easy_boiler;
 
 import android.app.Application;
-import com.facebook.react.PackageList;
-//custom packages
+import android.util.Log;
 
+import com.facebook.react.PackageList;
+import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
+import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import com.facebook.react.ReactApplication;
-//custom packages
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
@@ -18,7 +19,6 @@ import android.content.Context;
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
-
     @Override
     public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
@@ -29,8 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
       @SuppressWarnings("UnnecessaryLocalVariable")
       List<ReactPackage> packages = new PackageList(this).getPackages();
       // Packages that cannot be autolinked yet can be added manually here, for example:
-      // new MainReactPackage(),
-      // packages.add(new new NetInfoPackage());
+      // packages.add(new MyReactNativePackage());
       return packages;
     }
 
@@ -44,7 +43,7 @@ public class MainApplication extends Application implements ReactApplication {
   public ReactNativeHost getReactNativeHost() {
     return mReactNativeHost;
   }
-
+  
   @Override
   protected void attachBaseContext(Context base){
     super.attachBaseContext(base);
