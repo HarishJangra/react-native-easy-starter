@@ -1,6 +1,6 @@
-import React from "react";
-import Toast from "react-native-tiny-toast";
-import colors from "../../Themes/Colors";
+import React from 'react';
+import Toast from 'react-native-tiny-toast';
+import colors from '../../Themes/Colors';
 
 let toast;
 
@@ -12,18 +12,18 @@ export default function showToast(message, type, duration = 2000) {
 
     containerStyle: {
       backgroundColor:
-        type == "success"
+        type == 'success'
           ? colors.androidGreen
-          : type == "error"
+          : type == 'error'
           ? colors.rustyRed
-          : type == "info"
-          ? colors.brass
-          : "white",
+          : type == 'info'
+          ? colors.tiffanyBlue
+          : 'white',
 
       borderRadius: 10,
       padding: 20,
-      margin: 10
-    }
+      margin: 10,
+    },
   });
 }
 
@@ -31,27 +31,27 @@ export function hideLoading() {
   Toast.hide(toast);
 }
 
-export function showLoading(message = "") {
+export function showLoading(message = '') {
   toast = Toast.showLoading(message, {
     position: 0,
     containerStyle: {
       padding: 30,
-      backgroundColor: "rgba(0,0,0, 0.7)"
+      backgroundColor: 'rgba(0,0,0, 0.7)',
     },
-    textColor: "white",
-    textstyle: { fontSize: 16 }
+    textColor: 'white',
+    textstyle: {fontSize: 16},
     // maskColor:'rgba(10, 10, 10, 0.5)'
   });
 }
 
 export function showErrorToast(message) {
-  showToast(message, "error");
+  showToast(message, 'error');
 }
 
 export function showSuccessToast(message) {
-  showToast(message, "success");
+  showToast(message, 'success');
 }
 
 export function showInfoToast(message) {
-  showToast(message, "info");
+  showToast(message, 'info');
 }

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useCallback} from 'react';
 import {Text} from 'react-native';
 import LoadingActionContainer from '../../Components/LoadingActionContainer';
 import {Container, ButtonX} from '../../Components';
@@ -14,15 +14,12 @@ const MainScreen = ({navigation}) => {
 
   const {t, localeProvider, changeLocale} = useTranslation();
 
-  const _changeLocale = () => {
+  const _changeLocale = useCallback(() => {
     changeLocale(
       localeProvider.id == LOCALES.HINDI.id ? LOCALES.ENGLISH : LOCALES.HINDI,
     );
-  };
+  }, [changeLocale, localeProvider.id]);
 
-  useEffect(() => {
-    navigation.setParams({headerColor: theme.colors.header});
-  }, [navigation, theme.colors.header]);
   return (
     <LoadingActionContainer fixed>
       <Container
