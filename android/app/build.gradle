@@ -81,6 +81,7 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 
@@ -133,8 +134,8 @@ android {
         applicationId "com.easy_boiler"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 6
-        versionName "1.0.6"
+        versionCode 8
+        versionName "1.0.8"
     }
     splits {
         abi {
@@ -164,17 +165,19 @@ android {
 
     buildTypes {
         debug {
+            buildConfigField "String", "CODEPUSH_KEY",  '""'
             signingConfig signingConfigs.debug
         }
 
-        releaseStaging {
-            buildConfigField "String", "CODEPUSH_KEY",  '""'
+        releaseStaging {            
+            buildConfigField "String", "CODEPUSH_KEY",  '"jT5E-5DmICg9khdhvH2C2tQh7zTnVFM-YLP_B"'
             // Note: It is a good idea to provide matchingFallbacks for the new buildType you create to prevent build issues
             // Add the following line if not already there
             matchingFallbacks = ['release']
         }
 
         release {
+            buildConfigField "String", "CODEPUSH_KEY",  '"jT5E-5DmICg9khdhvH2C2tQh7zTnVFM-YLP_B"'
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
             signingConfig signingConfigs.release
@@ -219,6 +222,8 @@ android {
 
 dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
+    implementation project(':react-native-code-push')
+
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules

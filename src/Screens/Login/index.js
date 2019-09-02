@@ -63,10 +63,21 @@ export default () => {
             style={{
               fontSize: 32,
               fontWeight: 'bold',
-              color: theme.colors.primary,
-              marginVertical: 60,
+              color: theme.colors.accent,
+              marginTop: 60,
+              marginBottom: 20,
             }}>
             {t('welcome')}
+          </Text>
+          <Text
+            style={{
+              fontWeight: 'bold',
+              fontStyle: 'italic',
+              fontSize: 20,
+              color: theme.colors.primary,
+              marginBottom: 20,
+            }}>
+            react-native-easy-starter
           </Text>
         </Section>
         <Section>

@@ -1,12 +1,12 @@
-import model from "./Models";
-import ConfigureStore from "./ConfigureStore";
-import Api from "../Services/Api";
+import model from './Models';
+import ConfigureStore from './ConfigureStore';
+import Api from '../Services/Api';
 
 let store = null;
 let apiClient = null;
 
 const createStore = () => {
-  console.log("LOG_createstore");
+  console.log('LOG_createstore ok');
 
   apiClient = Api.createApiClient();
   store = ConfigureStore(model, apiClient);
@@ -16,4 +16,4 @@ const createStore = () => {
 // 👇 Kickoff our StoreCreater and store instance
 
 export default createStore;
-export { store as StoreService, apiClient as ApiService };
+export {store as StoreService, apiClient as ApiService};

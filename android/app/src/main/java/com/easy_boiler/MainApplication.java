@@ -15,6 +15,8 @@ import java.util.List;
 
 import androidx.multidex.MultiDex;
 import android.content.Context;
+import com.microsoft.codepush.react.CodePush;
+
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -25,11 +27,17 @@ public class MainApplication extends Application implements ReactApplication {
     }
 
     @Override
+      protected String getJSBundleFile() {
+          return CodePush.getJSBundleFile();
+      }
+
+    @Override
     protected List<ReactPackage> getPackages() {
       @SuppressWarnings("UnnecessaryLocalVariable")
       List<ReactPackage> packages = new PackageList(this).getPackages();
       // Packages that cannot be autolinked yet can be added manually here, for example:
       // packages.add(new MyReactNativePackage());
+      packages.add(new CodePush(BuildConfig.CODEPUSH_KEY, getApplicationContext(), BuildConfig.DEBUG));
       return packages;
     }
 
