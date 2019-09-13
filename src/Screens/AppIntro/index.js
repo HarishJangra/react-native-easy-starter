@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, StatusBar} from 'react-native';
 import {View, Image, Text} from 'react-native';

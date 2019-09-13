@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useCallback} from 'react';
 import {Text} from 'react-native';
 import LoadingActionContainer from '../../Components/LoadingActionContainer';

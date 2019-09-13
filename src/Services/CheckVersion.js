@@ -11,7 +11,7 @@ export default () => {
   const setSyncMessage = useCallback(
     message => {
       setMessage(syncMessage + '\n' + message);
-      showInfoToast(syncMessage + '\n' + message);
+      // showInfoToast(syncMessage + '\n' + message);
     },
     [syncMessage],
   );
@@ -25,38 +25,41 @@ export default () => {
     version: state.app.version,
   }));
 
-  const codePushStatusDidChange = useCallback(syncStatus => {
-    switch (syncStatus) {
-      case CodePush.SyncStatus.CHECKING_FOR_UPDATE:
-        setSyncMessage('Checking for update');
-        break;
-      case CodePush.SyncStatus.DOWNLOADING_PACKAGE:
-        setSyncMessage('Downloading package');
-        break;
-      case CodePush.SyncStatus.AWAITING_USER_ACTION:
-        setSyncMessage('Awaiting user action');
-        break;
-      case CodePush.SyncStatus.INSTALLING_UPDATE:
-        setSyncMessage('Installing update');
-        break;
-      case CodePush.SyncStatus.UP_TO_DATE:
-        setSyncMessage('App up to date.');
-        setProgress(false);
-        break;
-      case CodePush.SyncStatus.UPDATE_IGNORED:
-        setSyncMessage('Update cancelled by user.');
-        setProgress(false);
-        break;
-      case CodePush.SyncStatus.UPDATE_INSTALLED:
-        setSyncMessage('Update installed and will be applied on restart.');
-        setProgress(false);
-        break;
-      case CodePush.SyncStatus.UNKNOWN_ERROR:
-        setSyncMessage('An unknown error occurred.');
-        setProgress(false);
-        break;
-    }
-  }, []);
+  const codePushStatusDidChange = useCallback(
+    syncStatus => {
+      switch (syncStatus) {
+        case CodePush.SyncStatus.CHECKING_FOR_UPDATE:
+          setSyncMessage('Checking for update');
+          break;
+        case CodePush.SyncStatus.DOWNLOADING_PACKAGE:
+          setSyncMessage('Downloading package');
+          break;
+        case CodePush.SyncStatus.AWAITING_USER_ACTION:
+          setSyncMessage('Awaiting user action');
+          break;
+        case CodePush.SyncStatus.INSTALLING_UPDATE:
+          setSyncMessage('Installing update');
+          break;
+        case CodePush.SyncStatus.UP_TO_DATE:
+          setSyncMessage('App up to date.');
+          setProgress(false);
+          break;
+        case CodePush.SyncStatus.UPDATE_IGNORED:
+          setSyncMessage('Update cancelled by user.');
+          setProgress(false);
+          break;
+        case CodePush.SyncStatus.UPDATE_INSTALLED:
+          setSyncMessage('Update installed and will be applied on restart.');
+          setProgress(false);
+          break;
+        case CodePush.SyncStatus.UNKNOWN_ERROR:
+          setSyncMessage('An unknown error occurred.');
+          setProgress(false);
+          break;
+      }
+    },
+    [setSyncMessage],
+  );
 
   console.log(`[CodePush] message ${syncMessage}`);
 

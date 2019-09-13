@@ -1,8 +1,7 @@
-import React, {useRef, useEffect} from 'react';
-import {View, Text, Keyboard} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+import React, {useRef} from 'react';
+import {Text, Keyboard} from 'react-native';
 import {useStoreState, useStoreActions} from 'easy-peasy';
-import {Button} from 'react-native-paper';
-import {ScrollView} from 'react-native';
 import {STATUS} from '../../Constants';
 import LoadingActionContainer from '../../Components/LoadingActionContainer';
 import {
@@ -22,7 +21,7 @@ import useTranslation from '../../i18n';
 export default () => {
   const onChange = useStoreActions(actions => actions.login.onLoginInputChange);
   const {t} = useTranslation();
-  const {state, login} = useAuth();
+  const {login} = useAuth();
   const {theme} = useTheme();
 
   const inputUserName = useRef();
@@ -61,7 +60,7 @@ export default () => {
         <Section>
           <Text
             style={{
-              fontSize: 32,
+              fontSize: 48,
               fontWeight: 'bold',
               color: theme.colors.accent,
               marginTop: 60,
@@ -71,7 +70,6 @@ export default () => {
           </Text>
           <Text
             style={{
-              fontWeight: 'bold',
               fontStyle: 'italic',
               fontSize: 20,
               color: theme.colors.primary,
@@ -85,6 +83,7 @@ export default () => {
             label="USER NAME"
             // mode="outlined"
             ref={inputUserName}
+            style={{backgroundColor: '#fafafa'}}
             autoCapitalize="none"
             returnKeyType={'next'}
             onSubmitEditing={onSubmit}
@@ -100,6 +99,7 @@ export default () => {
             ref={inputPassword}
             value={password}
             // mode="outlined"
+            style={{backgroundColor: '#fafafa'}}
             label="PASSWORD"
             returnKeyType={'go'}
             onSubmitEditing={loginUser}

@@ -1,13 +1,12 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import createMaterialBottomTabNavigator from '../../Lib/MaterialBottomTabs';
-import {createBottomTabNavigator, createStackNavigator} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
+import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
 
 import Routes from '../Routes/index';
 import Home from '../../Screens/Home';
 import App from '../../Screens/App';
 import {IconX, ICON_TYPE} from '../../Icons';
-import {Text} from 'react-native';
-import colors from '../../Themes/Colors';
 
 const HomeStack = createStackNavigator({Home});
 const ProfileStack = createStackNavigator({Home});

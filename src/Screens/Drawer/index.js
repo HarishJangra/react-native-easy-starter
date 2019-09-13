@@ -11,7 +11,7 @@ const Drawer = props => {
         style={viewStyles.container}
         forceInset={{top: 'always', horizontal: 'never'}}>
         <Section style={{paddingTop: 100, backgroundColor: 'white'}}>
-          <Text>App Drawer</Text>
+          <Text style={{fontSize: 20}}>App Drawer</Text>
         </Section>
       </SafeAreaView>
     </ScrollView>
