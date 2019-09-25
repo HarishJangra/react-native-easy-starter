@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {Text, ActivityIndicator} from 'react-native';
 import colors from '../../Themes/Colors';
@@ -16,12 +17,12 @@ export default function() {
       <ActivityIndicator size="large" color={theme.colors.primary} />
       <Text
         style={{
-          color: 'cyan',
+          color: theme.colors.primary,
           fontSize: 24,
           paddingLeft: 10,
           marginTop: 10,
         }}>
-        LOADING Please wait...
+        Give us a second...
       </Text>
     </Container>
   );

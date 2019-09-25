@@ -8,13 +8,10 @@ export default () => {
   const [syncMessage, setMessage] = useState('');
   const [progress, setProgress] = useState(true);
 
-  const setSyncMessage = useCallback(
-    message => {
-      setMessage(syncMessage + '\n' + message);
-      // showInfoToast(syncMessage + '\n' + message);
-    },
-    [syncMessage],
-  );
+  const setSyncMessage = useCallback(message => {
+    // setMessage(syncMessage + '\n' + message);
+    // showInfoToast(syncMessage + '\n' + message);
+  }, []);
 
   const checkAppVersion = useStoreActions(
     actions => actions.app.checkAppVersion,
@@ -61,7 +58,7 @@ export default () => {
     [setSyncMessage],
   );
 
-  console.log(`[CodePush] message ${syncMessage}`);
+  // console.log(`[CodePush] message ${syncMessage}`);
 
   const downloadProgressCallback = useCallback(progress => {
     setProgress(progress);
