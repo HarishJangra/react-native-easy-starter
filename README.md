@@ -4,7 +4,9 @@
 
 ![](https://img.shields.io/github/stars/HarishJangra/react-native-easy-starter.svg) ![](https://img.shields.io/github/issues/HarishJangra/react-native-easy-starter.svg?style=flat-square)
 
-##### If you want to try React-Native RC 0.61-rc.3 it can be found [here rn0.61](https://github.com/HarishJangra/react-native-easy-starter/tree/rn0.61).
+##### NEW
+
+- React-Native 0.61 is updated.
 
 ## WHY USE EASY STARTER ?
 
