@@ -8,10 +8,10 @@ export default createStackNavigator(
       screen: BottomTabStack,
       path: 'tabs',
     },
+    //More stack screens can be defined here only
   },
   {
     // Default config for all screens
-    headerMode: 'none',
     initialRouteName: Routes.HOME_TABS,
   },
 );

@@ -6,13 +6,14 @@ import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom
 import Routes from '../Routes/index';
 import Home from '../../Screens/Home';
 import App from '../../Screens/App';
+import Profile from '../../Screens/Profile';
 import {IconX, ICON_TYPE} from '../../Icons';
 
 const HomeStack = createStackNavigator({Home});
-const ProfileStack = createStackNavigator({Home});
+const ProfileStack = createStackNavigator({Profile});
 const NotificationStack = createStackNavigator({App});
 
-export default createMaterialBottomTabNavigator(
+const BottomTabs = createMaterialBottomTabNavigator(
   {
     [Routes.HOME_SCREEN]: {
       screen: HomeStack,
@@ -81,3 +82,16 @@ function getNotificationIcon({focused, horizontal, tintColor}) {
     />
   );
 }
+
+export default createStackNavigator(
+  {
+    bottomTabs: BottomTabs,
+  },
+  {
+    headerMode: 'none',
+    navigationOptions: {
+      header: null,
+    },
+    initialRouteName: 'bottomTabs',
+  },
+);
