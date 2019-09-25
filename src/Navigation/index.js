@@ -1,8 +1,8 @@
-import { NavigationActions, StackActions } from "react-navigation";
-import { DrawerActions } from "react-navigation-drawer";
-import Routes from "./Routes";
+import {NavigationActions, StackActions} from 'react-navigation';
+import {DrawerActions} from 'react-navigation-drawer';
+import Routes from './Routes';
 
-export { Routes };
+export {Routes};
 
 /**
  * The navigation is implemented as a service so that it can be used outside of components, for example in sagas.
@@ -30,8 +30,8 @@ function navigate(routeName, params) {
   navigator.dispatch(
     NavigationActions.navigate({
       routeName,
-      params
-    })
+      params,
+    }),
   );
 }
 
@@ -52,10 +52,10 @@ function navigateAndReset(routeName, params) {
       actions: [
         NavigationActions.navigate({
           routeName,
-          params
-        })
-      ]
-    })
+          params,
+        }),
+      ],
+    }),
   );
 }
 
@@ -77,7 +77,7 @@ const NavigationService = {
   openDrawer,
   closeDrawer,
   navigateAndReset,
-  setTopLevelNavigator
+  setTopLevelNavigator,
 };
 
 export default NavigationService;

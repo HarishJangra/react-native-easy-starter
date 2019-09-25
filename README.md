@@ -4,11 +4,13 @@
 
 ![](https://img.shields.io/github/stars/HarishJangra/react-native-easy-starter.svg) ![](https://img.shields.io/github/issues/HarishJangra/react-native-easy-starter.svg?style=flat-square)
 
-##### If you want to try React-Native RC 0.61-rc.3 it can be found [here rn0.61](https://github.com/HarishJangra/react-native-easy-starter/tree/rn0.61).
+##### NEW
+
+- React-Native 0.61 is updated.
 
 ## WHY USE EASY STARTER ?
 
-- Always up-to-date React Native [0.60.5](https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#v0605) scaffolding.
+- Always up-to-date React Native [0.61](https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#v0605) scaffolding.
 
 * [Easy-Peasy](https://github.com/ctrlplusb/easy-peasy) makes it easy to access the global state.
 
@@ -20,7 +22,7 @@
 
 ## Currently Includes
 
-- React-native 0.60.5
+- React-native 0.61
   <!-- -   code-push -->
 - react-native-keychain
   <!-- -   react-native-config -->

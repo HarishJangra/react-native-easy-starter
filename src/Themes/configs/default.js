@@ -1,5 +1,5 @@
-import { DefaultTheme } from "react-native-paper";
-import colors from "../Colors";
+import {DefaultTheme} from 'react-native-paper';
+import colors from '../Colors';
 
 const theme = {
   ...DefaultTheme,
@@ -17,8 +17,8 @@ const theme = {
 
     //react-native-paper theme colors
     surface: colors.white,
-    primaryText: colors.darkgunmetal
-  }
+    primaryText: colors.darkgunmetal,
+  },
 };
 
 export default theme;
