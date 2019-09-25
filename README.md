@@ -1,8 +1,10 @@
 # **_react-native-easy-starter_**
 
-### A good, up to date and easy to use starter and learning tool for beginners to intermediate.
+### A good, up to date and easy to use starter and learning tool for beginners to intermediate. (IOS and Android ready)
 
 ![](https://img.shields.io/github/stars/HarishJangra/react-native-easy-starter.svg) ![](https://img.shields.io/github/issues/HarishJangra/react-native-easy-starter.svg?style=flat-square)
+
+##### If you want to try React-Native RC 0.61-rc.3 it can be found [here rn0.61](https://github.com/HarishJangra/react-native-easy-starter/tree/rn0.61).
 
 ## WHY USE EASY STARTER ?
 
