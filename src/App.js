@@ -17,7 +17,7 @@ import {NetInfoProvider} from './Lib/NetInfo/Context';
 import {Screen} from './Components';
 import useTheme from './Themes/Context';
 import useTranslation from './i18n';
-import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
+// import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 //create the easy store
 const store = createStore();
 
@@ -58,4 +58,4 @@ const ThemeConsumer = props => {
 
 //temp workaround for react-native-gesture-handler in react-native 0.61
 // take a look https://github.com/react-native-community/releases/issues/140#issuecomment-532819601
-export default gestureHandlerRootHOC(Root);
+export default Root;
