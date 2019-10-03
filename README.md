@@ -6,11 +6,11 @@
 
 ##### NEW
 
-- React-Native 0.61 is updated.
+- React-Native updated to 0.61.2
 
 ## WHY USE EASY STARTER ?
 
-- Always up-to-date React Native [0.61](https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#v0605) scaffolding.
+- Always up-to-date React Native [0.61.2](https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#0612) scaffolding.
 
 * [Easy-Peasy](https://github.com/ctrlplusb/easy-peasy) makes it easy to access the global state.
 
