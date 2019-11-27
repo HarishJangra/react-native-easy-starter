@@ -1,4 +1,5 @@
-# **_react-native-easy-starter_**
+![banner](https://raw.githubusercontent.com/HarishJangra/react-native-easy-starter/testmd/banner.png)
+<br /><br />
 
 ### A good, up to date and easy to use starter and learning tool for beginners to intermediate. (IOS and Android ready)
 
