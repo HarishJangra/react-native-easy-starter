@@ -11,7 +11,7 @@
 
 ## WHY USE EASY STARTER ?
 
-- Always up-to-date React Native [0.61.5](https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#0612) scaffolding.
+- Always up-to-date React Native [0.61.5](https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#0615) scaffolding.
 
 * [Easy-Peasy](https://github.com/ctrlplusb/easy-peasy) makes it easy to access the global state.
 
