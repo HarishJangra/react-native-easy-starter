@@ -2,7 +2,7 @@ import React from "react";
 import viewStyles from "../Styles/ViewStyles";
 import ViewX from "./View";
 import colors from "../Themes/Colors";
-import useTheme from "../Themes/Context";
+import useAppTheme from "../Themes/Context";
 
 export default ({ style, ...other }) => {
   return (
@@ -22,7 +22,7 @@ export class Container extends React.Component {
 }
 
 const ContainerComponent = ({ style, bg, ...other }) => {
-  const { theme } = useTheme();
+  const { theme } = useAppTheme();
 
   return (
     <ViewX

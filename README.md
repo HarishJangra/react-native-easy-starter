@@ -50,7 +50,7 @@
 - `useStorage()` for async storage
 - `useNetInfo()` for network info
 - `useTranslation()` for i18n
-- `useTheme()` for using themes
+- `useAppTheme()` for using themes
 - ... much more
 
 ## Getting Started

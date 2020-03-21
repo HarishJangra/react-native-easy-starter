@@ -1,20 +1,16 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Container, Section} from '../../Components';
-import {Text, ScrollView} from 'react-native';
-import viewStyles from '../../Styles/ViewStyles';
-import {DrawerItems, SafeAreaView} from 'react-navigation';
+import {DrawerContentScrollView} from '@react-navigation/drawer';
+import {Section} from '../../Components';
+import {Text} from 'react-native';
 
 const Drawer = props => {
   return (
-    <ScrollView>
-      <SafeAreaView
-        style={viewStyles.container}
-        forceInset={{top: 'always', horizontal: 'never'}}>
-        <Section style={{paddingTop: 100, backgroundColor: 'white'}}>
-          <Text style={{fontSize: 20}}>App Drawer</Text>
-        </Section>
-      </SafeAreaView>
-    </ScrollView>
+    <DrawerContentScrollView {...props}>
+      <Section style={{paddingTop: 100, backgroundColor: 'white'}}>
+        <Text style={{fontSize: 20}}>App Drawer</Text>
+      </Section>
+    </DrawerContentScrollView>
   );
 };
 

@@ -15,8 +15,9 @@ import {LocaleContextProvider} from './i18n/LocaleContext';
 import {NetInfoProvider} from './Lib/NetInfo/Context';
 
 import {Screen} from './Components';
-import useTheme from './Themes/Context';
+import useAppTheme from './Themes/Context';
 import useTranslation from './i18n';
+import RootNavigation from './Navigation/AppNavigation';
 // import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 //create the easy store
 const store = createStore();
@@ -40,17 +41,13 @@ const Root = () => {
 };
 
 const ThemeConsumer = props => {
-  const {theme} = useTheme();
+  const {theme} = useAppTheme();
   const {t} = useTranslation();
 
   return (
     <PaperProvider theme={theme}>
       <AppContextProvider>
-        <PrimaryNav
-          uriPrefix={APP_PREFIX}
-          screenProps={{theme, t}}
-          ref={nav => NavigationService.setTopLevelNavigator(nav)}
-        />
+        <RootNavigation />
       </AppContextProvider>
     </PaperProvider>
   );

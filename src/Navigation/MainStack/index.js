@@ -1,28 +1,25 @@
-import {createDrawerNavigator} from 'react-navigation-drawer';
+/* eslint-disable react-native/no-inline-styles */
+import React from 'react';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import Routes from '../Routes';
-import metrics from '../../Themes/Metrics';
 import MainStack from './MainStack';
-import Drawer from '../../Screens/Drawer';
+import DrawerScreen from '../../Screens/Drawer';
+import metrics from '../../Themes/Metrics';
 
-const DrawerStack = createDrawerNavigator(
-  {
-    [Routes.HOME_STACK]: MainStack,
-  },
-  {
-    drawerWidth: metrics.drawerWidth,
-    drawerBackgroundColor: 'transparent',
-    drawerType: 'slide',
-    contentComponent: Drawer,
-    style: {
-      padding: 0,
-    },
-    edgeWidth: 10,
-    contentOptions: {
-      itemStyle: {
-        marginTop: 30,
-      },
-    },
-  },
-);
+const Drawer = createDrawerNavigator();
 
-export default DrawerStack;
+export default props => {
+  return (
+    <Drawer.Navigator
+      drawerPosition={'left'}
+      drawerType="slide"
+      edgeWidth={10}
+      drawerStyle={{
+        backgroundColor: '#fafafa',
+        width: metrics.drawerWidth,
+      }}
+      drawerContent={DrawerScreen}>
+      <Drawer.Screen name={Routes.HOME_STACK} component={MainStack} />
+    </Drawer.Navigator>
+  );
+};

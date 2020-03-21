@@ -1,61 +1,36 @@
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
-import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
-import {Transition} from 'react-native-reanimated';
+import {NavigationContainer} from '@react-navigation/native';
+import {navigationRef, isMountedRef} from './index';
+import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import Routes from './Routes';
 import LaunchScreen from '../Screens/Launch';
 // Screens Objects
 import LoginStack from './LoginStack';
 import MainStack from './MainStack';
-import AppUpdate from '../Screens/AppUpdate';
+import {useAppContext} from '../Services/Auth/AppContext';
+import {APP_STATE} from '../Constants';
 
-const Root = {screen: LaunchScreen};
+export default function RootNavigation(props) {
+  React.useEffect(() => {
+    isMountedRef.current = true;
+    return () => (isMountedRef.current = false);
+  }, []);
 
-// Manifest of possible screens
-const PrimaryNav = createAnimatedSwitchNavigator(
-  {
-    [Routes.MAIN_APP]: {
-      screen: MainStack,
-      path: 'home',
-    },
-    [Routes.LOGIN_STACK]: {screen: LoginStack, path: 'login'},
-    [Routes.LOADING]: Root,
-  },
-  {
-    transition: (
-      <Transition.Together>
-        <Transition.Out
-          type="slide-left"
-          durationMs={200}
-          interpolation="easeIn"
-        />
-        <Transition.In type="slide-right" durationMs={200} />
-      </Transition.Together>
-    ),
-    // Default config for all screens
-    headerMode: 'none',
-    initialRouteName: Routes.LOADING,
-  },
-);
+  const {state} = useAppContext();
 
-const ModalNav = createStackNavigator(
-  {
-    Main: {
-      screen: PrimaryNav,
-      path: 'app',
-    },
+  return (
+    <NavigationContainer ref={navigationRef}>
+      <Stack.Navigator headerMode="none">
+        {state === APP_STATE.PRIVATE ? (
+          <Stack.Screen name={Routes.MAIN_APP} component={MainStack} />
+        ) : state === APP_STATE.PUBLIC ? (
+          <Stack.Screen name={Routes.LOGIN_STACK} component={LoginStack} />
+        ) : (
+          <Stack.Screen name={Routes.LOADING} component={LaunchScreen} />
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
-    AppUpdate: {
-      screen: AppUpdate,
-      path: 'update',
-    },
-  },
-  {
-    mode: 'modal',
-    initialRouteName: 'Main',
-    headerMode: 'none',
-  },
-);
-
-export default createAppContainer(ModalNav);
+const Stack = createStackNavigator();

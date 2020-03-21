@@ -2,16 +2,16 @@
 import React, {useEffect, useCallback} from 'react';
 import {Text} from 'react-native';
 import LoadingActionContainer from '../../Components/LoadingActionContainer';
-import {Container, ButtonX} from '../../Components';
+import {Container, ButtonX, Section} from '../../Components';
 import NavigationStyles from '../../Styles/NavigationStyles';
 import useAuth from '../../Services/Auth';
-import useTheme from '../../Themes/Context';
+import useAppTheme from '../../Themes/Context';
 import useTranslation from '../../i18n';
 import {LOCALES} from '../../Constants/index';
 
 const MainScreen = ({navigation}) => {
   const {logout} = useAuth();
-  const {theme} = useTheme();
+  const {theme} = useAppTheme();
 
   const {t, localeProvider, changeLocale} = useTranslation();
 
@@ -23,23 +23,36 @@ const MainScreen = ({navigation}) => {
 
   return (
     <LoadingActionContainer fixed>
-      <Container
-        style={{
-          justifyContent: 'center',
-          padding: 20,
-        }}>
-        <Text style={{fontSize: 24, color: theme.colors.primary}}>
-          {t('welcome')}
-        </Text>
+      <Container>
+        <Container
+          style={{
+            justifyContent: 'center',
+            padding: 20,
+          }}>
+          <Text
+            style={{
+              textAlign: 'center',
+              fontSize: 24,
+              color: theme.colors.primaryText,
+            }}>
+            {t('welcome')}
+          </Text>
 
-        <ButtonX dark={true} label={t('logout')} onPress={logout} />
-
-        <ButtonX
-          dark={true}
-          mode="outline"
-          label={t('change_locale')}
-          onPress={_changeLocale}
-        />
+          <ButtonX
+            dark={true}
+            mode="outline"
+            label={t('change_locale')}
+            onPress={_changeLocale}
+          />
+        </Container>
+        <Section>
+          <ButtonX
+            dark={true}
+            color={theme.colors.accent}
+            label={t('logout')}
+            onPress={logout}
+          />
+        </Section>
       </Container>
     </LoadingActionContainer>
   );

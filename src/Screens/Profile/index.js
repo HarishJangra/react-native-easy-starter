@@ -5,10 +5,10 @@ import LoadingActionContainer from '../../Components/LoadingActionContainer';
 import {Container, ButtonX, HeaderButton} from '../../Components';
 import NavigationStyles from '../../Styles/NavigationStyles';
 import NavigationService from '../../Navigation';
-import useTheme from '../../Themes/Context';
+import useAppTheme from '../../Themes/Context';
 
 const MainScreen = ({navigation}) => {
-  const {theme} = useTheme();
+  const {theme} = useAppTheme();
 
   return (
     <LoadingActionContainer fixed>

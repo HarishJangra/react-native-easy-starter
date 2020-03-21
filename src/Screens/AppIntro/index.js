@@ -71,6 +71,8 @@ const slides = [
 
 const AppIntro = props => {
   const _onDone = () => {
+    console.log('done');
+
     NavigationService.navigate(Routes.LOGIN_SCREEN);
   };
 

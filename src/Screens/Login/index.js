@@ -12,7 +12,7 @@ import {
   ButtonX,
 } from '../../Components';
 
-import useTheme from '../../Themes/Context';
+import useAppTheme from '../../Themes/Context';
 import useAuth from '../../Services/Auth';
 import {showInfoToast} from '../../Lib/Toast';
 import BottomPanel from '../../Components/Panel';
@@ -22,7 +22,7 @@ export default () => {
   const onChange = useStoreActions(actions => actions.login.onLoginInputChange);
   const {t} = useTranslation();
   const {login} = useAuth();
-  const {theme} = useTheme();
+  const {theme} = useAppTheme();
 
   const inputUserName = useRef();
   const inputPassword = useRef();

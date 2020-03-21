@@ -1,12 +1,15 @@
-import React, {useEffect, useCallback} from 'react';
+import React, {useEffect, useCallback, useContext} from 'react';
 import {Alert} from 'react-native';
 import {APP_STATE} from '../../Constants';
 import {resetLoginCredentials} from '../Keychain';
-import NavigationService, {Routes} from '../../Navigation';
 import {useStoreActions, useStoreState} from 'easy-peasy';
 import useCheckVersion from '../CheckVersion';
 
 const AppStateContext = React.createContext();
+
+export const useAppContext = () => {
+  return useContext(AppStateContext);
+};
 
 export const AppContextProvider = props => {
   const {loginUser, setState, checkLogin} = useStoreActions(actions => ({
@@ -51,19 +54,8 @@ export const AppContextProvider = props => {
 
   // check loggedin on mount
   useEffect(() => {
-    state == APP_STATE.UNKNOWN && checkLogin();
+    state === APP_STATE.UNKNOWN && checkLogin();
   }, [checkLogin, state]);
-
-  // app state reactor
-  useEffect(() => {
-    if (state == APP_STATE.PRIVATE) {
-      NavigationService.navigate(Routes.MAIN_APP);
-    } else if (state == APP_STATE.PUBLIC) {
-      NavigationService.navigate(Routes.LOGIN_STACK);
-    } else {
-      //do something if needed
-    }
-  }, [state]);
 
   return (
     <AppStateContext.Provider
