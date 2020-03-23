@@ -53,7 +53,7 @@ export default () => {
     });
   };
 
-  const loading = status == STATUS.FETCHING;
+  const loading = status === STATUS.FETCHING;
 
   return (
     <Container>
@@ -61,6 +61,7 @@ export default () => {
         <Section>
           <Text
             style={{
+              textAlign: 'center',
               fontSize: 30,
               color: theme.colors.primary,
               marginTop: 60,
@@ -68,6 +69,17 @@ export default () => {
               marginBottom: 20,
             }}>
             {t('welcome')}
+          </Text>
+        </Section>
+        <Section>
+          <Text
+            style={{
+              fontSize: 20,
+              textAlign: 'center',
+              fontFamily: Fonts.type.italic,
+              color: theme.colors.primaryText,
+            }}>
+            Provide any details to continue
           </Text>
         </Section>
         <Section>

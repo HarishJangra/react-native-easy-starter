@@ -5,6 +5,7 @@ import {Section, TouchableX} from '../../Components';
 import {Image, View} from 'react-native';
 import {Text} from 'react-native';
 import metrics from '../../Themes/Metrics';
+import useAuth from '../../Services/Auth';
 
 const Drawer = props => {
   return (
@@ -17,12 +18,21 @@ const Drawer = props => {
         source={require('../../../hero/1.png')}
       /> */}
 
+      <Content />
+    </DrawerContentScrollView>
+  );
+};
+
+const Content = () => {
+  const {logout} = useAuth();
+  return (
+    <>
       <Item name="Home" />
       <Item name="Profile" />
       <Item name="Setting" />
       <View style={{height: 20}} />
-      <Item name="Logout" color={'red'} />
-    </DrawerContentScrollView>
+      <Item name="Logout" color={'red'} onPress={logout} />
+    </>
   );
 };
 
