@@ -5,6 +5,8 @@ import LoadingActionContainer from '../../Components/LoadingActionContainer';
 import {Container, HeaderButton} from '../../Components';
 import useAppTheme from '../../Themes/Context';
 import {IconX, ICON_TYPE} from '../../Icons';
+import {Image} from 'react-native';
+import metrics from '../../Themes/Metrics';
 
 const MainScreen = ({routes, navigation}) => {
   console.log('navigation', navigation);
@@ -35,9 +37,18 @@ const MainScreen = ({routes, navigation}) => {
     <LoadingActionContainer fixed>
       <Container
         style={{
-          justifyContent: 'center',
-          padding: 20,
+          padding: 10,
         }}>
+        <View style={{alignItems: 'center'}}>
+          <Image
+            source={require('../../../hero/3.png')}
+            style={{
+              width: metrics.screenWidth,
+              aspectRatio: 1,
+              resizeMode: 'contain',
+            }}
+          />
+        </View>
         <Text style={{fontSize: 20, textAlign: 'center', padding: 20}}>
           Home screen
         </Text>
