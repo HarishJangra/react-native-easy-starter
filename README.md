@@ -47,6 +47,7 @@
 - material design components using [react-native-paper](https://github.com/callstack/react-native-paper)
 - react-native-modal
 - easy-peasy models
+- custom fonts guide
 - `useStorage()` for async storage
 - `useNetInfo()` for network info
 - `useTranslation()` for i18n
