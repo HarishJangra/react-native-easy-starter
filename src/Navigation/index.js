@@ -1,23 +1,8 @@
-import {NavigationActions, StackActions} from 'react-navigation';
-import {DrawerActions} from 'react-navigation-drawer';
-import Routes from './Routes';
+import React from 'react';
+export {Routes} from './Routes';
 
-export {Routes};
-
-/**
- * The navigation is implemented as a service so that it can be used outside of components, for example in sagas.
- *
- * @see https://reactnavigation.org/docs/en/navigating-without-navigation-prop.html
- */
-
-let navigator;
-
-/**
- * This function is called when the RootScreen is created to set the navigator instance to use.
- */
-function setTopLevelNavigator(navigatorRef) {
-  navigator = navigatorRef;
-}
+export const navigationRef = React.createRef();
+export const isMountedRef = React.createRef();
 
 /**
  * Call this function when you want to navigate to a specific route.
@@ -26,13 +11,14 @@ function setTopLevelNavigator(navigatorRef) {
  * @param params Route parameters.
  */
 function navigate(routeName, params) {
-  // console.log("LOG_navigate", routeName, params);
-  navigator.dispatch(
-    NavigationActions.navigate({
-      routeName,
-      params,
-    }),
-  );
+  console.log('LOG_navigate', routeName, params);
+  if (isMountedRef.current && navigationRef.current) {
+    // Perform navigation if the app has mounted
+    navigationRef.current.navigate(routeName, params);
+  } else {
+    // You can decide what to do if the app hasn't mounted
+    // You can ignore this, or add these actions to a queue you can call later
+  }
 }
 
 /**
@@ -45,30 +31,30 @@ function navigate(routeName, params) {
  * @param params Route parameters.
  */
 function navigateAndReset(routeName, params) {
-  navigator.dispatch(
-    StackActions.reset({
-      index: 0,
-      key: null,
-      actions: [
-        NavigationActions.navigate({
-          routeName,
-          params,
-        }),
-      ],
-    }),
-  );
+  // navigator.dispatch(
+  //   StackActions.reset({
+  //     index: 0,
+  //     key: null,
+  //     actions: [
+  //       NavigationActions.navigate({
+  //         routeName,
+  //         params,
+  //       }),
+  //     ],
+  //   }),
+  // );
 }
 
 function toggleDrawer() {
-  navigator.dispatch(DrawerActions.toggleDrawer());
+  // navigator.dispatch(DrawerActions.toggleDrawer());
 }
 
 function openDrawer() {
-  navigator.dispatch(DrawerActions.openDrawer());
+  // navigator.dispatch(DrawerActions.openDrawer());
 }
 
 function closeDrawer() {
-  navigator.dispatch(DrawerActions.closeDrawer());
+  // navigator.dispatch(DrawerActions.closeDrawer());
 }
 
 const NavigationService = {
@@ -77,7 +63,6 @@ const NavigationService = {
   openDrawer,
   closeDrawer,
   navigateAndReset,
-  setTopLevelNavigator,
 };
 
 export default NavigationService;

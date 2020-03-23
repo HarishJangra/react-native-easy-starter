@@ -3,10 +3,10 @@ import React from 'react';
 import {Text, ActivityIndicator} from 'react-native';
 import colors from '../../Themes/Colors';
 import {Container} from '../../Components';
-import useTheme from '../../Themes/Context';
+import useAppTheme from '../../Themes/Context';
 
 export default function() {
-  const {theme} = useTheme();
+  const {theme} = useAppTheme();
 
   return (
     <Container

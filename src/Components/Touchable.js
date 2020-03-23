@@ -5,11 +5,11 @@ import {
   TouchableOpacity,
 } from 'react-native-gesture-handler';
 import {isAndroid} from '../Constants';
-import useTheme from '../Themes/Context';
+import useAppTheme from '../Themes/Context';
 
 export default React.memo(
   ({onPress, foreground = true, background, ...other}) => {
-    const {theme} = useTheme();
+    const {theme} = useAppTheme();
 
     const _onPress = () => {
       InteractionManager.runAfterInteractions(() => {

@@ -12,17 +12,18 @@ import {
   ButtonX,
 } from '../../Components';
 
-import useTheme from '../../Themes/Context';
+import useAppTheme from '../../Themes/Context';
 import useAuth from '../../Services/Auth';
 import {showInfoToast} from '../../Lib/Toast';
 import BottomPanel from '../../Components/Panel';
 import useTranslation from '../../i18n';
+import Fonts from '../../Themes/Fonts';
 
 export default () => {
   const onChange = useStoreActions(actions => actions.login.onLoginInputChange);
   const {t} = useTranslation();
   const {login} = useAuth();
-  const {theme} = useTheme();
+  const {theme} = useAppTheme();
 
   const inputUserName = useRef();
   const inputPassword = useRef();
@@ -52,7 +53,7 @@ export default () => {
     });
   };
 
-  const loading = status == STATUS.FETCHING;
+  const loading = status === STATUS.FETCHING;
 
   return (
     <Container>
@@ -60,13 +61,25 @@ export default () => {
         <Section>
           <Text
             style={{
+              textAlign: 'center',
               fontSize: 30,
-              fontWeight: 'bold',
               color: theme.colors.primary,
               marginTop: 60,
+              fontFamily: Fonts.type.stylish,
               marginBottom: 20,
             }}>
             {t('welcome')}
+          </Text>
+        </Section>
+        <Section>
+          <Text
+            style={{
+              fontSize: 20,
+              textAlign: 'center',
+              fontFamily: Fonts.type.italic,
+              color: theme.colors.primaryText,
+            }}>
+            Provide any details to continue
           </Text>
         </Section>
         <Section>

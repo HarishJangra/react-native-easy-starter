@@ -1,9 +1,8 @@
-
-import { useContext } from 'react';
+import {useContext} from 'react';
 import AppStateContext from './AppContext';
 
-const useAuth = (props) => {
-    return useContext(AppStateContext)
-}
+const useAuth = props => {
+  return useContext(AppStateContext);
+};
 
-export default useAuth
+export default useAuth;

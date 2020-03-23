@@ -1,4 +1,4 @@
-![banner](https://raw.githubusercontent.com/HarishJangra/react-native-easy-starter/master/banner.png)
+![banner](https://raw.githubusercontent.com/HarishJangra/react-native-easy-starter/master/hero/3.png)
 <br /><br />
 
 ### A good, up to date and easy to use starter and learning tool for beginners to intermediate. (IOS and Android ready)
@@ -47,10 +47,11 @@
 - material design components using [react-native-paper](https://github.com/callstack/react-native-paper)
 - react-native-modal
 - easy-peasy models
+- custom fonts guide
 - `useStorage()` for async storage
 - `useNetInfo()` for network info
 - `useTranslation()` for i18n
-- `useTheme()` for using themes
+- `useAppTheme()` for using themes
 - ... much more
 
 ## Getting Started

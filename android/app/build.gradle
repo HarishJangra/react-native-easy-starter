@@ -212,6 +212,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-vector-icons')
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation project(':react-native-code-push')
 

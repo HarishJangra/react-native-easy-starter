@@ -5,9 +5,8 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* easy_starterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* easy_starterTests.m */; };
+		00E356F31AD99517003FC87E /* easy_boilerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* easy_boilerTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -15,7 +14,40 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* easy_starterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* easy_starterTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* easy_boilerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* easy_boilerTests.m */; };
+		1BD6C7CE716C439E87AE6F83 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5258059A507C48CDAE824E03 /* OpenSans-Bold.ttf */; };
+		4B349A754CC94CE4B1B67D9D /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28945FBF0DB44A62AAF46A0C /* OpenSans-Light.ttf */; };
+		C4EB50AE41194DE2B461E426 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55EA58AAD68844DE825062A3 /* OpenSans-Regular.ttf */; };
+		AF349B60B80C42D3926E5A3A /* pn_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83172C62DAA74AA88BA7ED65 /* pn_bold.otf */; };
+		6641C1C4B463483BA8F26791 /* pn_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9144B3BDF8C044179114C1D5 /* pn_light.otf */; };
+		AE382D8333C64520A01625BB /* pn_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60A9852E164D4A948A840FC4 /* pn_regular.otf */; };
+		884CE17441C242548C2A7995 /* pn_thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F27E7F54D92E46D08D87065A /* pn_thin.otf */; };
+		F3F01EBA4FEE4AD581368769 /* pnthin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5DCFA717546E46B29B60E0DD /* pnthin.otf */; };
+		694795F20B0B4AA589DD54DE /* sdsd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6FFE8DEBD214F89B447408D /* sdsd.ttf */; };
+		34E9B7B7142E4D7F98ABA447 /* subjects.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 562894CD5E5C44E182A94E1C /* subjects.ttf */; };
+		F9A79C3047B54DF5ACAABF23 /* GentiumBookBasic-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0FE91579B0141A6919A0180 /* GentiumBookBasic-Italic.ttf */; };
+		561B3F62A52044F1929E163A /* GentiumBookBasic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D094D2544B504734B39F1E85 /* GentiumBookBasic-Regular.ttf */; };
+		FB9DC84182A84D248AAB137C /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB45A45525D43C6A6177766 /* GreatVibes-Regular.ttf */; };
+		26B5A8CD5D2648A097FA9960 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC29E3910A8A4E4FB6761E72 /* Lato-Bold.ttf */; };
+		311C15289ED84F70BBFEE383 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5004AF6041D749B8A4DE3CCF /* Lato-Italic.ttf */; };
+		2CA4DDB36AA44C73AB6E076C /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE1BE071F6B74E5D9D7B1B3B /* Lato-Regular.ttf */; };
+		8476085784014BADBEE1FE29 /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73E626260B804616B2F72470 /* LuckiestGuy-Regular.ttf */; };
+		0437E564CFDE4C4781882FE3 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B9ABDC60EE94172951B690C /* AntDesign.ttf */; };
+		603510879B07487688D68039 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5BD1DE9FF0C4ED2B93EE0E0 /* Entypo.ttf */; };
+		2846934E033C49EE84D7C4CB /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DB893972E6449B9B94804B2 /* EvilIcons.ttf */; };
+		CC4DBE62BC09412E956C07C1 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F450C566914D44E3BDC09245 /* Feather.ttf */; };
+		E957479BFE16404783B6B121 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2731BB7E851140F985D4ADBD /* FontAwesome.ttf */; };
+		C5123A254C124963B0DDCF1F /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C870B4E5E4CE894592CF0 /* FontAwesome5_Brands.ttf */; };
+		2D9C33636B8E4AB1918B838D /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C064F60385645B3A419D5FB /* FontAwesome5_Regular.ttf */; };
+		9678EC00DB4A43E286AC6AFA /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5429B8B581BA4E05971D0C05 /* FontAwesome5_Solid.ttf */; };
+		ED40F5AC280A4AE0B1B42DE5 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F952088E9BFC4B1FBCC4BED6 /* Fontisto.ttf */; };
+		215D00C29EEF48F3A6716385 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 236D89CFDCAF41429524CCBB /* Foundation.ttf */; };
+		B44E3C732C8344D6886BD46B /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4255D9090CEB4CC29B12AF82 /* Ionicons.ttf */; };
+		4B4D6E5C94B34EDABAB56E2D /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDE5501DB3914B03AACD0EF5 /* MaterialCommunityIcons.ttf */; };
+		A0BA1EEE95644539BCC41CCA /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE8DDD8A5BC54816BD88644F /* MaterialIcons.ttf */; };
+		025A831D719B4F52B4676190 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 462EC08F7B834BC3AC86934F /* Octicons.ttf */; };
+		6403861015B149C39F1C7784 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58BB3D625D3D42F3B5292445 /* SimpleLineIcons.ttf */; };
+		8846143024EE4E68A1522D8D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7837C42CB87341329E86ADD2 /* Zocial.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,33 +56,66 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = easy_starter;
+			remoteInfo = easy_boiler;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "easy_starter-tvOS";
+			remoteInfo = "easy_boiler-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* easy_starterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = easy_starterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* easy_boilerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = easy_boilerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* easy_starterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = easy_starterTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* easy_starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easy_starter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = easy_starter/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = easy_starter/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* easy_boilerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = easy_boilerTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* easy_boiler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easy_boiler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = easy_boiler/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = easy_boiler/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = easy_starter/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = easy_starter/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = easy_starter/main.m; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* easy_starter-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easy_starter-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* easy_starter-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "easy_starter-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = easy_boiler/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = easy_boiler/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = easy_boiler/main.m; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* easy_boiler-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easy_boiler-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* easy_boiler-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "easy_boiler-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		5258059A507C48CDAE824E03 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; name = "OpenSans-Bold.ttf"; path = "../src/Assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		28945FBF0DB44A62AAF46A0C /* OpenSans-Light.ttf */ = {isa = PBXFileReference; name = "OpenSans-Light.ttf"; path = "../src/Assets/fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		55EA58AAD68844DE825062A3 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../src/Assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		83172C62DAA74AA88BA7ED65 /* pn_bold.otf */ = {isa = PBXFileReference; name = "pn_bold.otf"; path = "../src/Assets/fonts/pn_bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9144B3BDF8C044179114C1D5 /* pn_light.otf */ = {isa = PBXFileReference; name = "pn_light.otf"; path = "../src/Assets/fonts/pn_light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		60A9852E164D4A948A840FC4 /* pn_regular.otf */ = {isa = PBXFileReference; name = "pn_regular.otf"; path = "../src/Assets/fonts/pn_regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F27E7F54D92E46D08D87065A /* pn_thin.otf */ = {isa = PBXFileReference; name = "pn_thin.otf"; path = "../src/Assets/fonts/pn_thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5DCFA717546E46B29B60E0DD /* pnthin.otf */ = {isa = PBXFileReference; name = "pnthin.otf"; path = "../src/Assets/fonts/pnthin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D6FFE8DEBD214F89B447408D /* sdsd.ttf */ = {isa = PBXFileReference; name = "sdsd.ttf"; path = "../src/Assets/fonts/sdsd.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		562894CD5E5C44E182A94E1C /* subjects.ttf */ = {isa = PBXFileReference; name = "subjects.ttf"; path = "../src/Assets/fonts/subjects.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D0FE91579B0141A6919A0180 /* GentiumBookBasic-Italic.ttf */ = {isa = PBXFileReference; name = "GentiumBookBasic-Italic.ttf"; path = "../src/Assets/fonts/GentiumBookBasic-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D094D2544B504734B39F1E85 /* GentiumBookBasic-Regular.ttf */ = {isa = PBXFileReference; name = "GentiumBookBasic-Regular.ttf"; path = "../src/Assets/fonts/GentiumBookBasic-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7EB45A45525D43C6A6177766 /* GreatVibes-Regular.ttf */ = {isa = PBXFileReference; name = "GreatVibes-Regular.ttf"; path = "../src/Assets/fonts/GreatVibes-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CC29E3910A8A4E4FB6761E72 /* Lato-Bold.ttf */ = {isa = PBXFileReference; name = "Lato-Bold.ttf"; path = "../src/Assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5004AF6041D749B8A4DE3CCF /* Lato-Italic.ttf */ = {isa = PBXFileReference; name = "Lato-Italic.ttf"; path = "../src/Assets/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FE1BE071F6B74E5D9D7B1B3B /* Lato-Regular.ttf */ = {isa = PBXFileReference; name = "Lato-Regular.ttf"; path = "../src/Assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		73E626260B804616B2F72470 /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; name = "LuckiestGuy-Regular.ttf"; path = "../src/Assets/fonts/LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9B9ABDC60EE94172951B690C /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B5BD1DE9FF0C4ED2B93EE0E0 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8DB893972E6449B9B94804B2 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F450C566914D44E3BDC09245 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2731BB7E851140F985D4ADBD /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9F9C870B4E5E4CE894592CF0 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7C064F60385645B3A419D5FB /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5429B8B581BA4E05971D0C05 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F952088E9BFC4B1FBCC4BED6 /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		236D89CFDCAF41429524CCBB /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4255D9090CEB4CC29B12AF82 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EDE5501DB3914B03AACD0EF5 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FE8DDD8A5BC54816BD88644F /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		462EC08F7B834BC3AC86934F /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		58BB3D625D3D42F3B5292445 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7837C42CB87341329E86ADD2 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +150,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* easy_starterTests */ = {
+		00E356EF1AD99517003FC87E /* easy_boilerTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* easy_starterTests.m */,
+				00E356F21AD99517003FC87E /* easy_boilerTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = easy_starterTests;
+			path = easy_boilerTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -102,7 +167,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* easy_starter */ = {
+		13B07FAE1A68108700A75B9A /* easy_boiler */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -113,7 +178,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = easy_starter;
+			name = easy_boiler;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -135,11 +200,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* easy_starter */,
+				13B07FAE1A68108700A75B9A /* easy_boiler */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* easy_starterTests */,
+				00E356EF1AD99517003FC87E /* easy_boilerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				B2931527266A49A392261DEC /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -149,20 +215,61 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* easy_starter.app */,
-				00E356EE1AD99517003FC87E /* easy_starterTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* easy_starter-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* easy_starter-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* easy_boiler.app */,
+				00E356EE1AD99517003FC87E /* easy_boilerTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* easy_boiler-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* easy_boiler-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B2931527266A49A392261DEC /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				5258059A507C48CDAE824E03 /* OpenSans-Bold.ttf */,
+				28945FBF0DB44A62AAF46A0C /* OpenSans-Light.ttf */,
+				55EA58AAD68844DE825062A3 /* OpenSans-Regular.ttf */,
+				83172C62DAA74AA88BA7ED65 /* pn_bold.otf */,
+				9144B3BDF8C044179114C1D5 /* pn_light.otf */,
+				60A9852E164D4A948A840FC4 /* pn_regular.otf */,
+				F27E7F54D92E46D08D87065A /* pn_thin.otf */,
+				5DCFA717546E46B29B60E0DD /* pnthin.otf */,
+				D6FFE8DEBD214F89B447408D /* sdsd.ttf */,
+				562894CD5E5C44E182A94E1C /* subjects.ttf */,
+				D0FE91579B0141A6919A0180 /* GentiumBookBasic-Italic.ttf */,
+				D094D2544B504734B39F1E85 /* GentiumBookBasic-Regular.ttf */,
+				7EB45A45525D43C6A6177766 /* GreatVibes-Regular.ttf */,
+				CC29E3910A8A4E4FB6761E72 /* Lato-Bold.ttf */,
+				5004AF6041D749B8A4DE3CCF /* Lato-Italic.ttf */,
+				FE1BE071F6B74E5D9D7B1B3B /* Lato-Regular.ttf */,
+				73E626260B804616B2F72470 /* LuckiestGuy-Regular.ttf */,
+				9B9ABDC60EE94172951B690C /* AntDesign.ttf */,
+				B5BD1DE9FF0C4ED2B93EE0E0 /* Entypo.ttf */,
+				8DB893972E6449B9B94804B2 /* EvilIcons.ttf */,
+				F450C566914D44E3BDC09245 /* Feather.ttf */,
+				2731BB7E851140F985D4ADBD /* FontAwesome.ttf */,
+				9F9C870B4E5E4CE894592CF0 /* FontAwesome5_Brands.ttf */,
+				7C064F60385645B3A419D5FB /* FontAwesome5_Regular.ttf */,
+				5429B8B581BA4E05971D0C05 /* FontAwesome5_Solid.ttf */,
+				F952088E9BFC4B1FBCC4BED6 /* Fontisto.ttf */,
+				236D89CFDCAF41429524CCBB /* Foundation.ttf */,
+				4255D9090CEB4CC29B12AF82 /* Ionicons.ttf */,
+				EDE5501DB3914B03AACD0EF5 /* MaterialCommunityIcons.ttf */,
+				FE8DDD8A5BC54816BD88644F /* MaterialIcons.ttf */,
+				462EC08F7B834BC3AC86934F /* Octicons.ttf */,
+				58BB3D625D3D42F3B5292445 /* SimpleLineIcons.ttf */,
+				7837C42CB87341329E86ADD2 /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* easy_starterTests */ = {
+		00E356ED1AD99517003FC87E /* easy_boilerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "easy_starterTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "easy_boilerTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -173,14 +280,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = easy_starterTests;
-			productName = easy_starterTests;
-			productReference = 00E356EE1AD99517003FC87E /* easy_starterTests.xctest */;
+			name = easy_boilerTests;
+			productName = easy_boilerTests;
+			productReference = 00E356EE1AD99517003FC87E /* easy_boilerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* easy_starter */ = {
+		13B07F861A680F5B00A75B9A /* easy_boiler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "easy_starter" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "easy_boiler" */;
 			buildPhases = (
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -192,14 +299,14 @@
 			);
 			dependencies = (
 			);
-			name = easy_starter;
-			productName = "easy_starter";
-			productReference = 13B07F961A680F5B00A75B9A /* easy_starter.app */;
+			name = easy_boiler;
+			productName = "easy_boiler";
+			productReference = 13B07F961A680F5B00A75B9A /* easy_boiler.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* easy_starter-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* easy_boiler-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "easy_starter-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "easy_boiler-tvOS" */;
 			buildPhases = (
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
@@ -211,14 +318,14 @@
 			);
 			dependencies = (
 			);
-			name = "easy_starter-tvOS";
-			productName = "easy_starter-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* easy_starter-tvOS.app */;
+			name = "easy_boiler-tvOS";
+			productName = "easy_boiler-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* easy_boiler-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* easy_starter-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* easy_boiler-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "easy_starter-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "easy_boiler-tvOSTests" */;
 			buildPhases = (
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
@@ -229,9 +336,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "easy_starter-tvOSTests";
-			productName = "easy_starter-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* easy_starter-tvOSTests.xctest */;
+			name = "easy_boiler-tvOSTests";
+			productName = "easy_boiler-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* easy_boiler-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -240,7 +347,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -258,7 +365,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "easy_starter" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "easy_boiler" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -271,10 +378,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* easy_starter */,
-				00E356ED1AD99517003FC87E /* easy_starterTests */,
-				2D02E47A1E0B4A5D006451C7 /* easy_starter-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* easy_starter-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* easy_boiler */,
+				00E356ED1AD99517003FC87E /* easy_boilerTests */,
+				2D02E47A1E0B4A5D006451C7 /* easy_boiler-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* easy_boiler-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -293,6 +400,39 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				1BD6C7CE716C439E87AE6F83 /* OpenSans-Bold.ttf in Resources */,
+				4B349A754CC94CE4B1B67D9D /* OpenSans-Light.ttf in Resources */,
+				C4EB50AE41194DE2B461E426 /* OpenSans-Regular.ttf in Resources */,
+				AF349B60B80C42D3926E5A3A /* pn_bold.otf in Resources */,
+				6641C1C4B463483BA8F26791 /* pn_light.otf in Resources */,
+				AE382D8333C64520A01625BB /* pn_regular.otf in Resources */,
+				884CE17441C242548C2A7995 /* pn_thin.otf in Resources */,
+				F3F01EBA4FEE4AD581368769 /* pnthin.otf in Resources */,
+				694795F20B0B4AA589DD54DE /* sdsd.ttf in Resources */,
+				34E9B7B7142E4D7F98ABA447 /* subjects.ttf in Resources */,
+				F9A79C3047B54DF5ACAABF23 /* GentiumBookBasic-Italic.ttf in Resources */,
+				561B3F62A52044F1929E163A /* GentiumBookBasic-Regular.ttf in Resources */,
+				FB9DC84182A84D248AAB137C /* GreatVibes-Regular.ttf in Resources */,
+				26B5A8CD5D2648A097FA9960 /* Lato-Bold.ttf in Resources */,
+				311C15289ED84F70BBFEE383 /* Lato-Italic.ttf in Resources */,
+				2CA4DDB36AA44C73AB6E076C /* Lato-Regular.ttf in Resources */,
+				8476085784014BADBEE1FE29 /* LuckiestGuy-Regular.ttf in Resources */,
+				0437E564CFDE4C4781882FE3 /* AntDesign.ttf in Resources */,
+				603510879B07487688D68039 /* Entypo.ttf in Resources */,
+				2846934E033C49EE84D7C4CB /* EvilIcons.ttf in Resources */,
+				CC4DBE62BC09412E956C07C1 /* Feather.ttf in Resources */,
+				E957479BFE16404783B6B121 /* FontAwesome.ttf in Resources */,
+				C5123A254C124963B0DDCF1F /* FontAwesome5_Brands.ttf in Resources */,
+				2D9C33636B8E4AB1918B838D /* FontAwesome5_Regular.ttf in Resources */,
+				9678EC00DB4A43E286AC6AFA /* FontAwesome5_Solid.ttf in Resources */,
+				ED40F5AC280A4AE0B1B42DE5 /* Fontisto.ttf in Resources */,
+				215D00C29EEF48F3A6716385 /* Foundation.ttf in Resources */,
+				B44E3C732C8344D6886BD46B /* Ionicons.ttf in Resources */,
+				4B4D6E5C94B34EDABAB56E2D /* MaterialCommunityIcons.ttf in Resources */,
+				A0BA1EEE95644539BCC41CCA /* MaterialIcons.ttf in Resources */,
+				025A831D719B4F52B4676190 /* Octicons.ttf in Resources */,
+				6403861015B149C39F1C7784 /* SimpleLineIcons.ttf in Resources */,
+				8846143024EE4E68A1522D8D /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* easy_starterTests.m in Sources */,
+				00E356F31AD99517003FC87E /* easy_boilerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* easy_starterTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* easy_boilerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,12 +562,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* easy_starter */;
+			target = 13B07F861A680F5B00A75B9A /* easy_boiler */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* easy_starter-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* easy_boiler-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -439,7 +579,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = easy_starter;
+			path = easy_boiler;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -453,7 +593,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = easy_starterTests/Info.plist;
+				INFOPLIST_FILE = easy_boilerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -463,7 +603,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easy_starter.app/easy_starter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easy_boiler.app/easy_boiler";
 			};
 			name = Debug;
 		};
@@ -472,7 +612,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = easy_starterTests/Info.plist;
+				INFOPLIST_FILE = easy_boilerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -482,7 +622,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easy_starter.app/easy_starter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easy_boiler.app/easy_boiler";
 			};
 			name = Release;
 		};
@@ -492,7 +632,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = easy_starter/Info.plist;
+				INFOPLIST_FILE = easy_boiler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -500,7 +640,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = easy_starter;
+				PRODUCT_NAME = easy_boiler;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -510,7 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = easy_starter/Info.plist;
+				INFOPLIST_FILE = easy_boiler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -518,7 +658,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = easy_starter;
+				PRODUCT_NAME = easy_boiler;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -535,14 +675,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "easy_starter-tvOS/Info.plist";
+				INFOPLIST_FILE = "easy_boiler-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.easy_starter-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.easy_boiler-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -562,14 +702,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "easy_starter-tvOS/Info.plist";
+				INFOPLIST_FILE = "easy_boiler-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.easy_starter-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.easy_boiler-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -588,17 +728,17 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "easy_starter-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "easy_boiler-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.easy_starter-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.easy_boiler-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easy_starter-tvOS.app/easy_starter-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easy_boiler-tvOS.app/easy_boiler-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -614,17 +754,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "easy_starter-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "easy_boiler-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.easy_starter-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.easy_boiler-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easy_starter-tvOS.app/easy_starter-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/easy_boiler-tvOS.app/easy_boiler-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -731,7 +871,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "easy_starterTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "easy_boilerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -740,7 +880,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "easy_starter" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "easy_boiler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -749,7 +889,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "easy_starter-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "easy_boiler-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -758,7 +898,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "easy_starter-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "easy_boiler-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -767,7 +907,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "easy_starter" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "easy_boiler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

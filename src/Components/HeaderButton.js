@@ -8,7 +8,7 @@ export default ({onPress, icon, iconOrigin = ICON_TYPE.ICONICONS}) => {
   return (
     <TouchableX onPress={onPress}>
       <View style={{padding: 10}}>
-        <IconX name={icon} origin={iconOrigin} color={'white'} size={32} />
+        <IconX name={icon} origin={iconOrigin} color={'black'} size={32} />
       </View>
     </TouchableX>
   );

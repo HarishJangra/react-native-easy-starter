@@ -4,10 +4,10 @@ import {TextInput, Button} from 'react-native-paper';
 import {View} from 'react-native';
 import {TouchableOpacity} from 'react-native';
 import {IconX} from '../Icons';
-import useTheme from '../Themes/Context';
+import useAppTheme from '../Themes/Context';
 
 function Input({style, ...other}, ref) {
-  const {theme} = useTheme();
+  const {theme} = useAppTheme();
 
   const inputRef = useRef();
 
