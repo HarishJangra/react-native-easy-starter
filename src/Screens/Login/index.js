@@ -17,6 +17,7 @@ import useAuth from '../../Services/Auth';
 import {showInfoToast} from '../../Lib/Toast';
 import BottomPanel from '../../Components/Panel';
 import useTranslation from '../../i18n';
+import Fonts from '../../Themes/Fonts';
 
 export default () => {
   const onChange = useStoreActions(actions => actions.login.onLoginInputChange);
@@ -61,9 +62,9 @@ export default () => {
           <Text
             style={{
               fontSize: 30,
-              fontWeight: 'bold',
               color: theme.colors.primary,
               marginTop: 60,
+              fontFamily: Fonts.type.stylish,
               marginBottom: 20,
             }}>
             {t('welcome')}

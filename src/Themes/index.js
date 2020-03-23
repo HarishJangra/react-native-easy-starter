@@ -1,3 +1,3 @@
-import defaultTheme from "./configs/default";
+import defaultTheme from './configs/default';
 
 export default defaultTheme;
