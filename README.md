@@ -1,17 +1,20 @@
 ![banner](https://raw.githubusercontent.com/HarishJangra/react-native-easy-starter/master/hero/1.png)
-<br /><br />
 
-### A good, up to date and easy to use starter and learning tool for beginners to intermediate. (IOS and Android ready)
+<br />
+
+### A GOOD, up to date and easy to use starter and learning tool for beginners to intermediate. (IOS and Android ready)
 
 ![](https://img.shields.io/github/stars/HarishJangra/react-native-easy-starter.svg) ![](https://img.shields.io/github/issues/HarishJangra/react-native-easy-starter.svg?style=flat-square)
 
 ##### NEW
 
-- React-Native updated to 0.61.5
+- React-Native updated to [0.62.2 flipper by default ](https://reactnative.dev/blog/2020/03/26/version-0.62)
+
+- React-Navigation updated to [v5](https://reactnavigation.org/versions)
 
 ## WHY USE EASY STARTER ?
 
-- Always up-to-date React Native [0.61.5](https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#0615) scaffolding.
+- Always up-to-date React Native [0.62.2](<(https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#v0622)>) scaffolding.
 
 * [Easy-Peasy](https://github.com/ctrlplusb/easy-peasy) makes it easy to access the global state.
 
@@ -21,37 +24,66 @@
 
 - [ApiSauce](https://github.com/infinitered/apisauce) Axios + standardized errors + request/response transforms.
 
+##
+
+**_Android setup is completed and tested for RN 0.62. ios is not tested. Help Required._**
+
 ## Currently Includes
 
-- React-native 0.61
-  <!-- -   code-push -->
+- React-native 0.62
+
+- Code-push
+
 - react-native-keychain
-  <!-- -   react-native-config -->
+
+<!-- - react-native-config -->
+
 - easy-peasy for state management
+
 - Hooks
+
 - react-navigation
+
 - react-native-vector-icons
+
 - Login Navigation Flow using React Context.
+
 - Themes support and much more
+
 - Multi - languages and locale support using i18n-js
+
 - Deeply integrated, production ready workflow
 
 ## Ready to use templates
 
 - Loading /Login / Main app screens
+
 - extended Material Bottom Tabs Navigator (customizable) and Drawer Navigator using react-navigation
+
 - App Intro screens
+
 - Locale context , theme context
+
 - Api ready service
+
 - oAuth ready interceptor
+
 - material design components using [react-native-paper](https://github.com/callstack/react-native-paper)
+
 - react-native-modal
+
 - easy-peasy models
+
 - custom fonts guide
+
 - `useStorage()` for async storage
+
 - `useNetInfo()` for network info
+
 - `useTranslation()` for i18n
+
 - `useAppTheme()` for using themes
+
 - ... much more
 
 ## Getting Started
@@ -60,11 +92,19 @@
 
 ```sh
 
+
+
 $ git clone https://github.com/HarishJangra/react-native-easy-starter.git
+
+
 
 $ cd react-native-easy-starter
 
+
+
 $ yarn
+
+
 
 ```
 
@@ -72,9 +112,15 @@ $ yarn
 
 ```sh
 
+
+
 $ yarn global add react-native-rename
 
+
+
 $ react-native-rename <newName>
+
+
 
 ```
 
@@ -84,9 +130,15 @@ $ react-native-rename <newName>
 
 ```sh
 
+
+
 $ yarn start --reset-cache
 
+
+
 $ yarn run android:dev
+
+
 
 ```
 
@@ -96,7 +148,11 @@ see [Generating signed apk](https://facebook.github.io/react-native/docs/signed-
 
 ```sh
 
+
+
 $ yarn run android:build
+
+
 
 ```
 
