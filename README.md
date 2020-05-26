@@ -136,7 +136,7 @@ $ yarn start --reset-cache
 
 
 
-$ yarn run android:dev
+$ yarn run android
 
 
 
