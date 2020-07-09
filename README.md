@@ -8,13 +8,13 @@
 
 ##### NEW
 
-- React-Native updated to [0.62.2 flipper by default ](https://reactnative.dev/blog/2020/03/26/version-0.62)
+- React-Native updated to [0.63 LogBox by Default ](https://reactnative.dev/blog/2020/07/06/version-0.63)
 
 - React-Navigation updated to [v5](https://reactnavigation.org/versions)
 
 ## WHY USE EASY STARTER ?
 
-- Always up-to-date React Native [0.62.2](<(https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#v0622)>) scaffolding.
+- Always up-to-date React Native [0.63](<(https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#v0630)>) scaffolding.
 
 * [Easy-Peasy](https://github.com/ctrlplusb/easy-peasy) makes it easy to access the global state.
 
@@ -26,11 +26,11 @@
 
 ##
 
-**_Android setup is completed and tested for RN 0.62. ios is not tested. Help Required._**
+**_Android setup is completed and tested for RN 0.63. ios is not tested. Help Required._**
 
 ## Currently Includes
 
-- React-native 0.62
+- React-native 0.63
 
 - Code-push
 
@@ -57,8 +57,6 @@
 ## Ready to use templates
 
 - Loading /Login / Main app screens
-
-- extended Material Bottom Tabs Navigator (customizable) and Drawer Navigator using react-navigation
 
 - App Intro screens
 
@@ -92,19 +90,11 @@
 
 ```sh
 
-
-
 $ git clone https://github.com/HarishJangra/react-native-easy-starter.git
-
-
 
 $ cd react-native-easy-starter
 
-
-
 $ yarn
-
-
 
 ```
 
@@ -112,33 +102,20 @@ $ yarn
 
 ```sh
 
-
-
 $ yarn global add react-native-rename
-
-
 
 $ react-native-rename <newName>
 
-
-
 ```
-
 [View](https://github.com/junedomingo/react-native-rename#installation) more option
 
 **Step 3:** Start the App
 
 ```sh
 
-
-
 $ yarn start --reset-cache
 
-
-
 $ yarn run android
-
-
 
 ```
 
@@ -148,11 +125,7 @@ see [Generating signed apk](https://facebook.github.io/react-native/docs/signed-
 
 ```sh
 
-
-
 $ yarn run android:build
-
-
 
 ```
 
