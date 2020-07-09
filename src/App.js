@@ -40,9 +40,8 @@ const Root = () => {
   );
 };
 
-const ThemeConsumer = props => {
+const ThemeConsumer = () => {
   const {theme} = useAppTheme();
-  const {t} = useTranslation();
 
   return (
     <PaperProvider theme={theme}>

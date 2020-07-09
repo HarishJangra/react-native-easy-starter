@@ -1,9 +1,12 @@
 {
-    "welcome": "React Native Easy Starter",
+    "welcome": "react-native-easy-starter",
     "home": "होम",
     "notifications": "सूचनाएं",
     "change_locale": "भाषा बदलो",
     "logout": "लोग आउट",
     "login": "लॉग इन करें",
-    "selectLanguage": "अपनी भाषा का चयन करें"
+    "selectLanguage": "अपनी भाषा का चयन करें",
+    "settings": "सेट्टिंग्स",
+    "profile": "प्रोफाइल",
+    "change_theme": "थीम बदलें"
 }

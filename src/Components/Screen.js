@@ -1,14 +1,14 @@
-import React from "react";
-import viewStyles from "../Styles/ViewStyles";
-import ViewX from "./View";
-import colors from "../Themes/Colors";
-import useAppTheme from "../Themes/Context";
+import React from 'react';
+import viewStyles from '../Styles/ViewStyles';
+import ViewX from './View';
+import colors from '../Themes/Colors';
+import useAppTheme from '../Themes/Context';
 
-export default ({ style, ...other }) => {
+export default ({style, ...other}) => {
   return (
     <ViewX
       {...other}
-      style={[viewStyles.container, style, { backgroundColor: "#dddddd" }]}
+      style={[viewStyles.container, style, {backgroundColor: '#dddddd'}]}
       useSafeAreaView
     />
   );
@@ -21,16 +21,16 @@ export class Container extends React.Component {
   }
 }
 
-const ContainerComponent = ({ style, bg, ...other }) => {
-  const { theme } = useAppTheme();
+const ContainerComponent = ({style, bg, ...other}) => {
+  const {theme} = useAppTheme();
 
   return (
     <ViewX
       {...other}
       style={[
         viewStyles.container,
-        { backgroundColor: bg ? theme.colors.background : "transparent" },
-        style
+        {backgroundColor: bg ? theme.colors.background : 'transparent'},
+        style,
       ]}
     />
   );

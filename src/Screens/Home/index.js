@@ -7,9 +7,17 @@ import useAppTheme from '../../Themes/Context';
 import {IconX, ICON_TYPE} from '../../Icons';
 import {Image} from 'react-native';
 import metrics from '../../Themes/Metrics';
+import {useStoreState} from 'easy-peasy';
+import Fonts from '../../Themes/Fonts';
 
 const MainScreen = ({routes, navigation}) => {
   console.log('navigation', navigation);
+  const {theme} = useAppTheme();
+  // eslint-disable-next-line prettier/prettier
+  const {username, password} = useStoreState((state) => ({
+    username: state.login.username,
+    password: state.login.password,
+  }));
 
   useEffect(() => {
     const _toggleDrawer = () => {
@@ -24,6 +32,7 @@ const MainScreen = ({routes, navigation}) => {
           <View style={{marginLeft: 10}}>
             <HeaderButton
               icon="menuunfold"
+              color={theme.colors.headerTitle}
               iconOrigin={ICON_TYPE.ANT_ICON}
               onPress={_toggleDrawer}
             />
@@ -31,7 +40,7 @@ const MainScreen = ({routes, navigation}) => {
         );
       },
     });
-  }, [navigation]);
+  }, [navigation, theme.colors.headerTitle]);
 
   return (
     <LoadingActionContainer fixed>
@@ -52,33 +61,15 @@ const MainScreen = ({routes, navigation}) => {
         <Text style={{fontSize: 20, textAlign: 'center', padding: 20}}>
           Home screen
         </Text>
+        <View style={{padding: 20, margin: 10, backgroundColor: 'white'}}>
+          <Text style={{textAlign: 'center', fontSize: 18}}>Welcome</Text>
+          <Text style={{textAlign: 'center', fontFamily: Fonts.type.italic}}>
+            {username + ' ' + password}
+          </Text>
+        </View>
       </Container>
     </LoadingActionContainer>
   );
 };
-
-// MainScreen.options = ({navigation, screenProps}) => {
-//   const {t, theme} = screenProps;
-//   return {
-//     headerStyle: [
-//       NavigationStyles.header_statusBar,
-//       {backgroundColor: theme.colors.header},
-//     ],
-//     title: 'Home',
-//     headerTintColor: theme.colors.headerTitle,
-//     headerTitleStyle: [
-//       NavigationStyles.headerTitle,
-//       {color: theme.colors.headerTitle},
-//     ],
-//     headerLeft: (
-//       <View style={{marginLeft: 10}}>
-//         <HeaderButton
-//           icon="ios-menu"
-//           onPress={navigation.getParam('openDrawer', null)}
-//         />
-//       </View>
-//     ),
-//   };
-// };
 
 export default MainScreen;

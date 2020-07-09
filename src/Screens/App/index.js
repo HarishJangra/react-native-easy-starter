@@ -11,7 +11,7 @@ import {LOCALES} from '../../Constants/index';
 
 const MainScreen = ({navigation}) => {
   const {logout} = useAuth();
-  const {theme} = useAppTheme();
+  const {theme, toggleTheme} = useAppTheme();
 
   const {t, localeProvider, changeLocale} = useTranslation();
 
@@ -20,6 +20,10 @@ const MainScreen = ({navigation}) => {
       localeProvider.id == LOCALES.HINDI.id ? LOCALES.ENGLISH : LOCALES.HINDI,
     );
   }, [changeLocale, localeProvider.id]);
+
+  const _changeTheme = useCallback(() => {
+    toggleTheme();
+  }, [toggleTheme]);
 
   return (
     <LoadingActionContainer fixed>
@@ -38,16 +42,35 @@ const MainScreen = ({navigation}) => {
             {t('welcome')}
           </Text>
 
+          <Text
+            style={{
+              marginTop: 20,
+              fontSize: 15,
+              color: theme.colors.accent,
+              textAlign: 'center',
+            }}>
+            Please use the following buttons to change theme and locale of the
+            app.
+          </Text>
+
           <ButtonX
             dark={true}
-            mode="outline"
+            mode="outlined"
             label={t('change_locale')}
             onPress={_changeLocale}
+          />
+
+          <ButtonX
+            dark={true}
+            mode="outlined"
+            label={t('change_theme')}
+            onPress={_changeTheme}
           />
         </Container>
         <Section>
           <ButtonX
             dark={true}
+            mode="outlined"
             color={theme.colors.accent}
             label={t('logout')}
             onPress={logout}
@@ -56,22 +79,6 @@ const MainScreen = ({navigation}) => {
       </Container>
     </LoadingActionContainer>
   );
-};
-
-MainScreen.navigationOptions = ({navigation, screenProps}) => {
-  const {t, theme} = screenProps;
-  return {
-    headerStyle: [
-      NavigationStyles.header_statusBar,
-      {backgroundColor: theme.colors.header},
-    ],
-    headerTitle: t('notifications'),
-    headerTintColor: theme.colors.headerTitle,
-    headerTitleStyle: [
-      NavigationStyles.headerTitle,
-      {color: theme.colors.headerTitle},
-    ],
-  };
 };
 
 export default MainScreen;

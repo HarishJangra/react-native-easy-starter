@@ -1,9 +1,13 @@
 {
-    "welcome": "React-Native Easy-Starter",
+    "welcome": "RNES",
     "home": "HOME",
     "notifications": "NOTIFICATIONS",
     "change_locale": "CHANGE LOCALE",
     "logout": "LOGOUT",
     "login": "LOGIN",
-    "selectLanguage": "Select Your Language"
+    "selectLanguage": "Select Your Language",
+    "settings": "SETTINGS",
+    "profile": "PROFILE",
+    "change_theme": "CHANGE THEME"
+
 }

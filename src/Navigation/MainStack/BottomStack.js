@@ -9,12 +9,27 @@ import Profile from '../../Screens/Profile';
 import {IconX, ICON_TYPE} from '../../Icons';
 import {createStackNavigator} from '@react-navigation/stack';
 import useAppTheme from '../../Themes/Context';
+import useTranslation from '../../i18n';
+import NavigationStyles from '../../Styles/NavigationStyles';
 
 const HomeStackScreen = () => {
+  const {t} = useTranslation();
+  const {theme} = useAppTheme();
+
   return (
     <Stack.Navigator>
       <Stack.Screen
-        options={{title: 'Home'}}
+        options={{
+          title: t('home'),
+          headerStyle: [
+            NavigationStyles.header_statusBar,
+            {backgroundColor: theme.colors.header},
+          ],
+          headerTitleStyle: [
+            NavigationStyles.headerTitle,
+            {color: theme.colors.headerTitle},
+          ],
+        }}
         name="homestackscreen"
         component={Home}
       />
@@ -23,10 +38,23 @@ const HomeStackScreen = () => {
 };
 
 const ProfileStackScreen = () => {
+  const {t} = useTranslation();
+  const {theme} = useAppTheme();
+
   return (
     <Stack.Navigator>
       <Stack.Screen
-        options={{title: 'Profile'}}
+        options={{
+          title: t('profile'),
+          headerStyle: [
+            NavigationStyles.header_statusBar,
+            {backgroundColor: theme.colors.header},
+          ],
+          headerTitleStyle: [
+            NavigationStyles.headerTitle,
+            {color: theme.colors.headerTitle},
+          ],
+        }}
         name="profilestackscreen"
         component={Profile}
       />
@@ -35,11 +63,24 @@ const ProfileStackScreen = () => {
 };
 
 const NotificationStackScreen = () => {
+  const {t} = useTranslation();
+  const {theme} = useAppTheme();
+
   return (
     <Stack.Navigator>
       <Stack.Screen
         options={(route, navigation) => {
-          return {title: 'Settings'};
+          return {
+            title: t('settings'),
+            headerStyle: [
+              NavigationStyles.header_statusBar,
+              {backgroundColor: theme.colors.header},
+            ],
+            headerTitleStyle: [
+              NavigationStyles.headerTitle,
+              {color: theme.colors.headerTitle},
+            ],
+          };
         }}
         name="notificationsstackscreen"
         component={App}
@@ -83,7 +124,7 @@ function getNotificationIcon({focused, color}) {
 
 const Tab = createMaterialBottomTabNavigator();
 
-const BottomTabs = props => {
+const BottomTabs = () => {
   const {theme} = useAppTheme();
   return (
     <Tab.Navigator

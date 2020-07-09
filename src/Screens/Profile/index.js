@@ -1,10 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Text} from 'react-native';
 import LoadingActionContainer from '../../Components/LoadingActionContainer';
-import {Container, ButtonX, HeaderButton} from '../../Components';
+import {Container} from '../../Components';
 import NavigationStyles from '../../Styles/NavigationStyles';
-import NavigationService from '../../Navigation';
 import useAppTheme from '../../Themes/Context';
 
 const MainScreen = ({navigation}) => {

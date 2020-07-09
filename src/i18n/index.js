@@ -1,9 +1,8 @@
-
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import LocaleContext from './LocaleContext';
 
 const useTranslation = (props) => {
-    return useContext(LocaleContext)
-}
+  return useContext(LocaleContext);
+};
 
-export default useTranslation
+export default useTranslation;
