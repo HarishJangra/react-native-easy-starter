@@ -3,11 +3,7 @@ import {StatusBar} from 'react-native';
 import {StoreProvider} from 'easy-peasy';
 import {Provider as PaperProvider} from 'react-native-paper';
 
-import {APP_PREFIX} from './Config/index';
-
-import NavigationService from './Navigation';
 import createStore from './Store';
-import PrimaryNav from './Navigation/AppNavigation';
 
 import {ThemeProvider} from './Themes/Context/ThemeContext';
 import {AppContextProvider} from './Services/Auth/AppContext';
@@ -16,7 +12,7 @@ import {NetInfoProvider} from './Lib/NetInfo/Context';
 
 import {Screen} from './Components';
 import useAppTheme from './Themes/Context';
-import useTranslation from './i18n';
+// import useTranslation from './i18n';
 import RootNavigation from './Navigation/AppNavigation';
 // import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 //create the easy store

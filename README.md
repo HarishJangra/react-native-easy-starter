@@ -1,4 +1,4 @@
-![banner](https://raw.githubusercontent.com/HarishJangra/react-native-easy-starter/master/hero/1.png)
+cd ![banner](https://raw.githubusercontent.com/HarishJangra/react-native-easy-starter/master/hero/1.png)
 
 <br />
 
@@ -26,7 +26,7 @@
 
 ##
 
-**_Android setup is completed and tested for RN 0.63. ios is not tested. Help Required._**
+**_Android & IOS setup is completed and tested for RN 0.63_**
 
 ## Currently Includes
 
