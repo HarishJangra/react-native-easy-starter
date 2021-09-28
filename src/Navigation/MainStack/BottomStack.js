@@ -167,7 +167,10 @@ const Stack = createStackNavigator();
 
 export default () => {
   return (
-    <Stack.Navigator headerMode="none">
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Stack.Screen name={'bottomtabs'} component={BottomTabs} />
     </Stack.Navigator>
   );

@@ -1,7 +1,11 @@
+import {
+  createNavigationContainerRef,
+  DrawerActions,
+} from '@react-navigation/native';
 import React from 'react';
 export {Routes} from './Routes';
 
-export const navigationRef = React.createRef();
+export const navigationRef = createNavigationContainerRef();
 export const isMountedRef = React.createRef();
 
 /**
@@ -11,10 +15,9 @@ export const isMountedRef = React.createRef();
  * @param params Route parameters.
  */
 function navigate(routeName, params) {
-  console.log('LOG_navigate', routeName, params);
-  if (isMountedRef.current && navigationRef.current) {
+  if (navigationRef.isReady()) {
     // Perform navigation if the app has mounted
-    navigationRef.current.navigate(routeName, params);
+    navigationRef.navigate(routeName, params);
   } else {
     // You can decide what to do if the app hasn't mounted
     // You can ignore this, or add these actions to a queue you can call later
@@ -46,15 +49,15 @@ function navigateAndReset(routeName, params) {
 }
 
 function toggleDrawer() {
-  // navigator.dispatch(DrawerActions.toggleDrawer());
+  navigationRef.dispatch(DrawerActions.toggleDrawer());
 }
 
 function openDrawer() {
-  // navigator.dispatch(DrawerActions.openDrawer());
+  navigationRef.dispatch(DrawerActions.openDrawer());
 }
 
 function closeDrawer() {
-  // navigator.dispatch(DrawerActions.closeDrawer());
+  navigationRef.dispatch(DrawerActions.closeDrawer());
 }
 
 const NavigationService = {

@@ -7,7 +7,10 @@ const Stack = createStackNavigator();
 
 export default props => {
   return (
-    <Stack.Navigator headerMode="screen">
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Stack.Screen
         name={Routes.HOME_TABS}
         options={{headerShown: false}}

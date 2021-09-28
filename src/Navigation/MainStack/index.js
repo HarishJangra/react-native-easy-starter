@@ -12,10 +12,12 @@ export default props => {
   return (
     <Drawer.Navigator
       drawerPosition={'left'}
-      drawerType="slide"
+      drawerType={'slide'}
       edgeWidth={10}
+      screenOptions={{
+        headerShown: false,
+      }}
       drawerStyle={{
-        backgroundColor: '#fafafa',
         width: metrics.drawerWidth,
       }}
       drawerContent={DrawerScreen}>

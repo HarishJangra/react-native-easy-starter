@@ -9,19 +9,19 @@ import {Image} from 'react-native';
 import metrics from '../../Themes/Metrics';
 import {useStoreState} from 'easy-peasy';
 import Fonts from '../../Themes/Fonts';
+import NavigationService from '../../Navigation';
 
 const MainScreen = ({routes, navigation}) => {
-  console.log('navigation', navigation);
   const {theme} = useAppTheme();
   // eslint-disable-next-line prettier/prettier
-  const {username, password} = useStoreState((state) => ({
+  const {username, password} = useStoreState(state => ({
     username: state.login.username,
     password: state.login.password,
   }));
 
   useEffect(() => {
     const _toggleDrawer = () => {
-      navigation.toggleDrawer();
+      NavigationService.toggleDrawer();
     };
 
     console.log('use effect home');
