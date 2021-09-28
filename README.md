@@ -8,7 +8,7 @@ cd ![banner](https://raw.githubusercontent.com/HarishJangra/react-native-easy-st
 
 ##### NEW
 
-- React-Native updated to [0.65](https://reactnative.dev/blog/2020/07/06/version-0.63)
+- React-Native updated to [0.65](https://reactnative.dev/blog/2020/07/06/version-0.65)
 
 - React-Navigation updated to [v6](https://reactnavigation.org/versions)
 
