@@ -8,13 +8,13 @@ cd ![banner](https://raw.githubusercontent.com/HarishJangra/react-native-easy-st
 
 ##### NEW
 
-- React-Native updated to [0.63 LogBox by Default ](https://reactnative.dev/blog/2020/07/06/version-0.63)
+- React-Native updated to [0.65](https://reactnative.dev/blog/2020/07/06/version-0.63)
 
-- React-Navigation updated to [v5](https://reactnavigation.org/versions)
+- React-Navigation updated to [v6](https://reactnavigation.org/versions)
 
 ## WHY USE EASY STARTER ?
 
-- Always up-to-date React Native [0.63](<(https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#v0630)>) scaffolding.
+- Always up-to-date React Native [0.65](<(https://github.com/react-native-community/releases/blob/master/CHANGELOG.md#v0630)>) scaffolding.
 
 * [Easy-Peasy](https://github.com/ctrlplusb/easy-peasy) makes it easy to access the global state.
 
